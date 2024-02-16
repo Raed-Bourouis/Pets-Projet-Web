@@ -1,3 +1,7 @@
+body{
+    padding: 0;
+    margin:0;
+}
 /*importing font*/
 .kavivanar-regular {
     font-family: "Kavivanar", cursive;
@@ -10,6 +14,7 @@
 
 /*Header style*/
 nav {
+    margin-top: 0.1vw;
     background-color: #556B2F;
     height: 15vh;
     display: grid;
@@ -33,9 +38,22 @@ nav ul {
 }
 
 #logo {
-    position: fixed;
+    position: relative;
     padding-top: 1vh;
+    padding-left: 1vw;
     width: 10vw;
 }
 
 /*------------------------*/
+
+/*Volunteers photo*/
+
+#Volunteers-photo{
+    margin-top: 0.5vh;
+}
+
+#Volunteers-photo img{
+    height:50vh;
+    width:100vw;
+
+}
