@@ -2,6 +2,11 @@ body{
     padding: 0;
     margin:0;
 }
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 /*importing font*/
 .kavivanar-regular {
     font-family: "Kavivanar", cursive;
@@ -9,6 +14,12 @@ body{
     font-style: normal;
 }
 
+.playfair-display{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 /*----------------------*/
 
 
@@ -18,7 +29,7 @@ nav {
     background-color: #556B2F;
     height: 15vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.25fr;
     column-gap: 30vw;
 
 
@@ -40,7 +51,7 @@ nav ul {
 #logo {
     position: relative;
     padding-top: 1vh;
-    padding-left: 1vw;
+    padding-left: 2.5vw;
     width: 10vw;
 }
 
@@ -54,7 +65,7 @@ nav ul {
 
 #Volunteers-photo img{
     height:50vh;
-    width:100vw;
+    min-width:100vw;
 
 }
 /*------------------------*/
@@ -69,21 +80,53 @@ nav ul {
 }
 #join-cause-text-rectangle{
     position: absolute;
-    font-family:"Kavivanar";
-    padding-top: 1vh;
+    font-family:"Playfair Display";
+    padding-top: 7vh;
     left:30vw;
     width:35vw;
-    height: 15vh;
-    border-radius: 0.2vw 0 0 0.2vw ;
+    height: 20vh;
+    border-radius: 0.7vw 0 0 0.7vw ;
     background: linear-gradient(to right, #556B2F, #B3DDD5);
 }
 #aka-lfaza-lm3awja{
-    position: absolute;
+    position: relative;
     left:65vw;
     width:3vw;
-    height: 16vh;
-    display:inline;
+    height: 27vh;
     border-radius:  0 100% 100% 0;
     background: linear-gradient(to right,#B3DDD5,#eaf3f1 );
 }
+/*---------------------------------------*/
+
+/*get involved*/
+#get-involved{
+    text-align: center;
+    font-family: "Playfair Display";
+}
+#get-involved ol{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:5vh;
+    align-content: center;
+    
+}
+#get-involved ol #one, #get-involved ol #two {
+    display: flex;
+    gap :10vw;
+    li{
+        width:20vw;
+    }
+}
+
+#get-involved ol #three{
+    padding-top:2vh;
+    padding-left:9.5vw;
+
+    li{
+        width:30vw;
+    }
+}
+
 
