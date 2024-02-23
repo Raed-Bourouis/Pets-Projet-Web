@@ -57,3 +57,33 @@ nav ul {
     width:100vw;
 
 }
+/*------------------------*/
+
+/*Join our cause*/
+#join-cause{
+    text-align: center;
+    position: relative
+}
+#join-cause h1{
+    font-family:"Kavivanar";
+}
+#join-cause-text-rectangle{
+    position: absolute;
+    font-family:"Kavivanar";
+    padding-top: 1vh;
+    left:30vw;
+    width:35vw;
+    height: 15vh;
+    border-radius: 0.2vw 0 0 0.2vw ;
+    background: linear-gradient(to right, #556B2F, #B3DDD5);
+}
+#aka-lfaza-lm3awja{
+    position: absolute;
+    left:65vw;
+    width:3vw;
+    height: 16vh;
+    display:inline;
+    border-radius:  0 100% 100% 0;
+    background: linear-gradient(to right,#B3DDD5,#eaf3f1 );
+}
+
