@@ -8,7 +8,7 @@ body {
 
 nav {
     background-color: #556B2F;
-    height:100px;
+    height;
     color: #fff;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -89,13 +89,21 @@ input[type="tel"] {
     margin-bottom: 20px;
 }
 
-.city ,{
+.city {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
 }
+#State{
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
 
-.city  {
+.city input {
     flex: 1;
     margin-right: 10px;
     padding: 10px;
