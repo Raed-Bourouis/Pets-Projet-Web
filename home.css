@@ -1,21 +1,119 @@
-/* <!-- section1 --> */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-#container1{
+
+
+body{
+    margin: 0;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom: 100px;
+    padding-top: 11px;
+}
+
+.container{
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    font-size: large;
     gap: 30px;
 }
+
+/* <!-- section1 --> */
 .sect11{
     text-align: center;
     padding-top: 20px;
     font-family: 'Playfair Display', serif;
 }
-img{
-    width: 500px;
+#img1{
+    width: 450px;
     height: 260px;
 }
+/* video */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 30em;
+    max-width: 800px; 
+    margin: 0 auto; /* centre le conteneur horizontalement */
+    border: 9px solid #88B04B; 
+    border-radius: 10px;     
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 100%; 
+    border: none; /* supprime la bordure de l'iframe */
+  }
+
+  
+/* Our Supporters */
+#listSupp{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+
+}
+#oursupp{
+    background-color: #88B04B;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+}
+.supp{
+    width: 90px;
+    mix-blend-mode: color-burn;
+    
+}
+
+/* section2 */
+#img2{
+
+    width: 450px;
+    height: 350px;
+    border-radius: 60px;
+    
+
+}
+#btn2{
+    padding-left: 80%;
+}
+
+/* section3 */
+#btn3{
+    padding-left: 70%;
+}
+#volunteernow{
+    text-align: center;
+}
+/* be part */
+#bepart{
+    width: 90%;
+    height: 22em;
+    background: linear-gradient(to right, #88B04B, #A9D6CE);
+    display: grid;
+    place-items: center;
+    font-family: 'Playfair display';
+    border-radius: 30px;
+
+}
+#btn4{
+    width: 5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 button{
     height: 50px;
     border-radius: 40px;
