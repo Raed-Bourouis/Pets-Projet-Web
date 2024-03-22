@@ -142,5 +142,24 @@ nav ul {
         width:30vw;
     }
 }
+/*-------------------------------------------*/
+
+/*footer*/
+footer{
+    background-color:#556B2F;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    font-family: "Kavivanar";
+    color: #fff;
+    align-items: center;
+
+}
+
+footer div:nth-child(3){
+    padding-right: 2vw;
+}
+
+/*----------------------------*/
 
 
