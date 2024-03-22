@@ -8,7 +8,9 @@ body {
 
 nav {
     background-color: #556B2F;
-    height;
+    height:50px;
+    display: flex;
+    justify-content: space-around;
     color: #fff;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);

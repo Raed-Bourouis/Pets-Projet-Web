@@ -1,0 +1,148 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(BackgroundImage.jpg);
+    background-repeat: no-repeat;
+    background-color: rgba(249, 249, 249, 0.8); 
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+nav {
+    background: linear-gradient(135deg, #2E8540, #556B2F) ; 
+    top: 0; left: 0; right: 0; height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav:hover {
+    background: linear-gradient(135deg, #25703B, #35603A);
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-separator {
+    border-right: 2px solid #fff;
+    height: 50px;
+    margin: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+nav ul li:last-child a {
+    padding: 10px 20px;
+    background-color: #2E8540;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+nav ul li:last-child a:hover {
+    background-color: #25703B;
+}
+nav ul li a:hover {
+    color: #C0C0C0;
+}
+/*end of header*/
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+#logo2 {
+    max-width: 200px;
+    margin: 0 auto 20px; 
+    display: block;
+}
+
+#title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.reset {
+    background-color: #f44336;
+}
+
+button:hover {
+    background-color: #3F9142; 
+}
+
+button.reset:hover {
+    background-color: #BF3A3A; 
+}
