@@ -14,6 +14,35 @@ p{
     font-size: larger;
     text-align: center;
 }
+
+/*Header style*/
+nav {
+    margin-top: 0.0;
+    background-color: #556B2F;
+    height: 15vh;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    column-gap: 30vw;
+
+
+}
+
+nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    padding-top: 3.5vh;
+    font-family: "Kavivanar";
+    color: #fff;
+
+
+
+}
+nav ul li{
+    font-size: 2.2vh;
+}
+
 /* Intro */
 h1{
     text-align: center;
@@ -66,8 +95,25 @@ ul{
 
 #final{
     padding: 0 80px 0 80px;
+    margin-bottom: -4px;
 }
 #img2{
     position: relative;
     width: 100%;
+}
+/*footer*/
+footer{
+    background-color:#556B2F;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    font-family: "Kavivanar";
+    color: #fff;
+    align-items: center;
+    margin-top: 0;
+
+}
+
+footer div:nth-child(3){
+    padding-right: 2vw;
 }
