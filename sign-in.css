@@ -4,8 +4,10 @@ body{
 }
 html, body {
     max-width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
 }
+/*header style*/ 
 
 nav {
     background: linear-gradient(135deg, #2E8540, #556B2F) ; 
@@ -86,6 +88,8 @@ nav ul li a:hover {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
 }
 
 #sectionright{
@@ -98,6 +102,7 @@ nav ul li a:hover {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+
 }
 
 form{
@@ -120,6 +125,10 @@ input{
 /*footer*/
 footer{
     background: linear-gradient(135deg, #2E8540, #556B2F) ; 
+    /* position:absolute;
+    width: 100%;
+    bottom:0;
+    left: 0; */
     display: flex;
     flex-flow: row wrap;
     justify-content:space-between;
