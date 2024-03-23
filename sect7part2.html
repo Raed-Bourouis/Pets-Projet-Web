@@ -11,7 +11,7 @@
     <header>
         <nav>
             <div>
-                <img id="header-logo" src="logoweblight.png" alt="Logo">
+                <img id="logo" src="logoweblight.png" alt="Logo">
             </div>
             <div id="nav-list">
                 <ul>
@@ -26,89 +26,109 @@
     <!-- Header -->
     <div class="container">
         <img id="logo2" src="LogoLArge.png" alt="Large Logo">
-        <h1 class="form-title">Questionnaire</h1>
+        <h1 id="title">Questionnaire</h1>
         <form name="form1" action="" onsubmit="return validateForm()" method="post">
-            <label for="adult">I verify that I am an adult : *</label>
-            <input type="radio" name="adult" required> Yes 
-            <input type="radio" name="adult" value="No"> No<br>
+            <section  class="question-group">
+                <label for="adult">I verify that I am an adult : *</label>
+                <input type="radio" name="adult" required> Yes 
+                <input type="radio" name="adult" value="No"> No<br>
+            </section>
+            <!-- Household Information Section -->
+            <section class="household-info">
+                <h2 class="section-title">Household Information:</h2>
+                <label for="residence-type">Type of Residence (House/Apartment):</label>
+                <input type="radio" id="residence-house" name="residenceType"> House
+                <input type="radio" id="residence-apartment" name="residenceType" value="Other"> Apartment  
+                <br/> 
+                <label for="residence-duration">How long have you lived in this residence? :*</label>
+                <select name="residenceDuration" id="residence-duration" required>
+                    <option value="">Please Select...</option>
+                    <option value="less-than-a-year"> Less than a Year </option>
+                    <option value="one-to-two-years"> One to Two Years </option>
+                    <option value="two-to-five-years"> Two to Five Years </option>
+                    <option value="five-to-ten-years"> Five to Ten Years </option>
+                    <option value="more-than-ten-years"> More Than Ten Years </option>
+                </select><br>
+                <label for="home-ownership">Do you own or rent your home? :*</label>
+                <input type="radio" id="home-rent" name="homeOwnership"> Rent
+                <input type="radio" id="home-own" name="homeOwnership" value="Other"> Own 
+                <br/>
+                <label for="landlord-permission">If you rent, do you have permission from your landlord to have pets?</label> 
+                <input type="radio" id="landlord-yes" name="landlordPermission"> Yes <!-- this part i can use js -->
+                <input type="radio" id="landlord-no" name="landlordPermission" value="Other"> No <br>
+                <label for="num-adults">Number of Adults in the Household : *</label>
+                <input type="number" id="num-adults" name="numAdults" placeholder="Must be at least 1"><br>
+                <label for="num-minors">Number of Minors in the Household : *</label>
+                <input type="number" id="num-minors" name="numMinors"><br>
+                <label for="children-ages">Ages of Children: *</label> <!-- this part i can use js if the number is !=0 -->
+                <input type="text" id="children-ages" name="childrenAges"><br>
+                <label for="other-pets">Any other pets in the household? (If yes, provide details) : *</label>
+                <textarea id="other-pets" name="otherPets"></textarea><br>
+            </section>
+                <!-- End of Household Information Section -->
+                
+                <!-- User Information Section -->
+            <section class="user-info">
+                <h2 class="section-title">Lifestyle and Preferences:</h2>
+                <label for="reason-adopt">Why do you want to adopt a pet?</label>
+                <textarea id="reason-adopt" name="reasonAdopt"></textarea>
+                <br/> 
+                <label for="pet-appeal">What about this pet appeals to you?*</label>
+                <textarea id="pet-appeal" name="petAppeal"></textarea>
+                <label for="exercise-time">How much time can you dedicate to exercising and training your pet each day?</label>
+                <select name="exerciseTime" id="exercise-time" required>
+                    <option value="">Please Select...</option>
+                    <option value="less-than-an-hour"> Less than a hour </option>
+                    <option value="one-to-two-hours"> One to Two hours </option>
+                    <option value="more-than-two-hours"> More Than Two hours </option>
+                </select>
             
-            <h2 class="section-title">Household Information:</h2>
-            <label for="residence-type">Type of Residence (House/Apartment):</label>
-            <input type="radio" id="residence-house" name="residenceType"> House
-            <input type="radio" id="residence-apartment" name="residenceType" value="Other"> Apartment  
-            <br/> 
-            <label for="residence-duration">How long have you lived in this residence? :*</label>
-            <select name="residenceDuration" id="residence-duration" required>
-                <option value="">Please Select...</option>
-                <option value="less-than-a-year"> Less than a Year </option>
-                <option value="one-to-two-years"> One to Two Years </option>
-                <option value="two-to-five-years"> Two to Five Years </option>
-                <option value="five-to-ten-years"> Five to Ten Years </option>
-                <option value="more-than-ten-years"> More Than Ten Years </option>
-            </select>
-            <label for="home-ownership">Do you own or rent your home? :*</label>
-            <input type="radio" id="home-rent" name="homeOwnership"> Rent
-            <input type="radio" id="home-own" name="homeOwnership" value="Other"> Own 
-            <br/>
-            <label for="landlord-permission">If you rent, do you have permission from your landlord to have pets?</label> 
-            <input type="radio" id="landlord-yes" name="landlordPermission"> Yes <!-- this part i can use js -->
-            <input type="radio" id="landlord-no" name="landlordPermission" value="Other"> No 
-            <label for="num-adults">Number of Adults in the Household : *</label>
-            <input type="number" id="num-adults" name="numAdults" placeholder="Must be at least 1">
-            <label for="num-minors">Number of Minors in the Household : *</label><br>
-            <input type="number" id="num-minors" name="numMinors">
-            <label for="children-ages">Ages of Children: *</label> <!-- this part i can use js if the number is !=0 -->
-            <input type="text" id="children-ages" name="childrenAges">
-            <label for="other-pets">Any other pets in the household? (If yes, provide details) : *</label>
-            <textarea id="other-pets" name="otherPets"></textarea>
-       
-            <h2 class="section-title">Lifestyle and Preferences:</h2>
-            <label for="reason-adopt">Why do you want to adopt a pet?</label>
-            <textarea id="reason-adopt" name="reasonAdopt"></textarea>
-            <br/> 
-            <label for="pet-appeal">What about this pet appeals to you?*</label>
-            <textarea id="pet-appeal" name="petAppeal"></textarea>
-            <label for="exercise-time">How much time can you dedicate to exercising and training your pet each day?</label>
-            <select name="exerciseTime" id="exercise-time" required>
-                <option value="">Please Select...</option>
-                <option value="less-than-an-hour"> Less than a hour </option>
-                <option value="one-to-two-hours"> One to Two hours </option>
-                <option value="more-than-two-hours"> More Than Two hours </option>
-            </select>
-           
-            <label for="obedience-training">Are you willing to attend obedience training classes if needed?</label> 
-            <input type="radio" id="training-yes" name="obedienceTraining"> Yes 
-            <input type="radio" id="training-no" name="obedienceTraining" value="Other"> No 
-            <input type="radio" id="training-not-sure" name="obedienceTraining" value="Other"> Not Sure
-            <h2 class="section-title">Experience with Pets:</h2>
-            
-            <label for="prior-pets">Have you owned pets before? If yes, please provide details</label>
-            <textarea id="prior-pets" name="priorPets"></textarea>
-            <label for="surrender-pet">Have you ever surrendered a pet to a shelter or rescue organization? If yes, please explain.</label>
-            <textarea id="surrender-pet" name="surrenderPet"></textarea>
-            <label for="pet-costs">Are you familiar with the costs associated with pet ownership, including veterinary care, food, grooming, etc.?</label> 
-            <input type="radio" id="costs-yes" name="petCosts"> Yes 
-            <input type="radio" id="costs-no" name="petCosts" value="Other"> No 
-            <input type="radio" id="costs-not-sure" name="petCosts" value="Other"> Not Sure
+                <label for="obedience-training">Are you willing to attend obedience training classes if needed?</label> 
+                <input type="radio" id="training-yes" name="obedienceTraining"> Yes 
+                <input type="radio" id="training-no" name="obedienceTraining" value="Other"> No 
+                <input type="radio" id="training-not-sure" name="obedienceTraining" value="Other"> Not Sure
+            </section>
+            <!-- End of User Information Section -->
+            <!-- Start of Experience With Pets-->
+            <section class="experience-pets">
+                <h2 class="section-title">Experience with Pets:</h2>
+                <label for="prior-pets">Have you owned pets before? If yes, please provide details</label>
+                <textarea id="prior-pets" name="priorPets"></textarea>
+                <label for="surrender-pet">Have you ever surrendered a pet to a shelter or rescue organization? If yes, please explain.</label>
+                <textarea id="surrender-pet" name="surrenderPet"></textarea>
+                <label for="pet-costs">Are you familiar with the costs associated with pet ownership, including veterinary care, food, grooming, etc.?</label> <br>
+                <input type="radio" id="costs-yes" name="petCosts"> Yes 
+                <input type="radio" id="costs-no" name="petCosts" value="Other"> No 
+                <input type="radio" id="costs-not-sure" name="petCosts" value="Other"> Not Sure 
+            </section>
+            <!-- End of Experience With Pets -->
+            <!--Start Of Petcare-->
+            <section  class="PetCare" >
             <h2 class="section-title"> Pet Care:</h2>
-            <label for="daily-care">Who will be responsible for the day-to-day care of the pet? : </label><br>
-            <input type="text" id="daily-care" name="dailyCare">
-            <label for="care-plan">How do you plan to handle feeding, grooming, and exercise for your pet? : </label><br>
-            <input type="text" id="care-plan" name="carePlan">
-            <label for="pet-location">Where will the pet stay during the day and at night? : </label><br>
-            <input type="text" id="pet-location" name="petLocation">
-            <label for="vet-choice">Do you have a veterinarian you plan to use for your pet's medical care? : </label><br>
+            <label for="daily-care">Who will be responsible for the day-to-day care of the pet? : </label>
+            <input type="text" id="daily-care" name="dailyCare"><br>
+            <label for="care-plan">How do you plan to handle feeding, grooming, and exercise for your pet? : </label>
+            <input type="text" id="care-plan" name="carePlan"><br>
+            <label for="pet-location">Where will the pet stay during the day and at night? : </label>
+            <input type="text" id="pet-location" name="petLocation"><br>
+            <label for="vet-choice">Do you have a veterinarian you plan to use for your pet's medical care? : </label>
             <input type="radio" id="vet-yes" name="vetChoice"> Yes
-            <input type="radio" id="vet-no" name="vetChoice"> No
-            <h2 class="section-title"> Additional Questions:</h2>
-            <label for="vet-records">Are you willing to provide veterinary records for current or past pets? : </label><br>
-            <input type="radio" id="vet-records-yes" name="vetRecords"> Yes
-            <input type="radio" id="vet-records-no" name="vetRecords"> No
-            <label for="home-visit">Are you willing to allow a home visit from a shelter representative before adoption? : </label><br>
-            <input type="radio" id="home-visit-yes" name="homeVisit"> Yes
-            <input type="radio" id="home-visit-no" name="homeVisit"> No
-            <label for="future-care">What would you do if you were unable to care for your pet in the future? :</label>
-            <textarea id="future-care" name="futureCare"></textarea>
+            <input type="radio" id="vet-no" name="vetChoice"> No<br>
+            </section>
+            <!--End Of PetCare-->
+            <!--Start of Additional Questions -->
+            <section class="additional-services">
+                <h2 class="section-title"> Additional Questions:</h2>
+                <label for="vet-records">Are you willing to provide veterinary records for current or past pets? : </label>
+                <input type="radio" id="vet-records-yes" name="vetRecords"> Yes
+                <input type="radio" id="vet-records-no" name="vetRecords"> No<br>
+                <label for="home-visit">Are you willing to allow a home visit from a shelter representative before adoption? : </label>
+                <input type="radio" id="home-visit-yes" name="homeVisit"> Yes
+                <input type="radio" id="home-visit-no" name="homeVisit"> No<br>
+                <label for="future-care">What would you do if you were unable to care for your pet in the future? :</label>
+                <textarea id="future-care" name="futureCare"></textarea><br>
+            </section>
+        <!--End of Additional Questions -->
             <fieldset>
                 <legend>Select any additional services you would like to include with your adoption:</legend>
                 <input type="checkbox" id="service-microchipping" name="additionalServices" value="microchipping">
@@ -122,10 +142,13 @@
                 <input type="checkbox" id="service-insurance" name="additionalServices" value="insurance">
                 <label for="service-insurance">Health Insurance</label><br>
             </fieldset>
+            <label for="home-visit">I verify that all the information i provided is correct : </label>
+            <input type="radio" id="home-visit-yes" name="homeVisit"> Yes
+            <input type="radio" id="home-visit-no" name="homeVisit"> No<br>
             <div class="btn-container">
                 <button type="button" class="back" onclick="window.location.href='sect7.html'">Back</button>
                 <button type="reset" class="reset">Reset</button>
-                <button type="submit">Next</button>
+                <button type="submit">Submit</button>
             </div>
         </form>
     </div>
