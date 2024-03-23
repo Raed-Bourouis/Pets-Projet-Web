@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoption Application</title>
     <link rel="stylesheet" href="sect7part2.css">
+    <script  src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -27,47 +28,56 @@
     <div class="container">
         <img id="logo2" src="LogoLArge.png" alt="Large Logo">
         <h1 id="title">Questionnaire</h1>
-        <form name="form1" action="" onsubmit="return validateForm()" method="post">
-            <section  class="question-group">
+        <form id="form1" action="" onsubmit="return validateForm()" method="post">
+            <section  class="input">
                 <label for="adult">I verify that I am an adult : *</label>
                 <input type="radio" name="adult" required> Yes 
                 <input type="radio" name="adult" value="No"> No<br>
             </section>
-            <!-- Household Information Section -->
+            <!------- Household Information Section ------>
             <section class="household-info">
                 <h2 class="section-title">Household Information:</h2>
-                <label for="residence-type">Type of Residence (House/Apartment):</label>
+                <div class="input">
+                <label for="residence-type">Type of Residence (House/Apartment)*:</label>
                 <input type="radio" id="residence-house" name="residenceType"> House
                 <input type="radio" id="residence-apartment" name="residenceType" value="Other"> Apartment  
+            </div>
                 <br/> 
-                <label for="residence-duration">How long have you lived in this residence? :*</label>
-                <select name="residenceDuration" id="residence-duration" required>
+                <div class="input">
+                <label for="residence-duration">How long have you lived in this residence? :</label>
+                <select name="residenceDuration" id="residence-duration" >
                     <option value="">Please Select...</option>
                     <option value="less-than-a-year"> Less than a Year </option>
                     <option value="one-to-two-years"> One to Two Years </option>
                     <option value="two-to-five-years"> Two to Five Years </option>
                     <option value="five-to-ten-years"> Five to Ten Years </option>
                     <option value="more-than-ten-years"> More Than Ten Years </option>
-                </select><br>
+                </select></div><br>
+                <div class="input">
                 <label for="home-ownership">Do you own or rent your home? :*</label>
                 <input type="radio" id="home-rent" name="homeOwnership"> Rent
-                <input type="radio" id="home-own" name="homeOwnership" value="Other"> Own 
+                <input type="radio" id="home-own" name="homeOwnership" value="Other"> Own </div>
                 <br/>
+                <div class="input">
                 <label for="landlord-permission">If you rent, do you have permission from your landlord to have pets?</label> 
                 <input type="radio" id="landlord-yes" name="landlordPermission"> Yes <!-- this part i can use js -->
-                <input type="radio" id="landlord-no" name="landlordPermission" value="Other"> No <br>
+                <input type="radio" id="landlord-no" name="landlordPermission" value="Other"> No </div><br>
+                <div class="input">
                 <label for="num-adults">Number of Adults in the Household : *</label>
-                <input type="number" id="num-adults" name="numAdults" placeholder="Must be at least 1"><br>
+                <input type="number" id="num-adults" name="numAdults" placeholder="Must be at least 1"></div><br>
+                <div class="input">
                 <label for="num-minors">Number of Minors in the Household : *</label>
-                <input type="number" id="num-minors" name="numMinors"><br>
+                <input type="number" id="num-minors" name="numMinors"></div><br>
+                <div class="input">
                 <label for="children-ages">Ages of Children: *</label> <!-- this part i can use js if the number is !=0 -->
-                <input type="text" id="children-ages" name="childrenAges"><br>
+                <input type="text" id="children-ages" name="childrenAges"></div><br>
+                <div class="input">
                 <label for="other-pets">Any other pets in the household? (If yes, provide details) : *</label>
-                <textarea id="other-pets" name="otherPets"></textarea><br>
+                <textarea id="other-pets" name="otherPets"></textarea><br></div>
             </section>
-                <!-- End of Household Information Section -->
+            <!-------- End of Household Information Section ------->
                 
-                <!-- User Information Section -->
+            <!------- User Information Section ------->
             <section class="user-info">
                 <h2 class="section-title">Lifestyle and Preferences:</h2>
                 <label for="reason-adopt">Why do you want to adopt a pet?</label>
@@ -82,7 +92,7 @@
                     <option value="one-to-two-hours"> One to Two hours </option>
                     <option value="more-than-two-hours"> More Than Two hours </option>
                 </select>
-            
+                <br>
                 <label for="obedience-training">Are you willing to attend obedience training classes if needed?</label> 
                 <input type="radio" id="training-yes" name="obedienceTraining"> Yes 
                 <input type="radio" id="training-no" name="obedienceTraining" value="Other"> No 
@@ -129,6 +139,7 @@
                 <textarea id="future-care" name="futureCare"></textarea><br>
             </section>
         <!--End of Additional Questions -->
+        <section class="additional-services">
             <fieldset>
                 <legend>Select any additional services you would like to include with your adoption:</legend>
                 <input type="checkbox" id="service-microchipping" name="additionalServices" value="microchipping">
@@ -142,9 +153,12 @@
                 <input type="checkbox" id="service-insurance" name="additionalServices" value="insurance">
                 <label for="service-insurance">Health Insurance</label><br>
             </fieldset>
-            <label for="home-visit">I verify that all the information i provided is correct : </label>
-            <input type="radio" id="home-visit-yes" name="homeVisit"> Yes
-            <input type="radio" id="home-visit-no" name="homeVisit"> No<br>
+            <label for="correct">I verify that all of the information i have  provided is correct : * </label>
+            <input type="radio" id="correct-yes" name="correct"> Yes
+            <input type="radio" id="correct-no" name="correct" onclick="mustbeayes(this.form)"> No<br>
+            <p id="error"></p>
+            
+        </section>
             <div class="btn-container">
                 <button type="button" class="back" onclick="window.location.href='sect7.html'">Back</button>
                 <button type="reset" class="reset">Reset</button>
@@ -153,4 +167,67 @@
         </form>
     </div>
 </body>
+<script>
+    function validateForm() {
+    var form = document.getElementById('form1');
+    var submitButton = form.querySelector('button[type="submit"]');
+
+    submitButton.onclick = function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        var isValid = true;
+
+        // Reset border and remove error messages for all input fields
+        var inputFields = form.querySelectorAll('input, select, textarea');
+        inputFields.forEach(function(field) {
+            field.style.border = '1px solid #ccc';
+            var errorMessage = field.parentElement.querySelector('.error-message');
+            if (errorMessage) {
+                errorMessage.parentNode.removeChild(errorMessage);
+            }
+        });
+
+        var requiredFields = form.querySelectorAll('input, select, textarea');
+        requiredFields.forEach(function(field) {
+            if (!field.value.trim()) {
+                // Field is empty, mark it as invalid
+                isValid = false;
+                field.style.border = '1px solid red';
+
+                // Create and append error message
+                var errorMessage = document.createElement('div');
+                errorMessage.classList.add('error-message');
+                errorMessage.style.color = 'red';
+                errorMessage.textContent = 'This field is required';
+                field.parentNode.appendChild(errorMessage);
+            }
+        });
+
+        // If any required field is missing, show alert and prevent form submission
+        if (!isValid) {
+            alert('Please fill out all required fields.');
+            return false;
+        }
+
+        // Form is valid, submit it
+        form.submit();
+    };
+};
+function mustbeayes() {
+    var x = document.getElementById("correct-yes").checked;
+    if (!x) {
+        alert("You must verify that all of the information you have provided is correct");
+        var error=document.getElementById("error");
+        error.innerHTML="<p>Error: You did not confirm your information</p>";
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
+ 
+
+
+    </script>
 </html>

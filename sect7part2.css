@@ -116,22 +116,36 @@ form {
 label {
     font-size: 1em;
 }
-
+.input{
+    grid-template-columns: 2fr  5fr;
+    column-gap: 15px;
+}
 input[type="radio"],
 input[type="checkbox"] {
     margin-right: 10px;
 }
 
 input[type="text"],
-input[type="number"],
-textarea,
-select {
+textarea {
     width: calc(100% - 24px);
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
     background-color: #f9f9f9;
     transition: border-color 0.3s;
+}
+select,input[type="number"]{
+    width:fit-content;
+    height:fit-content;
+    padding: 10px;
+    margin-left: 20px;
+    text-align: center;
+    vertical-align: middle;
+    color: inherit;
+    line-height: normal;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
 }
 
 input[type="text"]:focus,
