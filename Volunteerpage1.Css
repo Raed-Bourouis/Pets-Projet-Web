@@ -1,0 +1,179 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    background-color: rgba(249, 249, 249, 0.8); 
+    margin: 0;
+    padding: 0;
+}
+/* Header styles */
+nav {
+    background: linear-gradient(135deg, #2E8540, #556B2F) ; 
+    top: 0; left: 0; right: 0; height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav:hover {
+    background: linear-gradient(135deg, #25703B, #35603A);
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-separator {
+    border-right: 2px solid #fff;
+    height: 50px;
+    margin: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+nav ul li:last-child a {
+    padding: 10px 20px;
+    background-color: #2E8540;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+nav ul li:last-child a:hover {
+    background-color: #25703B;
+}
+nav ul li a:hover {
+    color: #C0C0C0;
+}
+/*end of header*/
+
+h1 {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5em;
+    color: #2E8540;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 60px);
+    margin-top: 20px;
+}
+
+.opportunities {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.Volunteer, .veterinarian {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Volunteer:hover, .veterinarian:hover {
+    transform: translateY(-5px);
+}
+
+.Volunteer img, .veterinarian img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.Volunteer img:hover, .veterinarian img:hover {
+    transform: scale(1.05);
+}
+
+.Volunteer h3, .veterinarian h3 {
+    color: #2E8540;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.Volunteer p, .veterinarian p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: #2E8540;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #556B2F;
+}
+/* Email section */
+.e-mail {
+    text-align: center;
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.e-mail a {
+    color: #2E8540;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.e-mail a:hover {
+    color: #556B2F;
+}
+
