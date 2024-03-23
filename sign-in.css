@@ -1,68 +1,136 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
+body{
     padding: 0;
+    margin:0;
 }
-main{
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+nav {
+    background: linear-gradient(135deg, #2E8540, #556B2F) ; 
+    top: 0; left: 0; right: 0; height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav:hover {
+    background: linear-gradient(135deg, #25703B, #35603A);
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-separator {
+    border-right: 2px solid #fff;
+    height: 50px;
+    margin: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+nav ul li:last-child a {
+    padding: 10px 20px;
+    background-color: #2E8540;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+nav ul li:last-child a:hover {
+    background-color: #25703B;
+}
+nav ul li a:hover {
+    color: #C0C0C0;
+}
+/*------------------------*/
+
+
+
+
+
+
+#main{
     display: flex;
     flex-flow: row wrap;
-
+    justify-content: space-around;
     align-items: center;
+}
+
+#sectionright{
+    border: #25703B solid 2px;
+    border-radius: 2vw;
+    width:50vw;
+    height:60vh;
+    background: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 4vh;
     
-}
-section {
-    padding: 50px;
-    text-align: center;
-}
-.right{
-    width: 50%;
-    background-color: #F5FAFE;
-    border-radius: 15px;
-    box-shadow: 4px 6px 8px rgba(38, 100, 136, 0.384);
-}
-.left{
-    width: 30%;
-}
-section h1 {
-    margin-bottom: 30px;
+
 }
 
-form {
-    width: 50%;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input,textarea {
-    width: 100%;
+input{
+    width: calc(100% - 22px);
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
 }
 
-textarea {
-    resize: none;
+
+/*footer*/
+footer{
+    background: linear-gradient(135deg, #2E8540, #556B2F) ; 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    font-family: "Kavivanar";
+    color: #fff;
+    align-items: center;
+
 }
 
-button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+footer div:nth-child(3){
+    padding-right: 2vw;
 }
 
-.contact-info {
-    margin-top: 30px;
-}
+/*----------------------------*/
