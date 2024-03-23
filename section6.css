@@ -25,7 +25,7 @@ html, body {
 
 /*Header style*/
 nav {
-    margin-top: 0.1vw;
+    margin-top: 0.0;
     background-color: #556B2F;
     height: 15vh;
     display: grid;
@@ -42,6 +42,7 @@ nav ul {
     text-align: center;
     padding-top: 3.5vh;
     font-family: "Kavivanar";
+    font-size: 2vh;
     color: #fff;
 
 
@@ -60,7 +61,7 @@ nav ul {
 /*Volunteers photo*/
 
 #Volunteers-photo{
-    margin-top: 0.5vh;
+    margin-top: 0.0;
 }
 
 #Volunteers-photo img{
