@@ -5,11 +5,10 @@ body {
 }
 main{
     display: flex;
-    width: 80vw;
-    height: 100vh;
+    flex-flow: row wrap;
+
     align-items: center;
-    background-color: #E5E5E5;
-    padding: 10%;
+    
 }
 section {
     padding: 50px;

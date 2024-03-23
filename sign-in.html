@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="sign-in.css">
-    
+
 </head>
+
 <body>
 
     <main>
-        <section class="contact-section left">
-            <h1>Contact Us</h1>
-            <p>Feel free to reach out to us with any questions or inquiries.</p>
-            <br>
-            <p><b>Contact Information</b></p>
-            <p>Phone: +216 12 345 678</p>
-            <p>Email: contact@gmail.com</p>
-            <p>Address: 123 Avenue Habib Bourguiba</p>
-        </section>
-        <section class="contact-section right">
-            <div class="container">
-                
+    <section class="contact-section left">
+        <img src="423903814_443804231314202_8705268101771052883_n.png" alt="">
+    </section>
+    <section class="contact-section right">
+        <div class="container">
+            <form action="#">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
 
-                <form action="#">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject:</label>
-                        <input type="text" id="subject" name="subject">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
 
-                
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 
-    <footer>
-        </footer>
 </body>
+
 </html>
