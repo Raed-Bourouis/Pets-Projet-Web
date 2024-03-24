@@ -43,7 +43,9 @@ a:visited, a:link{
 #signup-hyperlink:hover{
     border-radius: 2vw;
     border: #25703B 2px solid;  
-    background-color: linea
+    background: #ddd;
+    color: #25703B;
+
 
 }
 
