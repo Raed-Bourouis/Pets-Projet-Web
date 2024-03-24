@@ -1,6 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(BackgroundImage.jpg);
+    font-family: 'Poppins',sans-serif;
     background-color: rgba(249, 249, 249, 0.8); 
     margin: 0;
     padding: 0;
@@ -74,7 +73,22 @@ nav ul li a:hover {
     color: #C0C0C0;
 }
 /*end of header*/
-
+/* background image */
+.bck-img {
+    
+    background-image: url('BackgroundImage.jpg');
+    /* Adjust background size and position */
+    background-size: cover;
+    background-position: center;
+    /* Set fixed positioning to prevent scrolling */
+    position: fixed;
+    filter: blur(8px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure background is behind other elements */
+}
 .container {
     max-width: 800px;
     margin: 20px auto;
@@ -82,7 +96,7 @@ nav ul li a:hover {
     border: 1px solid #ccc;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 #logo2 {
@@ -123,7 +137,12 @@ input[type="tel"] {
     border-radius: 4px;
     background-color: #f9f9f9;
 }
-
+input:focus,
+select:focus {
+    border-color: #257042;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
 .address {
     display: flex;
     flex-direction: column;
@@ -179,4 +198,18 @@ button:hover {
 
 button.reset:hover {
     background-color: #913838; 
+}
+/*footer*/
+footer {
+    background: linear-gradient(135deg, #2E8540, #556B2F);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-family: "Kavivanar";
+    color: #fff;
+    align-items: center;
+}
+
+footer div:nth-child(3) {
+    padding-right: 2vw;
 }

@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoption Application</title>
     <link rel="stylesheet" href="sect7.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ApLEyOf1yIW6CWU1VfAgcR/zOqQz1CgZxA7sH2gIrU+05feFv/wt2ADeYO9n/pkHEimDQHBddvtQx7dXEnKByA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script defer src="sect7.js"></script>
 </head>
 <body>
     <!--header-->
@@ -26,11 +29,12 @@
         </nav>
     </div>
     <!--header-->
+    <div class="bck-img"> </div>
     <div class="container">
         <img id="logo2" src="LogoLArge.png" alt="Large Logo">
         <h1 id="title">Adoption Application</h1>
         <p id="note">Complete this application to start the adoption process. Applications submitted by minors will not be considered valid.</p>
-        <form name="appform" action="sect7part2.html" onsubmit="return ValiderleForm()" method="post"> <!--explain the onsubmit next meet-->
+        <form name="appform" action="sect7part2.html" method="post"> <!--explain the onsubmit next meet-->
             <label for="Petname">Name Of the Pet(s) You're Interested in Adopting: *</label>
             <input type="text" id="Petname" name="Petname" placeholder="Kiki, Micha..">
             <label for="name">Your Name: *</label>
@@ -75,9 +79,28 @@
             </div>
             <div class="btn-container">
                 <button type="reset" class="reset">Reset</button>
-                <button type="submit" onclick="validateform()">Next</button>
+                <button type="submit" >Next</button>
             </div>
         </form>
+           
     </div>
+     <!-- Footer -->
+     <footer>
+        <div>
+            <img id="logo" src="logoweblight.png" alt="Logo">
+        </div>
+        <div>
+            <p>Addresses:</p>
+            <p>Denden, Manouba</p>
+            <p>Moncef Bey, Tunis</p>
+        </div>
+        <div>
+            <p>Email: pets@gmail.com</p>
+            <p>Tel: +216 12 898 757</p>
+            <p>Fax: +216 62 69 26</p>
+            <p>RIB: 156549855955558598</p>
+        </div>
+    </footer>
+    <!-- End of Footer -->
 </body>
 </html>
