@@ -82,21 +82,6 @@ input{
     border-radius: 4px;
     background-color: #f9f9f9;
 }
-
-.password-toggle {
-    /* Style the button visually (optional) */
-    width: 20px;
-    height: 20px;
-    background-color: #ddd;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .password-toggle:hover {
-    background-color: #ccc;
-  }
   
 
 
