@@ -1,51 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank You for Your Submission</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    }
-    
-    .container {
-        max-width: 800px;
-        margin: 50px auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-    h1 {
-        color: #333;
-    }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 1s ease-out; /* Add fade-in animation */
+        }
 
-    p {
-        color: #666;
-        margin-bottom: 20px;
-    }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .contact-link {
-        color: #007bff;
-        text-decoration: none;
-    }
+        h1 {
+            color: #333;
+        }
 
-    .contact-link:hover {
-        text-decoration: underline;
-    }
-</style>
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
 <body>
-<div class="container">
-    <h1>Thank You for Your Submission!</h1>
-    <p>We appreciate your interest. We will review your submission and get back to you as soon as possible.</p>
-    <p>If you have any urgent questions or concerns, please feel free to <a href="mailto:info@example.com" class="contact-link">contact us</a>.</p>
-</div>
+    <div class="container">
+       
+        <h1>Thank You for Your Submission!</h1>
+        <p>We appreciate your interest. We will review your submission and get back to you as soon as possible.</p>
+        <p>If you have any urgent questions or concerns, please feel free to <a href="mailto:info@example.com" class="contact-link">contact us</a>.</p>
+    
+    </div>
 </body>
 </html>

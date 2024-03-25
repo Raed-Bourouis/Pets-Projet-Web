@@ -101,6 +101,7 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
+    align-items: center;
     border: 1px solid #ccc;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -158,7 +159,7 @@ label {
 
 .select label ,.radio label{
     flex: 3; /* Takes 3/4 of the available space */
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .select select {
@@ -170,6 +171,8 @@ label {
 }
 .radio input {
     flex:1;
+    margin-left: 0;
+    margin-right: 0;
     height:auto;
     flex-wrap: wrap;
 }
@@ -194,6 +197,8 @@ label {
 .input input[type="number"]:focus,
 .select select:focus {
     outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0  0 8px rgba(102,175,233,.6);
+
 }
 
 .input.success input[type="number"],
@@ -222,7 +227,10 @@ textarea{
 }
 
 
-
+input,label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 .input input:focus,.textarea textarea:focus, .button:focus {
     border-color: #257042;
@@ -293,7 +301,6 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    font-family: "Kavivanar";
     color: #fff;
     align-items: center;
 }

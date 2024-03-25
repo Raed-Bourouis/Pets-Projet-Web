@@ -1,19 +1,32 @@
 const form = document.getElementById('form');
 const inputs = document.querySelectorAll('.input input');
 const textareas = document.querySelectorAll('.textarea textarea');
-const radios = document.querySelectorAll('.radio input[type="radio"]');
+const radios = document.querySelectorAll('.radio input');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-    validateInputs();
+    // Validate inputs
+    if (validateInputs()) {
+        const submitButton = form.querySelector('button[type="submit"]');
+        submitButton.innerText = 'Submitting...';
+        // Perform form submission after a brief delay to ensure the "Submitting..." message is displayed
+        setTimeout(() => {
+            form.submit();
+            window.location.href='thankyou.html'
+        }, 300);
+    }
+
 });
 
 const validateInputs = () => {
-    validateInputsOrTextarea(inputs);
-    validateInputsOrTextarea(textareas);
-    validateRadios();
-    validateCheckboxes();
+    let isValid = true;
+    isValid = validateInputsOrTextarea(inputs) && isValid;
+    isValid = validateInputsOrTextarea(textareas) && isValid;
+    isValid = validateRadios() && isValid;
+    isValid = validateMustBeAYes() && isValid;
+    return isValid;
 };
+
 const validateInputsOrTextarea = elements => {
     for (let i = 0; i < elements.length; i++) {
         const parentElement = elements[i].closest('.input') || elements[i].closest('.textarea');
@@ -31,7 +44,31 @@ const validateInputsOrTextarea = elements => {
     toggleChildrenAges();
 };
 
+const validateRadios = () => {
+    let checkedRadio = '';
+    for (let i = 0; i < elements.length; i++)  {
+        if (radios[i].checked) {
+            checkedRadio = radio.id;
+            break;
+        }
+    }
+    
+    if (!checkedRadio) return showCustomError('Please select an option');
+}
 
+// Show custom error message
+const showCustomError = msg => {
+    const errorSummary = document.getElementsByClassName('.error_select');
+    errorSummary.innerHTML = `<p>${msg}</p>`;
+    errorSummary.classList.add('govuk-error-summary--show');
+};
+
+// Hide all errors from summary box
+const hideAllErrors = () => {
+    const errorSummary = document.getElementsByClassName('.error_select');
+    errorSummary.innerHTML = '';
+    errorSummary.classList.remove('govuk-error-summary--show');
+};
 
 
 const showError = element => {
@@ -53,13 +90,21 @@ const showSuccess = element => {
 // Function to ensure that user verifies information
 function mustBeAYes(form) {
     var x = form.elements["correct-yes"].checked;
+    var y= form.elements["adult-yes"].checked;
     if (!x) {
         alert("You must verify that all of the information you have provided is correct");
         var error = document.getElementById("error_yes");
         error.innerHTML = "<p>* You did not confirm your information</p>";
         error.style.color = "red";
         return false;
-    } else {
+    } else if(!y) {
+        alert("Only Adults.");
+        var error = document.getElementById("error_yes");
+        error.innerHTML = "<p>* You did not confirm your information</p>";
+        error.style.color = "red";
+        return false;
+    }
+    else{
         return true;
     }
 }

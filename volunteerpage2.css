@@ -1,9 +1,11 @@
+/* Updated Header Styles with Gradient Background */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
 }
+
 /* Header Styles */
 nav {
     background: linear-gradient(135deg, #2E8540, #556B2F); 
@@ -17,8 +19,14 @@ nav {
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in-out;
+    /* Adding a gradient border */
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 0 0 2px 0;
+    border-image-source: linear-gradient(135deg, #2E8540, #556B2F); 
 }
 
+/* Hover Effect on Header */
 nav:hover {
     background: linear-gradient(135deg, #25703B, #35603A);
 }
@@ -82,7 +90,7 @@ nav ul li a:hover {
 form {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #fff;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -117,17 +125,18 @@ input[type="checkbox"] {
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background: linear-gradient(135deg, #45a049, #4CAF50);
 }
 
 fieldset {
@@ -147,4 +156,19 @@ fieldset div label {
 
 #otherSpecifyInput {
     margin-left: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #2E8540, #556B2F); 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-family: "Kavivanar";
+    color: #fff;
+    align-items: center;
+}
+
+footer div:nth-child(3) {
+    padding-right: 2vw;
 }
