@@ -31,22 +31,28 @@
                 <label for="fullName">1. Full Name:</label>
                 <input type="text" id="fullName" name="fullName" required>
             </div>
+            <div class="error"></div>
             <div>
                 <label for="email">2. Email Address:</label>
                 <input type="email" id="email" name="email" required>
             </div>
+            <div class="error"></div>
+
             <div>
                 <label for="phone">3. Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required>
             </div>
+            <div class="error"></div>
             <div>
                 <label for="address">4. Address:</label>
                 <textarea id="address" name="address" required></textarea>
             </div>
+            <div class="error"></div>
             <div>
                 <label for="age">5. Age:</label>
                 <input type="number" id="age" name="age" min="13" max="100" required>
             </div>
+            <div class="error"></div>
             <div>
                 <label for="legalWork">6. Are you legally allowed to work in our country? (Yes/No)</label>
                 <label>
@@ -56,6 +62,7 @@
                     <input type="radio" id="legalWork_no" name="legalWork" value="no" required> No
                 </label>
             </div>
+            <div class="error"></div>
             <div>
                 <label for="previousVolunteer">7. Have you volunteered at an animal shelter or similar organization before? If yes, please describe your experience.</label>
                 <textarea id="previousVolunteer" name="previousVolunteer"></textarea>
@@ -64,10 +71,12 @@
                 <label for="whyInterested">8. Why are you interested in volunteering at our animal shelter?</label>
                 <textarea id="whyInterested" name="whyInterested" required></textarea>
             </div>
+            <div class="error"></div>
             <div>
                 <label for="availability">9. What days and times are you available to volunteer?</label>
                 <textarea id="availability" name="availability" required></textarea>
             </div>
+            <div class="error"></div>
             <div>
                 <label for="limitationsOrConcerns">10. Do you have any physical limitations or health concerns we should be aware of?</label>
                 <textarea id="limitationsOrConcerns" name="limitationsOrConcerns"></textarea>
@@ -81,6 +90,7 @@
                     <input type="radio" id="animalAbuseOrNeglect_no" name="animalAbuseOrNeglect" value="no" required> No
                 </label>
             </div>
+            <div class="error-select"></div>
             <div>
                 <label for="experience">12. Do you have any experience working with specific types of animals (e.g., dogs, cats, small animals)? If yes, please specify.</label>
                 <input type="text" id="experience" name="experience">
@@ -93,6 +103,7 @@
                 <label for="skillsOrQualities">14. What skills or qualities do you possess that you think would make you a valuable volunteer at our animal shelter?</label>
                 <textarea id="skillsOrQualities" name="skillsOrQualities" required></textarea>
             </div>
+            <div class="error"></div>
             <div>
                 <label for="commitment">15. Are you interested in a long-term volunteer commitment or a short-term project?</label>
                 <input type="text" id="commitment" name="commitment">

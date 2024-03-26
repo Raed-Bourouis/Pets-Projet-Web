@@ -4,57 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You for Your Submission</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            animation: fadeIn 1s ease-out; /* Add fade-in animation */
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .contact-link {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .contact-link:hover {
-            text-decoration: underline;
-        }
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="thankyou.css">
 </head>
 <body>
+      <!-- Header -->
+     
+      <header>
+        <nav>
+            <div>
+                <img id="logo" src="logoweblight.png" alt="Logo">
+            </div>
+            <div id="nav-list">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Market</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Header -->
+    <div class="bck-img"></div>
+    <!-- Main Content -->
     <div class="container">
        
         <h1>Thank You for Your Submission!</h1>
@@ -62,5 +37,23 @@
         <p>If you have any urgent questions or concerns, please feel free to <a href="mailto:info@example.com" class="contact-link">contact us</a>.</p>
     
     </div>
+     <!-- Footer -->
+     <footer>
+        <div>
+            <img id="logo" src="logoweblight.png" alt="Logo">
+        </div>
+        <div>
+            <p>Addresses:</p>
+            <p>Denden, Manouba</p>
+            <p>Moncef Bey, Tunis</p>
+        </div>
+        <div>
+            <p>Email: pets@gmail.com</p>
+            <p>Tel: +216 12 898 757</p>
+            <p>Fax: +216 62 69 26</p>
+            <p>RIB: 156549855955558598</p>
+        </div>
+    </footer>
+    <!-- End of Footer -->
 </body>
 </html>

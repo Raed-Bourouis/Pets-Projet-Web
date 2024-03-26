@@ -80,22 +80,21 @@ nav ul li:last-child a:hover {
 nav ul li a:hover {
     color: #C0C0C0;
 }
-/* background image */
+
+/* Background Image */
 .bck-img {
-    
     background-image: url('BackgroundImage.jpg');
-    /* Adjust background size and position */
     background-size: cover;
     background-position: center;
-    /* Set fixed positioning to prevent scrolling */
     position: fixed;
     filter: blur(8px);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensure background is behind other elements */
+    z-index: -1; /* Place it behind any content so it doesn't show over anything else */
 }
+
 /* Container Styles */
 .container {
     max-width: 800px;
@@ -122,13 +121,21 @@ nav ul li a:hover {
 }
 
 .section-title {
-
     text-align: left;
     font-style: oblique;
     font-size: large;
 }
+hr{
+    width:50%;
+    text-align:left;
+    margin-left:0;
+    margin-top:15px;
+}
 
 /* Form Styles */
+.required{
+    color: red;
+}
 form {
     margin-top: 60px;
     display: flex;
@@ -137,88 +144,73 @@ form {
     padding: 20px;
 }
 
-.input ,
+.input,
 .textarea {
     display: flex;
     flex-direction: column;
-   
 }
-.radio , .checkbox {
-    display: inline-block;
+
+.checkbox {
+    display: contents;
     width: auto;
     vertical-align: middle;
 }
+
 label {
     cursor: pointer;
 }
 
-.select {
-    display: flex;
-    align-items: center;
-}
-
-.select label ,.radio label{
-    flex: 3; /* Takes 3/4 of the available space */
-    margin-right: 10px;
-}
-
-.select select {
-    flex: 1; /* Takes 1/4 of the available space */
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    padding: 10px;
-    width: 100%;
-}
-.radio input {
-    flex:1;
-    margin-left: 0;
-    margin-right: 0;
-    height:auto;
-    flex-wrap: wrap;
-}
+.select,
 .radio {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-.select label {
-    margin-right: 10px; 
+.select label,
+.radio label {
+    flex: 3;
+    margin-right: 10px;
+    flex-wrap: nowrap;
 }
 
-.input input[type="number"],
 .select select {
+    flex: 1;
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     padding: 10px;
     width: 100%;
+}
+
+.radio input {
+    flex: 1;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+}
+
+.input input[type="number"] {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+}
+.radio label[for="adult"] {
+    white-space: nowrap;
+    margin-right: 50px;
+}
+.radio-label {
+    margin-right: 25px; 
+    margin-left: 10px;
 }
 
 .input input[type="number"]:focus,
 .select select:focus {
     outline: 0;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0  0 8px rgba(102,175,233,.6);
-
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
 }
 
-.input.success input[type="number"],
-.select.success select {
-    border-color: #09c372;
-}
-
-.input.error input[type="number"],
-.select.error select {
-    border-color: #ff3860;
-}
-
-.input .error,
-.select .error {
-    color: #ff3860;
-    font-size: 9px;
-    height: 13px;
-}
 input[type="text"],
-textarea{
+textarea {
     width: calc(100% - 22px);
     padding: 10px;
     border: 1px solid #ddd;
@@ -226,18 +218,21 @@ textarea{
     background-color: #f9f9f9;
 }
 
-
-input,label{
+input,
+label {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.input input:focus,.textarea textarea:focus, .button:focus {
+.input input:focus,
+.textarea textarea:focus,
+.button:focus {
     border-color: #257042;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     outline: none;
 }
-/*   javascript     */
+
+/* JavaScript */
 .input.success input,
 .textarea.success textarea {
     border-color: #09c372;
@@ -251,12 +246,33 @@ input,label{
 .input .error,
 .textarea .error {
     color: #ff3860;
-    font-size: 9px;
+    font-size: 14px;
+    margin-top: 5px;
     height: 13px;
 }
-/* end of js */
 
+.radio .error_select {
+    color: #ff3860;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
 
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #2E8540, #556B2F);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+}
+
+footer div:nth-child(3) {
+    padding-right: 2vw;
+}
+
+/* Buttons */
 .btn-container {
     text-align: center;
     margin-top: 40px;
@@ -289,24 +305,14 @@ button.reset:hover {
     background-color: #BF3A3A;
 }
 
-#children-ages-label {
+#children-ages-label{
     display: none;
 }
 
-
-
-/*footer*/
-footer {
-    background: linear-gradient(135deg, #2E8540, #556B2F);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    color: #fff;
-    align-items: center;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
 }
 
-footer div:nth-child(3) {
-    padding-right: 2vw;
-}
-
-   
