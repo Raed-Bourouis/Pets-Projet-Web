@@ -130,7 +130,7 @@ input {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],select {
     width: calc(100% - 22px);
     padding: 10px;
     border: 1px solid #ddd;
@@ -144,47 +144,26 @@ select:focus {
     outline: none;
 }
 .city {
-    display: flex;
-    align-items: center; 
-    margin-bottom: 20px;
-}
-
-.address {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: auto max-content auto; 
+    gap: 10px; 
     align-items: center;
+    margin-bottom: 20px;
 }
-
-/* Rest of your CSS remains unchanged */
-
-
-#State,
-.city input {
-    flex: 1;
-    width: auto;
-    height: 100%; 
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease;
-}
-
-#State:hover,
-.city input:hover {
-    border-color: #aaa;
+#state{
+    width: 150px;
+    transform: translateY(-9px);
 }
 
 
-
-
+#Pcode {
+    flex: 1; 
+}
 
 /******* javascript ********/
 /* Apply error animation to elements with the class 'error' */
 
-.input-control .error{
+.input-control .error,.selected .error{
     animation: errorAnimation 0.5s ease forwards;
     color: #ff3860;
     font-size: 14px;
@@ -205,26 +184,26 @@ select:focus {
 }
 
 button {
-    background-color: #4CAF50; 
+    background-color: #2E8540;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button.reset {
     background-color: #f44336;
-    margin-right: 10px;
 }
 
 button:hover {
-    background-color: #556B2F; 
+    background-color: #25703B;
 }
 
 button.reset:hover {
-    background-color: #913838; 
+    background-color: #BF3A3A;
 }
 /*footer*/
 footer {

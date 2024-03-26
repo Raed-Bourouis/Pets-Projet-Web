@@ -7,26 +7,19 @@ body {
 }
 
 /* Header Styles */
-nav {
-    background: linear-gradient(135deg, #2E8540, #556B2F); 
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
+header {
+    background: linear-gradient(135deg, #2E8540, #556B2F);
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in-out;
     border: 2px solid;
     border-image-slice: 1;
     border-width: 0 0 2px 0;
-    border-image-source: linear-gradient(135deg, #2E8540, #556B2F); 
+    border-image-source: linear-gradient(135deg, #2E8540, #556B2F);
 }
 
 /* Hover Effect on Header */
-nav:hover {
+header:hover {
     background: linear-gradient(135deg, #25703B, #35603A);
 }
 
@@ -41,16 +34,12 @@ nav:hover {
     transform: scale(1.05);
 }
 
-.nav-separator {
-    border-right: 2px solid #fff;
-    height: 50px;
-    margin: 0 20px;
-}
-
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -86,9 +75,11 @@ nav ul li a:hover {
 }
 /* background image */
 .bck-img {
+    
     background-image: url('BackgroundImage.jpg');
     background-size: cover;
     background-position: center;
+    /* Set fixed positioning to prevent scrolling */
     position: fixed;
     filter: blur(8px);
     top: 0;
@@ -110,33 +101,41 @@ form {
 legend {
     font-size: 24px;
     font-weight: bold;
-    color:#556B2F ;
     margin-bottom: 20px;
 }
 
-
-
-label,
-input {
-    display: block;
-    margin-bottom: 10px;
-    color: #333;
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
+fieldset div {
+    margin-bottom: 15px;
+}
+
+fieldset div label {
+    font-weight: bold;
+}
+
+textarea,
 input[type="text"],
 input[type="email"],
-input[type="tel"]{
+input[type="tel"],
+input[type="number"] {
     width: calc(100% - 22px);
     padding: 10px;
-    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
 }
-input:focus{
-    border-color: #257042;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    outline: none;
+
+textarea {
+    resize: vertical;
 }
+
 input[type="checkbox"] {
     margin-right: 5px;
 }
@@ -156,28 +155,9 @@ input[type="submit"]:hover {
     background: linear-gradient(135deg, #45a049, #4CAF50);
 }
 
-fieldset {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-fieldset div {
-    margin-bottom: 15px;
-}
-
-fieldset div label {
-    font-weight: normal;
-}
-
-#otherSpecifyInput {
-    margin-left: 5px;
-}
-
 /* Footer Styles */
 footer {
-    background: linear-gradient(135deg, #2E8540, #556B2F); 
+    background: linear-gradient(135deg, #2E8540, #556B2F);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
