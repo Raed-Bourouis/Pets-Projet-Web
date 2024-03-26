@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sect2-admin.css">
     <title>adoption</title>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -28,45 +30,158 @@
     <!-- Title and btn -->
     <div id="section1">
         <div class="adoptablepets">Adoptable Pets</div>
-        <button id="btn1">Add +</button>
+        <button id="btn1">Add</button>
     </div>
 
     <!-- traitSimple -->
     <div class="traitSimple"></div>
-<div class="container">
-    <!-- block1 -->
-    <p id="date">-24 Nov. 2023-</p>
-    <div class="block">
-        <div class="left"><img src="max.png" alt=""></div>
-        <div class="right">
-            <h1>MAX</h1>
-            <h4>3-Month puff ball</h4>
-            <h5>Description :</h5>
-            <p>Max is a bundle of energy and enthusiasm, always ready for adventure. 
-                Whether it's chasing balls in the backyard or going for long hikes in the great outdoors, Max is your go-to buddy for all things active. 
-                His playful demeanor and boundless spirit make him the perfect companion for anyone with an active lifestyle. With Max by your side,
-                 every day is an opportunity for fun and excitement.</p>
-            <button class="adopt">Adopt</button>
+    <div class="container">
+        <!-- block1 -->
+        <div id="block1">
+            <p class="date">-24 Nov. 2023-</p>
+            <div class="block">
+                <div class="left">
+                    <img src="max.png" alt="">
+                    <div class="circles">
+                        <div class="circle" onclick="changerImage('max.png',this)"></div>
+                        <div class="circle" onclick="changerImage('max2.jpg',this)"></div>
+                        <div class="circle" onclick="changerImage('max3.jpeg',this)"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>MAX</h1>
+                    <h4>3-Month puff ball</h4>
+                    <h5>Description :</h5>
+                    <p>Max is a bundle of energy and enthusiasm, always ready for adventure.
+                        Whether it's chasing balls in the backyard or going for long hikes in the great outdoors, Max is
+                        your go-to buddy for all things active.
+                        His playful demeanor and boundless spirit make him the perfect companion for anyone with an
+                        active lifestyle. With Max by your side,
+                        every day is an opportunity for fun and excitement.</p>
+                    <div class="divForBtn">
+                        <button onclick="ToDelete(this)" class="delete">Delete</button>
+                        <button class="modify">Modify</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- trait hor -->
+            <div class="traitHor"></div>
         </div>
+        <!-- block2 -->
+        <div id="block2">
+            <p class="date">-15 Dec. 2023-</p>
+            <div class="block">
+                <div class="left">
+                    <img src="luna.png" alt="">
+                    <div class="circles">
+                        <div class="circle" onclick="changerImage('luna.png',this)"></div>
+                        <div class="circle" onclick="changerImage('luna2.png',this)"></div>
+                        <div class="circle" onclick="changerImage('luna3.jpg',this)"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>LUNA</h1>
+                    <h4>2-Month puff ball</h4>
+                    <h5>Description :</h5>
+                    <p>Introducing Luna, the epitome of feline grace and charm. With her sleek black fur and mesmerizing
+                        green eyes, Luna is a true beauty. But don't let her elegance fool you—this kitty has a playful
+                        side too! She enjoys chasing feather toys and lounging in sunny spots by the window. Luna is
+                        also incredibly affectionate, always seeking out head scratches and chin rubs from her human
+                        companions. If you're searching for a sophisticated yet sweet addition to your family, look no
+                        further than Luna. She'll enchant you with her purrs and steal your heart with her gentle
+                        demeanor.</p>
+                    <div class="divForBtn">
+                        <button onclick="ToDelete(this)" class="delete">Delete</button>
+                        <button class="modify">Modify</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- trait hor -->
+            <div class="traitHor"></div>
+        </div>
+        <!-- block3 -->
+        <div id="block3">
+            <p class="date">-06 Jui. 2023-</p>
+            <div class="block">
+                <div class="left">
+                    <img src="bella.png" alt="">
+                    <div class="circles">
+                        <div class="circle" onclick="changerImage('bella.png',this)"></div>
+                        <div class="circle" onclick="changerImage('bella2.jpg',this)"></div>
+                        <div class="circle" onclick="changerImage('bella3.jpg',this)"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>BELLA</h1>
+                    <h4>8-Month puff ball</h4>
+                    <h5>Description :</h5>
+                    <p>Bella is the epitome of sweetness and gentleness, with a heart as big as her fluffy golden coat.
+                        She thrives on love and affection, always eager to snuggle up on the couch for a cozy cuddle
+                        session. Bella's loyalty knows no bounds, and she'll stick by your side through thick and thin.
+                        Whether you're looking for a faithful friend to share your quiet moments with or a loving
+                        presence to greet you at the end of a long day,
+                        Bella is the perfect addition to your family.</p>
+                    <div class="divForBtn">
+                        <button onclick="ToDelete(this)" class="delete">Delete</button>
+                        <button class="modify">Modify</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- trait hor -->
+            <div class="traitHor"></div>
+        </div>
+        <!-- block4 -->
+        <div id="block4">
+            <p class="date">-23 Jan. 2024-</p>
+            <div class="block">
+                <div class="left">
+                    <img src="sunny1.png" alt="">
+                    <div class="circles">
+                        <div class="circle" onclick="changerImage('sunny1.png',this)"></div>
+                        <div class="circle" onclick="changerImage('image2.jpg',this)"></div>
+                        <div class="circle" onclick="changerImage('image3.jpg',this)"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>SUNNY</h1>
+                    <h4>1-Month</h4>
+                    <h5>Description :</h5>
+                    <p>Meet Sunny, the sunshine of our aviary! This vibrant yellow canary is a bundle of energy and joy,
+                        spreading cheer wherever he goes. With his melodious chirps and graceful flight, Sunny is a
+                        delight to behold. He loves perching on your shoulder and singing along to your favorite tunes.
+                        Sunny is also a curious explorer, always eager to investigate new toys and treats. Whether
+                        you're a seasoned bird enthusiast or a first-time owner, Sunny is sure to brighten your days
+                        with his chirpy personality and warm presence.
+                        Adopt Sunny today and let your home resonate with the song of happiness!</p>
+                    <div class="divForBtn">
+                        <button onclick="ToDelete(this)" class="delete">Delete</button>
+                        <button class="modify">Modify</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-
-    <!-- trait hor -->
-    <div class="traitHor"></div>
-
-    <div class="block2"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
 
     <br><br>
     <!-- Footer -->
@@ -86,5 +201,8 @@
             <p>RIB: 156549855955558598</p>
         </div>
     </footer>
+
+    <script src="sect2-admin.js"></script>
 </body>
+
 </html>
