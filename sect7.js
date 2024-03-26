@@ -1,5 +1,6 @@
 // Get all input elements within the form
-const inputs = document.querySelectorAll('input');
+const inputs = document.querySelectorAll('.input-control input');
+const selected=document.querySelector(".city");
 
 // Form submission event listener
 document.forms.appform.addEventListener('submit', e => {
@@ -10,6 +11,14 @@ document.forms.appform.addEventListener('submit', e => {
     }
 });
 
+// Function to show error animation
+const showErrorAnimation = parentElement => {
+    parentElement.classList.add('error');
+    parentElement.classList.add('error-animation'); 
+    setTimeout(() => {
+        parentElement.classList.remove('error-animation'); 
+    }, 500);
+};
 
 
 // Function to validate inputs 
@@ -24,41 +33,23 @@ const validateInputs = elements => {
             isValid = false;
         } else {
             showSuccess(element, parentElement);
-            showSuccessAnimation(parentElement); 
         }
     });
     return isValid;
 };
 
-// Show error
+// Function to show error message
 const showError = (element, parentElement) => {
-    const errorDisplay = parentElement.querySelector('.error');
-
-    errorDisplay.innerText = '* This field is required';
+    const errorMessage = parentElement.querySelector('.error');
+    errorMessage.innerText = '* This field is required';
     parentElement.classList.add('error');
     parentElement.classList.remove('success');
 };
 
-// Show success
+// Function to show success
 const showSuccess = (element, parentElement) => {
-    const errorDisplay = parentElement.querySelector('.error');
-    
-    errorDisplay.innerText = '';
+    const errorMessage = parentElement.querySelector('.error');
+    errorMessage.textContent = '';
     parentElement.classList.add('success');
     parentElement.classList.remove('error');
-};
-// Function to show success animation
-const showSuccessAnimation = element => {
-    element.classList.add('success');
-    setTimeout(() => {
-        element.classList.remove('success');
-    }, 500);
-};
-
-// Function to show error animation
-const showErrorAnimation = element => {
-    element.classList.add('error');
-    setTimeout(() => {
-        element.classList.remove('error');
-    }, 500);
 };
