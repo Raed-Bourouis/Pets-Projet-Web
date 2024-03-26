@@ -25,6 +25,7 @@ button{
 button:hover{
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 
@@ -100,6 +101,7 @@ nav ul li a:hover {
 
 /* intro */
 #presentation{
+    margin-top: 10px;
     font-family: 'Playfair display';
     font-size: 70px;
     border-right: 5px solid rgb(221, 221, 221); 
