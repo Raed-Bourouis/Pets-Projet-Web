@@ -213,3 +213,28 @@ footer {
 footer div:nth-child(3) {
     padding-right: 2vw;
 }
+/* CSS for showing success */
+.input.success {
+    animation: successAnimation 0.5s ease forwards;
+}
+
+/* CSS for showing error */
+.input.error {
+    animation: errorAnimation 0.5s ease forwards;
+}
+
+/* Keyframes for success animation */
+@keyframes successAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Keyframes for error animation */
+@keyframes errorAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
