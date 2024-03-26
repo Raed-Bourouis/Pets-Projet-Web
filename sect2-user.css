@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap');
+@font-face {
+    font-family: 'Gloucester MT Extra Condensed';
+    src: url('chemin/vers/le/fichier/gloucester-mt-extra-condensed.woff2') format('woff2'), /* Format WOFF2 */
+         url('chemin/vers/le/fichier/gloucester-mt-extra-condensed.woff') format('woff'); /* Format WOFF */
+}
+
+body{
+    margin: 0;
+}
+
+/* Header Styles */
+nav {
+    background: linear-gradient(135deg, #2E8540, #556B2F);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav:hover {
+    background: linear-gradient(135deg, #25703B, #35603A);
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-separator {
+    border-right: 2px solid #fff;
+    height: 50px;
+    margin: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+nav ul li:last-child a {
+    padding: 10px 20px;
+    background-color: #2E8540;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+nav ul li:last-child a:hover {
+    background-color: #25703B;
+}
+
+nav ul li a:hover {
+    color: #C0C0C0;
+}
+/* ------------------------------------------------------ */
+
+.container{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+/* titre and button */
+#section1{
+    margin-left: 20%;
+    margin-right: 20%;
+    
+    
+}
+.adoptablepets{
+    font-family: 'Gloucester MT Extra Condensed',sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: xx-large;
+    letter-spacing: 3px;
+}
+
+/* traitSimple */
+.traitSimple{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+    height: 2px;
+    background-color: rgb(221, 220, 220);
+}
+
+
+/* block */
+.block{
+    display: flex;
+    gap: 30px;
+
+}
+.left{
+    flex: 1fr;
+}
+.right{
+    flex: 3fr;
+}
+h1{
+    font-family: 'Playfair Display';
+}
+h4{
+    font-family: 'Arima Madurai';
+}
+h5{
+    font-family: 'Averia Libre';
+    color: #88B04B;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+.date{
+    font-size: large;
+    color: rgb(167, 165, 165);
+}
+.divForBtn{
+    padding-left: 85%;
+}
+.modify{
+    border-radius: 15px;
+    padding: 10px 20px ;
+    background-color: #B14FC1;
+    border-color: #B14FC1;
+}
+.modify:hover{
+    background-color: #4a0055;
+    border-color: #4a0055;
+    cursor: pointer;
+    color: white;
+    transform: scale(1.1);
+    
+}
+.delete{
+    border-radius: 15px;
+    padding: 10px 20px ;
+    background-color: #f34444;
+    border-color: #f34444;
+}
+.delete:hover{
+    background-color: #921b1b;
+    border-color: #921b1b;
+    cursor: pointer;
+    color: white;
+    transform: scale(1.1);
+    
+}
+img{
+    width: 450px;
+    height: 320px;
+}
+.circles {
+    padding-top: 20px;
+    margin-left: 60%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #CCC;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.circle:hover {
+    background-color: #999;
+}
+
+/* traitHor */
+.traitHor{
+    
+    margin-top: 40px;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+}
+
+/*footer*/
+footer {
+    background: linear-gradient(135deg, #2E8540, #556B2F);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+footer div:nth-child(3) {
+    padding-right: 2vw;
+}

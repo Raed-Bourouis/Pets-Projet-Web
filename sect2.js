@@ -20,7 +20,7 @@ function changerImage(link,elem){
     var parentIm=elem.parentNode.parentNode
     var imElem=parentIm.querySelector('img')
     imElem.src=link
-    imElem.style='width: 450px; height: 350px ; border-radius: 23px'
+    imElem.style='width: 450px; height: 320px ; border-radius: 23px'
 
 
 }
