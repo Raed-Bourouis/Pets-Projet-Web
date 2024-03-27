@@ -99,6 +99,9 @@ nav ul li a:hover {
 }
 
 /* Container Styles */
+.req{
+    color:red
+}
 form {
     max-width: 800px;
     margin: 20px auto;
@@ -126,6 +129,10 @@ textarea{
     box-sizing: border-box;
     transition: border-color 0.3s;
 }
+input[type="radio"]{
+ transform: scale(1.5);
+ margin-top: 15px;
+}
 
 input:focus,
 textarea:focus {
@@ -151,6 +158,9 @@ input[type="submit"]:hover {
 .label-questions{
     font-weight: bold;
     color: #556B2F;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 100px;
 }
 fieldset {
     border: 1px solid #ccc;
@@ -178,6 +188,15 @@ footer {
 footer div:nth-child(3) {
     padding-right: 2vw;
 }
+/* JavaScript */
+.required.success input {
+    border-color: #09c372;
+}
+
+.required.error input{
+    border-color: #ff3860;
+}
+
 
 /* Error animation */
 @keyframes errorAnimation {

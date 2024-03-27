@@ -32,48 +32,54 @@
         <form id="Vform">
         <fieldset>
             <legend>Volunteer Questionnaire</legend>
-            <div class="input">
-                <label for="fullName" class="label-questions">1. Full Name:</label>
-                <input type="text" id="fullName" name="fullName" class="required" >
+            <div >
+                <label for="fullName"class="label-questions">1. Full Name:<span class="req">*</span></label>
+                <input type="text" id="fullName" name="fullName" class="required">
+                <div class="error"></div>
             </div>
      
-            <div class="input">
-                <label for="email"class="label-questions">2. Email Address:</label>
-                <input type="text" id="email" name="email" >
+            <div >
+                <label for="email"class="label-questions">2. Email Address:<span class="req">*</span></label>
+                <input type="text" id="email" name="email" class="required">
+                <div class="error"></div>
+
             </div>
      
 
-            <div class="input" id="phonenum">
-                <label for="phone"class="label-questions">3. Phone Number:</label>
-                <input type="tel" id="phone" name="phone" >
+            <div  id="phonenum">
+                <label for="phone"class="label-questions">3. Phone Number:<span class="req">*</span></label>
+                <input type="text" id="phone" name="phone" class="required">
                 <div class="error"></div>
             </div>
      
             <div class="textarea">
-                <label for="address"class="label-questions">4. Address:</label>
-                <textarea id="address" name="address" ></textarea>
+                <label for="address"class="label-questions">4. Address:<span class="req">*</span></label>
+                <textarea id="address" name="address" class="required"></textarea>
+                <div class="error"></div>
+
             </div>
      
-            <div class="input" id="ageclient">
-                <label for="age"class="label-questions">5. Age:</label>
-                <input type="number" id="age" name="age" min="13" max="100" >
+            <div  id="ageclient">
+                <label for="age"class="label-questions">5. Age:<span class="req">*</span></label>
+                <input type="number" id="age" name="age"  class="required">
                 <div class="error"></div>
             </div>
      
-            <div class="input">
-                <label for="legalWork" class="label-questions">6. Are you legally allowed to work in our country? (Yes/No)</label>
+            <div class="required-radio">
+                <label for="legalWork" class="label-questions">6. Are you legally allowed to work in our country? (Yes/No)<span class="req">*</span></label>
                 <label>
-                    <input type="radio" id="legalWork_yes" name="legalWork" value="yes" > Yes
+                    <input type="radio" id="legalWork_yes" name="legalWork" value="yes"> Yes
                 </label>
                 <label>
                     <input type="radio" id="legalWork_no" name="legalWork" value="no" > No
                 </label>
+                <div class="error"></div>
+
             </div>
      
             <div class="textarea">
                 <label for="previousVolunteer"class="label-questions">7. Have you volunteered at an animal shelter or similar organization before? If yes, please describe your experience.</label>
                 <textarea id="previousVolunteer" name="previousVolunteer"></textarea>
-                <div class="error"></div>  
             </div>
             <div class="textarea">
                 <label for="whyInterested" class="label-questions">8. Why are you interested in volunteering at our animal shelter?</label>
@@ -81,29 +87,32 @@
             </div>
      
             <div class="textarea">
-                <label for="availability" class="label-questions">9. What days and times are you available to volunteer?</label>
-                <textarea id="availability" name="availability" ></textarea>
+                <label for="availability" class="label-questions">9. What days and times are you available to volunteer?<span class="req">*</span></label>
+                <textarea id="availability" name="availability" class="required"></textarea>
+                <div class="error"></div>
+
             </div>
      
             <div class="textarea">
                 <label for="limitationsOrConcerns" class="label-questions">10. Do you have any physical limitations or health concerns we should be aware of?</label>
                 <textarea id="limitationsOrConcerns" name="limitationsOrConcerns"></textarea>
             </div>
-            <div class="input">
-                <label for="animalAbuseOrNeglect" class="label-questions">11. Have you ever been convicted of animal abuse or neglect? (Yes/No)</label>
+            <div class="required-radio">
+                <label for="animalAbuseOrNeglect" class="label-questions">11. Have you ever been convicted of animal abuse or neglect? (Yes/No)<span class="req">*</span></label>
                 <label>
-                    <input type="radio" id="animalAbuseOrNeglect_yes" name="animalAbuseOrNeglect" value="yes" > Yes
+                    <input type="radio" id="animalAbuseOrNeglect_yes" name="animalAbuseOrNeglect" value="yes"  > Yes
                 </label>
                 <label>
-                    <input type="radio" id="animalAbuseOrNeglect_no" name="animalAbuseOrNeglect" value="no" > No
+                    <input type="radio" id="animalAbuseOrNeglect_no" name="animalAbuseOrNeglect" value="no"  > No
                 </label>
+                <div class="error"></div>
+
             </div>
-            <div class="error-select"></div>
-            <div class="input">
+            <div >
                 <label for="experience" class="label-questions">12. Do you have any experience working with specific types of animals (e.g., dogs, cats, small animals)? If yes, please specify.</label>
                 <input type="text" id="experience" name="experience">
             </div>
-            <div class="input">
+            <div >
                 <label for="interestSpecificTasks" class="label-questions">13. Are you interested in volunteering for specific tasks (e.g., cleaning kennels, walking dogs, socializing with cats)? If yes, please specify.</label>
                 <input type="text" id="interestSpecificTasks" name="interestSpecificTasks">
             </div>
@@ -112,19 +121,19 @@
                 <textarea id="skillsOrQualities" name="skillsOrQualities" ></textarea>
             </div>
      
-            <div class="input">
+            <div >
                 <label for="commitment" class="label-questions">15. Are you interested in a long-term volunteer commitment or a short-term project?</label>
                 <input type="text" id="commitment" name="commitment">
             </div>
-            <div class="input">
+            <div >
                 <label for="leadershipRole"class="label-questions">16. Are you interested in taking on a leadership role within our volunteer program (e.g., team leader, event coordinator)?</label>
                 <input type="text" id="leadershipRole" name="leadershipRole">
             </div>
-            <div class="input">
+            <div >
                 <label for="additionalTraining" class="label-questions">17. Are you interested in participating in additional training or workshops related to animal care or shelter operations?</label>
                 <input type="text" id="additionalTraining" name="additionalTraining">
             </div>
-            <div class="input">
+            <div >
                 <label for="volunteerRole" class="label-questions">18. Please select the type of volunteer role you are interested in:</label>
                 <div class="input-role">
                 <div>
@@ -154,7 +163,7 @@
                 </div>
                 <div>
                     <label for="otherSpecify">
-                        <input type="checkbox" id="otherSpecify" name="volunteerRole[]" value="Other" onclick="other()"> Other (please specify):
+                        <input type="checkbox" id="otherSpecify" name="volunteerRole[]" value="Other" > Other (please specify):
                         <input type="text" id="otherSpecifyInput" name="otherSpecifyInput" disabled>
                     </label>
                 </div>

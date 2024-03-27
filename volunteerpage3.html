@@ -35,38 +35,38 @@
             <legend>Veterinary Volunteer Questionnaire</legend>
             <ol>
                 <li>
-                    <label for="fullName" class="label-questions">Full Name:</label>
+                    <label for="fullName" class="label-questions">Full Name: <span class="req">*</span></label>
                     <input type="text" id="fullName" name="fullName" class="required">
                     <div class="error"></div>
                 </li>
                 <li>
-                    <label for="email" class="label-questions">Email Address:</label>
+                    <label for="email" class="label-questions">Email Address: <span class="req">*</span></label>
                     <input type="text" id="email" name="email" class="required">
                     <div class="error" id="emailError"></div>
                 </li>
                 <li>
-                    <label for="phone" class="label-questions">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" class="required">
+                    <label for="phone" class="label-questions">Phone Number:<span class="req">*</span></label>
+                    <input type="text" id="phone" name="phone" class="required">
                     <div class="error"></div>
                 </li>
                 <li>
-                    <label for="address" class="label-questions">Address:</label>
+                    <label for="address" class="label-questions">Address:<span class="req">*</span></label>
                     <textarea id="address" name="address" class="required"></textarea>
                     <div class="error"></div>
                 </li>
                 <li>
-                    <label for="age" class="label-questions">Age:</label>
+                    <label for="age" class="label-questions">Age:<span class="req">*</span></label>
                     <input type="number" id="age" name="age" class="required">
                     <div class="error"></div>
                 </li>
-                <li>
-                    <label for="legalWork" class="label-questions">Are you licensed to practice veterinary medicine in our country? (Yes/No)</label>
-                    <label><input type="radio" id="legalWork_yes" name="legalWork" value="yes" class="required"> Yes</label>
-                    <label><input type="radio" id="legalWork_no" name="legalWork" value="no" class="required"> No</label>
+                <li  class="required-radio">
+                    <label for="legalWork" class="label-questions">Are you licensed to practice veterinary medicine in our country? (Yes/No) <span class="req">*</span></label>
+                    <label> <input type="radio" id="legalWork_yes" name="legalWork" value="yes"> Yes</label>
+                    <label> <input type="radio" id="legalWork_no" name="legalWork" value="no" > No</label>
                     <div class="error"></div>
                 </li>
                 <li>
-                    <label for="yearsExperience" class="label-questions">How many years of experience do you have as a veterinarian?</label>
+                    <label for="yearsExperience" class="label-questions">How many years of experience do you have as a veterinarian?<span class="req">*</span></label>
                     <input type="number" id="yearsExperience" name="yearsExperience" class="required">
                     <div class="error"></div>
                 </li>
@@ -75,12 +75,12 @@
                     <textarea id="previousVolunteer" name="previousVolunteer"></textarea>
                 </li>
                 <li>
-                    <label for="whyInterested" class="label-questions">Why are you interested in volunteering your veterinary services at our animal shelter?</label>
+                    <label for="whyInterested" class="label-questions">Why are you interested in volunteering your veterinary services at our animal shelter?<span class="req">*</span></label>
                     <textarea id="whyInterested" name="whyInterested" class="required"></textarea>
                     <div class="error"></div>
                 </li>
                 <li>
-                    <label for="availability" class="label-questions">What days and times are you available to volunteer?</label>
+                    <label for="availability" class="label-questions">What days and times are you available to volunteer?<span class="req">*</span></label>
                     <textarea id="availability" name="availability" class="required"></textarea>
                     <div class="error"></div>
                 </li>
@@ -88,41 +88,39 @@
                     <label for="specificExperience" class="label-questions">Do you have any specific areas of expertise or interest within veterinary medicine (e.g., surgery, emergency care, preventive medicine)? If yes, please specify.</label>
                     <textarea id="specificExperience" name="specificExperience"></textarea>
                 </li>
-                <li>
-                    <label for="provideMedicalCare" class="label-questions">Are you willing to provide medical care for a variety of animals, including dogs, cats, and potentially other species?</label>
-                    <label><input type="radio" id="provideMedicalCare_yes" name="provideMedicalCare" value="yes" class="required"> Yes</label>
-                    <label><input type="radio" id="provideMedicalCare_no" name="provideMedicalCare" value="no" class="required"> No</label>
+                <li class="required-radio">
+                    <label for="provideMedicalCare" class="label-questions">Are you willing to provide medical care for a variety of animals, including dogs, cats, and potentially other species?<span class="req">*</span></label>
+                    <label> <input type="radio" id="provideMedicalCare_yes" name="provideMedicalCare" value="yes" > Yes
+                    <label> <input type="radio" id="provideMedicalCare_no" name="provideMedicalCare" value="no" > No
                     <div class="error"></div>
                 </li>
-                <li>
-                    <label for="comfortableAnimals" class="label-questions">Are you comfortable working with animals that may have medical or behavioral issues?</label>
-                    <label><input type="radio" id="comfortableAnimals_yes" name="comfortableAnimals" value="yes" class="required"> Yes</label>
-                    <label><input type="radio" id="comfortableAnimals_no" name="comfortableAnimals" value="no" class="required"> No</label>
+                <li class="required-radio">
+                    <label for="comfortableAnimals" class="label-questions">Are you comfortable working with animals that may have medical or behavioral issues?<span class="req">*</span></label>
+                    <label> <input type="radio" id="comfortableAnimals_yes" name="comfortableAnimals" value="yes" > Yes</label>
+                    <label> <input type="radio" id="comfortableAnimals_no" name="comfortableAnimals" value="no" > No</label>
                     <div class="error"></div>
                 </li>
                 <li>
                     <label for="outreachPrograms" class="label-questions">Are you interested in participating in outreach 
                         programs or community events to promote responsible pet ownership and veterinary care?</label>
-                        <label><input type="radio" id="outreachPrograms_yes" name="outreachPrograms" value="yes" class="required"> Yes</label>
-                        <label><input type="radio" id="outreachPrograms_no" name="outreachPrograms" value="no" class="required"> No</label>
-                        <div class="error"></div>
+                        <label> <input type="radio" id="outreachPrograms_yes" name="outreachPrograms" value="yes" > Yes</label>
+                        <label> <input type="radio" id="outreachPrograms_no" name="outreachPrograms" value="no" > No</label>
                         </li>
-                        <li>
+                <li>
                         <label for="liabilityInsurance"class="label-questions">Are you able to provide proof of liability insurance or malpractice coverage?</label>
-                        <label><input type="radio" id="liabilityInsurance_yes" name="liabilityInsurance" value="yes" class="required"> Yes</label>
-                        <label><input type="radio" id="liabilityInsurance_no" name="liabilityInsurance" value="no" class="required"> No</label>
-                        <div class="error"></div>
-                        </li>
-                        <li>
+                        <label> <input type="radio" id="liabilityInsurance_yes" name="liabilityInsurance" value="yes" > Yes</label>
+                        <label> <input type="radio" id="liabilityInsurance_no" name="liabilityInsurance" value="no" > No</label>
+                </li>
+                <li>
                         <label for="mentorship" class="label-questions">Are you interested in providing mentorship or training to shelter staff or other volunteers?</label>
-                        <label><input type="radio" id="mentorship_yes" name="mentorship" value="yes" class="required"> Yes</label>
-                        <label><input type="radio" id="mentorship_no" name="mentorship" value="no" class="required"> No</label>
+                        <label> <input type="radio" id="mentorship_yes" name="mentorship" value="yes" > Yes</label>
+                        <label> <input type="radio" id="mentorship_no" name="mentorship" value="no" > No</label>
                         <div class="error"></div>
-                        </li>
-                        <li>
+                </li>
+                <li>
                         <label for="preferences" class="label-questions">Do you have any specific preferences or limitations regarding the types of cases or procedures you're willing to handle at our shelter?</label>
                         <textarea id="preferences" name="preferences"></textarea>
-                        </li>
+                </li>
                         <li>
                         <label for="specializedEquipment"class="label-questions">Please describe any specialized equipment or resources you can provide for veterinary care.</label>
                         <textarea id="specializedEquipment" name="specializedEquipment"></textarea>
@@ -134,19 +132,19 @@
                         <li>
                         <label for="volunteerRole" class="label-questions">Please choose the type of work you are interested in:</label>
                         <div>
-                        <label><input type="checkbox" id="routineMedicalCare" name="volunteerRole[]" value="Routine Medical Care"> Routine Medical Care (e.g., vaccinations, health exams)</label>
+                        <input type="checkbox" id="routineMedicalCare" name="volunteerRole[]" value="Routine Medical Care"> Routine Medical Care (e.g., vaccinations, health exams)</label>
                         </div>
                         <div>
-                        <label><input type="checkbox" id="surgicalProcedures" name="volunteerRole[]" value="Surgical Procedures"> Surgical Procedures (e.g., spay/neuter surgeries, minor surgeries)</label>
+                        <input type="checkbox" id="surgicalProcedures" name="volunteerRole[]" value="Surgical Procedures"> Surgical Procedures (e.g., spay/neuter surgeries, minor surgeries)</label>
                         </div>
                         <div>
-                        <label><input type="checkbox" id="emergencyCare" name="volunteerRole[]" value="Emergency Care"> Emergency Care and Triage</label>
+                        <input type="checkbox" id="emergencyCare" name="volunteerRole[]" value="Emergency Care"> Emergency Care and Triage</label>
                         </div>
                         <div>
-                        <label><input type="checkbox" id="behavioralConsultations" name="volunteerRole[]" value="Behavioral Consultations"> Behavioral Consultations and Training</label>
+                        <input type="checkbox" id="behavioralConsultations" name="volunteerRole[]" value="Behavioral Consultations"> Behavioral Consultations and Training</label>
                         </div>
                         <div>
-                        <label><input type="checkbox" id="outreachProgramsVolunteer" name="volunteerRole[]" value="Outreach Programs"> Outreach and Education Programs</label>
+                        <input type="checkbox" id="outreachProgramsVolunteer" name="volunteerRole[]" value="Outreach Programs"> Outreach and Education Programs</label>
                         </div>
                         <div>
                         <label>
