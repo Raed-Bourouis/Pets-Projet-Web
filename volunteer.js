@@ -147,13 +147,17 @@ function validateCheckbox(){
             checked = true;
         }
     });
-
+    const parentElement=document.getElementById("volunteerRole");
     if (!checked) {
-        const errorMessage = " * You must choose at least one role to volunteer for.";
-        displayErrorMessage(document.getElementById("volunteerRole"), errorMessage);
+        const message = " * You must choose at least one role to volunteer for.";
+        var errorDiv = parentElement.querySelector('.error'); 
+        errorDiv.textContent = message;
+        errorDiv.style.display = "block";
+        errorDiv.style="color:red;font-weight:bold;font-size:14px;margin-bottom: 20px;"
         return false;
     } else {
-        removeErrorMessage(document.getElementById("volunteerRole"));
+        const errorDisplay = parentElement.querySelector('.error');
+        errorDisplay.innerText = '';     
         return true;
     }
 }
@@ -187,6 +191,7 @@ function displayErrorMessage(parentElement, message) {
     errorDiv.textContent = message;
     errorDiv.style.display = "block";
     errorDiv.style="color:red;font-weight:bold;font-size:14px;margin-bottom: 20px;"
+    parentElement.classList.add('error');
     parentElement.classList.remove('success');
 }
 

@@ -189,14 +189,16 @@ footer {
 footer div:nth-child(3) {
     padding-right: 2vw;
 }
-/* JavaScript */
-.required.success  input {
+/* Javascript */
+.success input ,.success textarea{
     border-color: #09c372;
 }
 
-.required.error input{
+.error input,.error textarea {
     border-color: #ff3860;
 }
+
+
 
 
 /* Error animation */
