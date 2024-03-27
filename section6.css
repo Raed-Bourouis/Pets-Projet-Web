@@ -117,10 +117,12 @@ nav ul li a:hover {
 /*Join our cause*/
 #join-cause{
     text-align: center;
-    position: relative
+    position: relative;
+    font-size: larger;
 }
 #join-cause h1{
     font-family:"Kavivanar";
+    letter-spacing: 1.5px;
 }
 #join-cause-text-rectangle{
     position: absolute;
