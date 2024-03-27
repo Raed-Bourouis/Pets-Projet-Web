@@ -8,13 +8,17 @@ document.addEventListener('DOMContentLoaded', function () {
         // Validate inputs and select
         if (validateInputs(inputs) && validateSelect(select)) {
             e.target.submit();
-        }else{
+        }
+        if(! validateSelect(select)){
             select.style='border-color: #ff3860;animation: errorAnimation 0.5s ease forwards'
             var selected=select.parentNode
             var p=selected.querySelector('.error')
             p.innerHTML="* This field is required"
-            p.style='animation: errorAnimation 0.5s ease forwards;color: #ff3860;font-size: 14px;margin-top: 5px;height: 13px'
+            p.style='animation: errorAnimation 0.5s ease forwards;color: #ff3860;font-size: 14px;height: 13px'
             
+        }else{
+            select.parentElement.querySelector('p').innerText=''
+            select.style='border-color : #09c372;margin-top:18px'
         }
     });
 
@@ -46,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const parentElement = element.parentElement;
 
         if (element.value === 'Select your state') {
+            
             
             return false;
         } else {
