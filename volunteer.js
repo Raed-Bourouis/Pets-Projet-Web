@@ -2,8 +2,17 @@
 function toggleOtherSpecifyInput() {
     var otherSpecifyCheckbox = document.getElementById('otherSpecify');
     var otherSpecifyInput = document.getElementById('otherSpecifyInput');
+    
     otherSpecifyInput.disabled = !otherSpecifyCheckbox.checked;
+
+    // Add/remove the 'required' attribute based on the checkbox status
+    if (otherSpecifyCheckbox.checked) {
+        otherSpecifyInput.setAttribute('required', 'required');
+    } else {
+        otherSpecifyInput.removeAttribute('required');
+    }
 }
+
 
 // Event listener for the "otherSpecify" checkbox change
 var otherSpecifyCheckbox = document.getElementById('otherSpecify');
@@ -21,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Validate form inputs
         if (validateForm()) {
             const submitButton = document.querySelector('input[type="submit"]');
-            submitButton.innerText = 'Submitting...';
+            submitButton.value = 'Submitting...';
             // Perform form submission after a brief delay to ensure the "Submitting..." message is displayed
             setTimeout(() => {
                 form.submit();
@@ -130,15 +139,30 @@ function validateRadios() {
 }
 
 function validateCheckbox(){
-    const checkboxes = document.getElementsByClassName("optional-checkbox");
-    
-    for(let i=0; i < checkboxes.length; i++){
+    const checkboxes = document.querySelectorAll("input[name='volunteerRole[]']");
+    let checked = false;
+
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            checked = true;
+        }
+    });
+
+    if (!checked) {
+        const errorMessage = " * You must choose at least one role to volunteer for.";
+        displayErrorMessage(document.getElementById("volunteerRole"), errorMessage);
+        return false;
+    } else {
+        removeErrorMessage(document.getElementById("volunteerRole"));
+        return true;
+    }
 }
 
 function validateForm() {
     let isValid = true;
     isValid = validateNotEmpty() && isValid;
     isValid = validateRadios() && isValid;
+    isValid = validateCheckbox() && isValid;
     if(isValid){
         isValid = validateEmail() && isValid;
         isValid = validateAge() && isValid;
@@ -156,6 +180,7 @@ const showErrorAnimation = parentElement => {
         parentElement.classList.remove('error-animation');
     }, 500);
 };
+
 // Function to display error message for an input field
 function displayErrorMessage(parentElement, message) {
     var errorDiv = parentElement.querySelector('.error'); 
@@ -163,7 +188,6 @@ function displayErrorMessage(parentElement, message) {
     errorDiv.style.display = "block";
     errorDiv.style="color:red;font-weight:bold;font-size:14px;margin-bottom: 20px;"
     parentElement.classList.remove('success');
-
 }
 
 // Function to remove error message for an input field
@@ -172,4 +196,4 @@ const removeErrorMessage = (parentElement) => {
     errorDisplay.innerText = '';
     parentElement.classList.add('success');
     parentElement.classList.remove('error');
-};
+}

@@ -60,7 +60,8 @@
                     <div class="error"></div>
                 </li>
                 <li  class="required-radio">
-                    <label for="legalWork" class="label-questions">Are you licensed to practice veterinary medicine in our country? (Yes/No) <span class="req">*</span></label>
+                    <label for="legalWork" class="label-questions">Are you licensed to practice veterinary medicine in our country? (Yes/No)<span class="req">*</span></label>
+                    <br>
                     <label> <input type="radio" id="legalWork_yes" name="legalWork" value="yes"> Yes</label>
                     <label> <input type="radio" id="legalWork_no" name="legalWork" value="no" > No</label>
                     <div class="error"></div>
@@ -90,12 +91,14 @@
                 </li>
                 <li class="required-radio">
                     <label for="provideMedicalCare" class="label-questions">Are you willing to provide medical care for a variety of animals, including dogs, cats, and potentially other species?<span class="req">*</span></label>
+                    <br>
                     <label> <input type="radio" id="provideMedicalCare_yes" name="provideMedicalCare" value="yes" > Yes
                     <label> <input type="radio" id="provideMedicalCare_no" name="provideMedicalCare" value="no" > No
                     <div class="error"></div>
                 </li>
                 <li class="required-radio">
                     <label for="comfortableAnimals" class="label-questions">Are you comfortable working with animals that may have medical or behavioral issues?<span class="req">*</span></label>
+                    <br>
                     <label> <input type="radio" id="comfortableAnimals_yes" name="comfortableAnimals" value="yes" > Yes</label>
                     <label> <input type="radio" id="comfortableAnimals_no" name="comfortableAnimals" value="no" > No</label>
                     <div class="error"></div>
@@ -103,16 +106,19 @@
                 <li>
                     <label for="outreachPrograms" class="label-questions">Are you interested in participating in outreach 
                         programs or community events to promote responsible pet ownership and veterinary care?</label>
+                        <br>
                         <label> <input type="radio" id="outreachPrograms_yes" name="outreachPrograms" value="yes" > Yes</label>
                         <label> <input type="radio" id="outreachPrograms_no" name="outreachPrograms" value="no" > No</label>
                         </li>
                 <li>
                         <label for="liabilityInsurance"class="label-questions">Are you able to provide proof of liability insurance or malpractice coverage?</label>
+                        <br>
                         <label> <input type="radio" id="liabilityInsurance_yes" name="liabilityInsurance" value="yes" > Yes</label>
                         <label> <input type="radio" id="liabilityInsurance_no" name="liabilityInsurance" value="no" > No</label>
                 </li>
                 <li>
                         <label for="mentorship" class="label-questions">Are you interested in providing mentorship or training to shelter staff or other volunteers?</label>
+                        <br>
                         <label> <input type="radio" id="mentorship_yes" name="mentorship" value="yes" > Yes</label>
                         <label> <input type="radio" id="mentorship_no" name="mentorship" value="no" > No</label>
                         <div class="error"></div>
@@ -121,15 +127,15 @@
                         <label for="preferences" class="label-questions">Do you have any specific preferences or limitations regarding the types of cases or procedures you're willing to handle at our shelter?</label>
                         <textarea id="preferences" name="preferences"></textarea>
                 </li>
-                        <li>
-                        <label for="specializedEquipment"class="label-questions">Please describe any specialized equipment or resources you can provide for veterinary care.</label>
-                        <textarea id="specializedEquipment" name="specializedEquipment"></textarea>
-                        </li>
-                        <li>
+                <li>
+                    <label for="specializedEquipment"class="label-questions">Please describe any specialized equipment or resources you can provide for veterinary care.</label>
+                    <textarea id="specializedEquipment" name="specializedEquipment"></textarea>
+                </li>
+                <li>
                         <label for="volunteerCommitment"class="label-questions">Are you interested in volunteering for specific time-limited projects or ongoing support?</label>
                         <textarea id="volunteerCommitment" name="volunteerCommitment"></textarea>
-                        </li>
-                        <li>
+                </li>
+                <li id="volunteerRole">
                         <label for="volunteerRole" class="label-questions">Please choose the type of work you are interested in:</label>
                         <div>
                         <input type="checkbox" id="routineMedicalCare" name="volunteerRole[]" value="Routine Medical Care"> Routine Medical Care (e.g., vaccinations, health exams)</label>
@@ -151,12 +157,31 @@
                         <input type="checkbox" id="otherSpecify" name="volunteerRole[]" value="Other"> Other (please specify):
                         <input type="text" id="otherSpecifyInput" name="otherSpecifyInput" disabled>
                         </label>
+                        <div class="error"></div>
                         </div>
-                        </li>
-                        </ol>
-                        <input type="submit" value="Submit">
-                        </fieldset>
-                        </form>
+                </li>
+            </ol>
+            <input type="submit" value="Submit">
+        </fieldset>
+     </form>
+          <!-- Footer -->
+          <footer>
+            <div>
+                <img id="logo" src="logoweblight.png" alt="Logo">
+            </div>
+            <div>
+                <p>Addresses:</p>
+                <p>Denden, Manouba</p>
+                <p>Moncef Bey, Tunis</p>
+            </div>
+            <div>
+                <p>Email: pets@gmail.com</p>
+                <p>Tel: +216 12 898 757</p>
+                <p>Fax: +216 62 69 26</p>
+                <p>RIB: 156549855955558598</p>
+            </div>
+        </footer>
+        <!-- End of Footer -->
                         
-                        </body>
-                        </html>
+</body>
+</html>

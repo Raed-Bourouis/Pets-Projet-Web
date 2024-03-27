@@ -132,6 +132,7 @@ textarea{
 input[type="radio"]{
  transform: scale(1.5);
  margin-top: 15px;
+ margin-left: 150px;
 }
 
 input:focus,
@@ -189,7 +190,7 @@ footer div:nth-child(3) {
     padding-right: 2vw;
 }
 /* JavaScript */
-.required.success input {
+.required.success  input {
     border-color: #09c372;
 }
 

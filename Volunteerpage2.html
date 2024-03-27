@@ -67,6 +67,7 @@
      
             <div class="required-radio">
                 <label for="legalWork" class="label-questions">6. Are you legally allowed to work in our country? (Yes/No)<span class="req">*</span></label>
+                <br>
                 <label>
                     <input type="radio" id="legalWork_yes" name="legalWork" value="yes"> Yes
                 </label>
@@ -99,6 +100,7 @@
             </div>
             <div class="required-radio">
                 <label for="animalAbuseOrNeglect" class="label-questions">11. Have you ever been convicted of animal abuse or neglect? (Yes/No)<span class="req">*</span></label>
+                <br>
                 <label>
                     <input type="radio" id="animalAbuseOrNeglect_yes" name="animalAbuseOrNeglect" value="yes"  > Yes
                 </label>
@@ -133,7 +135,7 @@
                 <label for="additionalTraining" class="label-questions">17. Are you interested in participating in additional training or workshops related to animal care or shelter operations?</label>
                 <input type="text" id="additionalTraining" name="additionalTraining">
             </div>
-            <div >
+            <div id="volunteerRole">
                 <label for="volunteerRole" class="label-questions">18. Please select the type of volunteer role you are interested in:</label>
                 <div class="input-role">
                 <div>
@@ -167,6 +169,7 @@
                         <input type="text" id="otherSpecifyInput" name="otherSpecifyInput" disabled>
                     </label>
                 </div>
+                <div  class="error"></div>
                 
             </div>
             <div>
