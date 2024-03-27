@@ -163,7 +163,7 @@ select:focus {
 /******* javascript ********/
 /* Apply error animation to elements with the class 'error' */
 
-.input-control .error,.selected .error{
+.input-control .error{
     animation: errorAnimation 0.5s ease forwards;
     color: #ff3860;
     font-size: 14px;

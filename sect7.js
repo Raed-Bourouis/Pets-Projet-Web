@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Validate inputs and select
         if (validateInputs(inputs) && validateSelect(select)) {
             e.target.submit();
+        }else{
+            select.style='border-color: #ff3860;animation: errorAnimation 0.5s ease forwards'
+            var selected=select.parentNode
+            var p=selected.querySelector('.error')
+            p.innerHTML="* This field is required"
+            p.style='animation: errorAnimation 0.5s ease forwards;color: #ff3860;font-size: 14px;margin-top: 5px;height: 13px'
+            
         }
     });
 
@@ -39,11 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const parentElement = element.parentElement;
 
         if (element.value === 'Select your state') {
-            showError(parentElement);
-            showErrorAnimation(parentElement);
+            
             return false;
         } else {
-            showSuccess(parentElement);
+            
             return true;
         }
     };
