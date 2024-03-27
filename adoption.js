@@ -54,6 +54,7 @@ const validateInputsOrTextarea = elements => {
 
         if (element.value.trim() === '') {
             showError(element, parentElement);
+            showErrorAnimation(parentElement);
             isValid = false;
         } else {
             showSuccess(element, parentElement); 
@@ -85,6 +86,7 @@ const validateRadios = () => {
         if (!groupChecked) {
             const parentElement = radio.closest('.radio'); // Get the parent element of the radio
             showErrorRadio(parentElement);
+            showErrorAnimation(parentElement);
             allChecked = false;
         } else {
             const parentElement = radio.closest('.radio'); // Get the parent element of the radio
@@ -180,6 +182,7 @@ const toggleChildrenAges = () => {
         if (childrenAgesField.style.display === "block") {
             if (childrenAgesField.value.trim() === '') {
                 showError(childrenAgesField, childrenAgesParent);
+                showErrorAnimation(childrenAgesParent);
             } else {
                 showSuccess(childrenAgesField, childrenAgesParent);
             }
@@ -195,7 +198,31 @@ const toggleChildrenAges = () => {
         childrenAgesParent.classList.remove('success');
     }
 };
+// Function to show error animation
+const showErrorAnimation = parentElement => {
+        parentElement.classList.add('error-animation');
+        setTimeout(() => {
+            parentElement.classList.remove('error-animation');
+        }, 500);
+    };
 
+// Function to reset form inputs
+const resetForm = elements => {
+        elements.forEach(element => {
+            element.value = '';
+            const parentElement = element.parentElement;
+            parentElement.classList.remove('error', 'success');
+            parentElement.querySelector('.error').textContent = '';
+        });
+    };
+
+// Function to reset select
+const resetSelect = select => {
+        select.value = '';
+        const parentElement = select.parentElement;
+        parentElement.classList.remove('error', 'success');
+        parentElement.querySelector('.error').textContent = '';
+    };
 // Function to initialize the form
 const initializeForm = () => {
     // Hide the children ages field by default

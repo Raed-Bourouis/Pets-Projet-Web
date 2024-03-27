@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const inputs = document.querySelectorAll('.input-control input, .city input');
-    const select = document.querySelector("#state");
-
     // Form submission event listener
     document.forms.appform.addEventListener('submit', e => {
         e.preventDefault();
-        // Validate inputs and select
-        if (validateInputs(inputs) && validateSelect(select)) {
+        // Validate inputs 
+        if (validateInputs(inputs)) {
             e.target.submit();
         }
     });
@@ -14,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Reset button event listener
     document.querySelector('.reset').addEventListener('click', function() {
         resetForm(inputs);
-        resetSelect(select);
     });
 
     // Function to validate inputs
@@ -33,21 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         return isValid;
     };
-
-    // Function to validate select
-    const validateSelect = element => {
-        const parentElement = element.parentElement;
-
-        if (element.value === 'Select your state') {
-            showError(parentElement);
-            showErrorAnimation(parentElement);
-            return false;
-        } else {
-            showSuccess(parentElement);
-            return true;
-        }
-    };
-
     // Function to show error message
     const showError = parentElement => {
         const errorMessage = parentElement.querySelector('.error');
@@ -59,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to show success
     const showSuccess = parentElement => {
         const errorMessage = parentElement.querySelector('.error');
-        errorMessage.textContent = '';
+        errorMessage.textContent = ''; // Reset error message
         parentElement.classList.add('success');
         parentElement.classList.remove('error');
     };
@@ -78,15 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
             element.value = '';
             const parentElement = element.parentElement;
             parentElement.classList.remove('error', 'success');
-            parentElement.querySelector('.error').textContent = '';
+            parentElement.querySelector('.error').textContent = ''; // Reset error message
         });
-    };
-
-    // Function to reset select
-    const resetSelect = select => {
-        select.value = '';
-        const parentElement = select.parentElement;
-        parentElement.classList.remove('error', 'success');
-        parentElement.querySelector('.error').textContent = '';
     };
 });

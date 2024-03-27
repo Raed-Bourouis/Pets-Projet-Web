@@ -83,6 +83,7 @@ nav ul li:last-child a:hover {
 nav ul li a:hover {
     color: #C0C0C0;
 }
+
 /* background image */
 .bck-img {
     background-image: url('BackgroundImage.jpg');
@@ -96,54 +97,47 @@ nav ul li a:hover {
     height: 100%;
     z-index: -1; /* Ensure background is behind other elements */
 }
+
 /* Container Styles */
 form {
     max-width: 800px;
     margin: 20px auto;
-    background: linear-gradient(135deg, #f9f9f9, #ffffff);
-    padding: 20px;
-    border-radius: 8px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-legend {
-    font-size: 24px;
+legend{
+    font-size: large;
+    color: #556B2F;
+    text-shadow:0 8px 10px rgba(0, 0, 0, 0.1) ;
     font-weight: bold;
-    color:#556B2F ;
-    margin-bottom: 20px;
 }
-
-
-
-label,
-input {
-    display: block;
-    margin-bottom: 10px;
-    color: #333;
-}
-
 input[type="text"],
 input[type="email"],
-input[type="tel"]{
-    width: calc(100% - 22px);
-    padding: 10px;
-    border: 1px solid #ddd;
+input[type="tel"],
+input[type="number"],
+textarea{
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
 }
-input:focus{
+
+input:focus,
+textarea:focus {
     border-color: #257042;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     outline: none;
-}
-input[type="checkbox"] {
-    margin-right: 5px;
 }
 
 input[type="submit"] {
     background: linear-gradient(135deg, #4CAF50, #45a049);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -154,7 +148,10 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: linear-gradient(135deg, #45a049, #4CAF50);
 }
-
+.label-questions{
+    font-weight: bold;
+    color: #556B2F;
+}
 fieldset {
     border: 1px solid #ccc;
     padding: 20px;
@@ -166,13 +163,6 @@ fieldset div {
     margin-bottom: 15px;
 }
 
-fieldset div label {
-    font-weight: normal;
-}
-
-#otherSpecifyInput {
-    margin-left: 5px;
-}
 
 /* Footer Styles */
 footer {
@@ -187,4 +177,17 @@ footer {
 
 footer div:nth-child(3) {
     padding-right: 2vw;
+}
+
+/* Error animation */
+@keyframes errorAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.error-animation {
+    animation: errorAnimation 0.5s ease-in-out;
 }
