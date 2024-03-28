@@ -105,7 +105,7 @@ nav ul li a:hover {
 }
 
 #Volunteers-photo img{
-    height:50vh;
+    height:60vh;
     min-width:100vw;
 
 }
@@ -130,7 +130,7 @@ nav ul li a:hover {
     padding-top: 7vh;
     left:30vw;
     width:35vw;
-    height: 20vh;
+    height: 30vh;
     border-radius: 0.7vw 0 0 0.7vw ;
     
     background: linear-gradient(to right, #2E8540, #B3DDD5);
@@ -139,7 +139,7 @@ nav ul li a:hover {
     position: relative;
     left:65vw;
     width:3vw;
-    height: 27vh;
+    height: 37vh;
     border-radius:  0 100% 100% 0;
     background: linear-gradient(to right,#B3DDD5,#eaf3f1 );
 }
