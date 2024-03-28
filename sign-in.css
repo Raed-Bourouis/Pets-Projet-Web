@@ -58,10 +58,12 @@ body {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+    
+
 
 }
 #login-container{
-    background-color: linear-gradient(to-right, #25703B, #000);
+    background: linear-gradient(to right, #2E8540, #B3DDD5);
 }
 a:visited,
 a:link {
