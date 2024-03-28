@@ -100,15 +100,30 @@ nav ul li a:hover {
 
 /*Volunteers photo*/
 
-#Volunteers-photo{
+/* #Volunteers-photo{
     margin-top: 0.0;
+} */
+#Volunteers-photo img {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+#Volunteers-photo{
+    position: relative;
+    overflow: hidden;
+    height: 400px; 
 }
 
-#Volunteers-photo img{
+
+
+/* #Volunteers-photo img{
     height:50vh;
     min-width:100vw;
 
-}
+} */
+
 /*------------------------*/
 
 
