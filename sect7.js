@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const inputs = document.querySelectorAll('.input-control input, .city input');
+    const select= document.querySelector('#state')
     // Form submission event listener
     document.forms.appform.addEventListener('submit', e => {
         e.preventDefault();
