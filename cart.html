@@ -19,7 +19,6 @@
         border-radius: 20px;
         background: #fff;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        color: #333;
     }
     h1 {
         text-align: center;
@@ -42,7 +41,7 @@
     .button {
         display: inline-block;
         padding: 10px 20px;
-        background-color: #333;
+        background-color: #25703B;
         color: #fff;
         text-decoration: none;
         border-radius: 5px;
@@ -68,12 +67,11 @@
             </tr>
         </thead>
         <tbody id="cart-items">
-            <!-- Cart items will be dynamically added here -->
         </tbody>
     </table>
     <div id="cart-summary">
         <p>Total Items: <span id="total-items">0</span></p>
-        <p>Total Price: $<span id="total-price">0.00</span></p>
+        <p>Total Price: <span id="total-price">0.00</span> TND</p>
     </div>
     <div class="buttons">
         <a href="checkout.html" class="button">Proceed to Checkout</a>
@@ -81,75 +79,8 @@
     </div>
 </div>
 
-<script>
-    // Sample cart data
-    const cartItems = [
-        { id: 1, name: 'Classy Sapphire Necklace', price: 99.99, quantity: 2 },
-        { id: 2, name: 'Elegant Pearl Earrings', price: 49.99, quantity: 1 }
-    ];
+<script src="cart.js">
 
-    // Display cart items
-    const cartContainer = document.getElementById('cart-items');
-    cartItems.forEach(item => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${item.name}</td>
-            <td>$${item.price.toFixed(2)}</td>
-            <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)"></td>
-            <td>$${(item.price * item.quantity).toFixed(2)}</td>
-            <td><button onclick="removeItem(${item.id})">Remove</button></td>
-        `;
-        cartContainer.appendChild(row);
-    });
-
-    // Update cart summary
-    const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
-    const totalPrice = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-    document.getElementById('total-items').textContent = totalItems;
-    document.getElementById('total-price').textContent = totalPrice.toFixed(2);
-
-    // Functions to update cart
-    function updateQuantity(id, quantity) {
-        const item = cartItems.find(item => item.id === id);
-        item.quantity = parseInt(quantity);
-        updateCart();
-    }
-
-    function removeItem(id) {
-        const index = cartItems.findIndex(item => item.id === id);
-        if (index !== -1) {
-            cartItems.splice(index, 1);
-            updateCart();
-        }
-    }
-
-    function clearCart() {
-        cartItems.length = 0;
-        updateCart();
-    }
-
-    function updateCart() {
-        while (cartContainer.firstChild) {
-            cartContainer.removeChild(cartContainer.firstChild);
-        }
-
-        cartItems.forEach(item => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${item.name}</td>
-                <td>$${item.price.toFixed(2)}</td>
-                <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)"></td>
-                <td>$${(item.price * item.quantity).toFixed(2)}</td>
-                <td><button onclick="removeItem(${item.id})">Remove</button></td>
-            `;
-            cartContainer.appendChild(row);
-        });
-
-        const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
-        const totalPrice = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-        document.getElementById('total-items').textContent = totalItems;
-        document.getElementById('total-price').textContent = totalPrice.toFixed(2);
-    }
 </script>
 
 </body>
