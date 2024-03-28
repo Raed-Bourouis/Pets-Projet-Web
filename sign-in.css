@@ -31,7 +31,7 @@ body {
     position: relative;
     display: flex;
     border: #ddd 2px solid;
-    background: #25703B;
+    background: #ddd;
     flex-flow: row wrap;
     margin-top: 10vh;
     margin-left: 2vw;
@@ -43,14 +43,12 @@ body {
     align-items: center;
 }
 
-#sectionleft {
-    background: #ddd;
-}
+
 
 #sectionright {
     border-radius: 2vw;
-    
-    border: #ddd 2px solid;
+    background: #25703B;
+    border: #fff 2px solid;
     width: 50vw;
     height: 60vh;
     color: #ddd;
