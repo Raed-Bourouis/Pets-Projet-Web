@@ -11,11 +11,11 @@ cartItems.forEach(item => {
     // create a table row for each item
     const row = document.createElement('tr');
     row.innerHTML = `
-        <td>${item.name}</td>
-        <td>${item.price.toFixed(2)} TND</td>
-        <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)"></td>
-        <td>${(item.price * item.quantity).toFixed(2)} TND</td>
-        <td><button onclick="removeItem(${item.id})">Remove</button></td>
+        <td style="text-align:center">${item.name}</td>
+        <td style="text-align:center">${item.price.toFixed(2)} TND</td>
+        <td style="text-align:center"><input type="number" style='width:40px' value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)"></td>
+        <td style="text-align:center">${(item.price * item.quantity).toFixed(2)} TND</td>
+        <td style="text-align:center"><a onclick="removeItem(${item.id})"><i class="fa fa-trash" style="color:red"></i></a></td>
     `;
     cartContainer.appendChild(row);
 });
