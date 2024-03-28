@@ -62,9 +62,7 @@ body {
 
 
 }
-#login-container{
-    background: linear-gradient(to right, #2E8540, #B3DDD5);
-}
+
 a:visited,
 a:link {
     color: #ddd;
@@ -75,6 +73,7 @@ a:link {
     border: #25703B 2px solid;
     background: #ddd;
     color: #25703B;
+    transition: 0.2s;
 
 
 }
@@ -109,7 +108,6 @@ form {
 
 #revealpswrd:hover{
     border:none;
-
     cursor:pointer;
     border: #25703B 1px hidden;
     color: #25703B;
@@ -129,7 +127,7 @@ form {
     color: #25703B;
     border: #ddd;
     transform: translateY(-10%);
-    transition: transform 0.6s ;
+    transition: transform 0.6s ease-in-out ;
 }
 
 
