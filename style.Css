@@ -1,12 +1,14 @@
+/* reset styles for the body*/
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-  }
-  /* Header styles */
+    background-color: #f4f4f4; 
+}
+
+/* header styles */
 nav {
-    background: linear-gradient(135deg, #2E8540, #556B2F);
+    background: linear-gradient(135deg, #2E8540, #556B2F); 
     top: 0;
     left: 0;
     right: 0;
@@ -20,7 +22,7 @@ nav {
 }
 
 nav:hover {
-    background: linear-gradient(135deg, #25703B, #35603A);
+    background: linear-gradient(135deg, #25703B, #35603A); 
 }
 
 #logo {
@@ -74,81 +76,76 @@ nav ul li:last-child a:hover {
     background-color: #25703B;
 }
 
-
 nav ul li a:hover {
     color: #C0C0C0;
 }
-nav ul li i{
+
+nav ul li i {
     margin: 10px;
 }
 
-/* End of header */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  .container {
+/* end of header */
+
+/* container styles */
+
+
+.container {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #fff; 
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .stat-item {
+}
+
+/* statistics styles */
+.stat-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     border-radius: 5px;
-    flex-basis: calc(50% - 20px); /* Two items per row */
+    flex-basis: calc(50% - 20px);
     max-width: calc(50% - 20px);
-  }
-.statistics{
+}
+
+.statistics {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
     text-align: center;
- 
 }
-  .stat-item i {
-    font-size: 24px;
-    margin-right: 10px;
-  }
 
-  .stat-text {
-    flex-grow: 1;
-  }
-  
-  .stat-item i {
+.stat-item i {
     font-size: 24px;
     margin-right: 10px;
-  }
-  
-  .stat-item p {
+}
+
+.stat-text {
+    flex-grow: 1;
+}
+
+.stat-item p {
     margin: 0;
-  }
-  
-  .stat-item strong {
+}
+
+.stat-item strong {
     font-size: 18px;
     margin-left: auto;
-  }
-  
-  .user-list {
+}
+
+/* user list styles */
+.user-list {
     list-style: none;
     padding: 0;
-  }
-  
-  .user {
+}
+
+.user {
     padding: 20px;
     margin-bottom: 20px;
     background-color: #f9f9f9;
@@ -156,49 +153,50 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-  }
-  
-  .user img {
+}
+
+.user img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-right: 20px;
-  }
-  
-  .user-details {
+}
+
+.user-details {
     flex: 1;
-  }
-  
-  .user-details h3 {
+}
+
+.user-details h3 {
     margin: 0;
     font-size: 24px;
-  }
-  
-  .user-details p {
+}
+
+.user-details p {
     margin: 5px 0;
     font-size: 16px;
-  }
-  
-  .user-join-date {
+}
+
+.user-join-date {
     font-size: 14px;
     color: #666;
-  }
-  
-  .user-options {
+}
+
+.user-options {
     display: flex;
     align-items: center;
-  }
-  
-  .user-options .btn {
+}
+
+.user-options .btn {
     background-color: #238323;
-    border: none ;
-    color:#ffffff;
+    border: none;
+    color: #ffffff;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 50px;
     cursor: pointer;
-  }  
-  /* Footer styles */
+}
+
+/* footer styles */
 footer {
     background: linear-gradient(135deg, #2E8540, #556B2F);
     padding: 15px;
