@@ -1,72 +1,8 @@
 body{
     font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.product-info {
-    display: flex;
-    align-items: center;
-}
-
-.product-image {
-    width: 300px;
-    margin-right: 20px;
-    border-radius: 10px;
-}
-
-.details {
-    max-width: 400px;
-}
-
-.details table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.details table th, .details table td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.details table th {
-    text-align: left;
-    font-weight: bold;
-}
-
-.details table td {
-    text-align: left;
-}
-
-.buttons {
-    text-align: center;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #25703B;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-right: 10px;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
 /* Header styles */
 nav {
     background: linear-gradient(135deg, #2E8540, #556B2F) ; 
@@ -136,6 +72,73 @@ nav ul li a:hover {
     color: #C0C0C0;
 }
 /*end of header*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    width: 300px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.details {
+    max-width: 400px;
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.details table th, .details table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.details table th {
+    text-align: left;
+    font-weight: bold;
+}
+
+.details table td {
+    text-align: left;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25703B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
 /*footer*/
 footer {
     background: linear-gradient(135deg, #2E8540, #556B2F);
