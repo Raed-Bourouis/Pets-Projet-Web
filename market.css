@@ -17,8 +17,8 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    height: 70px; /* Increased height */
-    padding: 0 20px; /* Adjusted padding */
+    height: 70px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@ nav:hover {
 }
 
 #logo {
-    width: 100px; /* Reduced width */
+    width: 100px;
     height: auto;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
     transition: transform 0.3s ease-in-out;
@@ -43,7 +43,7 @@ nav:hover {
 
 .nav-separator {
     border-right: 2px solid #fff;
-    height: 40px; /* Adjusted height */
+    height: 40px;
     margin: 0 20px;
 }
 
@@ -54,7 +54,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 30px; /* Reduced margin */
+    margin-right: 30px;
 }
 
 nav ul li:last-child {
@@ -66,12 +66,12 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
-    font-size: 1em; /* Adjusted font size */
+    font-size: 1em;
     letter-spacing: 1px;
 }
 
 nav ul li:last-child a {
-    padding: 8px 16px; /* Reduced padding */
+    padding: 8px 16px;
     background-color: #2E8540;
     border-radius: 4px;
     transition: background-color 0.3s;
@@ -85,45 +85,34 @@ nav ul li a:hover {
     color: #C0C0C0;
 }
 
-/* Footer styles */
-footer {
-    background: linear-gradient(135deg, #2E8540, #556B2F);
-    padding: 20px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Kavivanar";
-}
 
-footer div:nth-child(3) {
-    padding-right: 2vw;
-}
+/* Picture  */
 
-/* Picture with text overlay */
 .banner {
-    position: relative; /* Added position */
-    overflow: hidden;
+    position: relative; 
+    overflow: hidden;/* hide overflow to ensure content stays within the container */
     height: 400px;
 }
 
 .banner img {
-    position: absolute; /* Added position */
+    position: absolute; /*position the image inside the banner absolutely */
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;/* make the image cover the entire area of its container */
     filter: brightness(0.7);
 }
 
 .banner-text {
-    position: absolute; /* Added position */
-    top: 50%;
+    position: absolute; /* position the text absolutely in the center of the banner */
+    top: 50%; /* ajuster horizontal and vertical position */
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
-    z-index: 1;
+    z-index: 1; /* text appears above the image */
+
 }
+
 
 .banner-text h1 {
     font-size: 3em;
@@ -150,7 +139,7 @@ footer div:nth-child(3) {
 }
 
 .product:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
 }
 
 .product img {
@@ -182,18 +171,17 @@ footer div:nth-child(3) {
 
 .action-buttons {
     display: flex;
-    justify-content: center; /* Centered buttons */
-    margin-top: 20px; /* Added margin top */
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .add-to-cart,
 .view-product {
     background-color: #25703B;
-
     color: #fff;
     border: none;
     padding: 10px 20px;
-    margin:  10px; /* Adjusted margin */
+    margin:  10px;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
@@ -217,4 +205,18 @@ footer div:nth-child(3) {
 h2 {
     text-align: center;
     margin: 15px;
+}
+/* Footer styles */
+footer {
+    background: linear-gradient(135deg, #2E8540, #556B2F);
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Kavivanar";
+}
+
+footer div:nth-child(3) {
+    padding-right: 2vw;
 }
