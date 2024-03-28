@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f7f7f7;
     color: #333;
 }
@@ -93,7 +93,15 @@ nav ul li a:hover {
 .section {
     margin-bottom: 50px;
     position: relative;
+    transform : translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
     overflow: hidden;
+
+}
+.section.active{
+    transform : translateY(0px);
+    opacity: 1;
 }
 
 .section img {
@@ -111,15 +119,15 @@ nav ul li a:hover {
     text-align: center;
     border-radius: 20px;
     padding: 20px;
-    font-family: 'Arial', sans-serif;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(0%, -50%);
+    transform: translate(-25%, -50%);
     z-index: 1;
+    width: 750px;
 }
-/* Styles for Section 2 */
+
 #section1 ,#section3{
     display: flex;
     justify-content: flex-end;
@@ -127,11 +135,11 @@ nav ul li a:hover {
 }
 
 .section img {
-    width: 100%;
+    width: 600px;
     max-width: 800px;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
 #section1 p, #section3 p{
@@ -141,16 +149,14 @@ nav ul li a:hover {
     text-align: center;
     border-radius: 20px;
     padding: 20px;
-    font-family: 'Arial', sans-serif;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     position: absolute;
+    width: 750px;
     top: 50%;
     right: 50%; 
-    transform: translate(0%, -50%); 
+    transform: translate(25%, -50%); 
     z-index: 1;
 }
-
-
 
 h1 {
     font-weight: bold;
@@ -159,9 +165,9 @@ h1 {
     margin-bottom: 50px;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
 b{
     font-size: medium;
-
 }
 
 .Values ul {
@@ -175,13 +181,14 @@ b{
 li .ValueBox{
     display: flex;
     align-items: baseline;
-    
 }
+
 .ValueBox b{
     margin-left: 15px;
     transform: translateY(-12px);
     color:#666;
 }
+
 .Values ul li {
     display: flex;
     flex-direction: column;
@@ -220,12 +227,95 @@ li .ValueBox{
     margin-right: 10px;
 }
 
+/* Team Member section */
+.teamMember img {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.teamMember img:hover {
+    transform: scale(1.1);
+}
+
+.teamMember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.teamMember:hover {
+    transform: scale(1.05);
+}
+
+#team {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#team h2 {
+font-weight: bold;
+font-size: 2.5em;
+color: #333;
+text-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+}
+
+#team {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+#team p {
+font-size: 1.2em;
+color: #25703B;
+text-transform: uppercase;
+margin-bottom: 20px;
+text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#join {
+background: linear-gradient(135deg, #88B04B, #89D9CA);
+padding: 20px;
+border-radius: 28px;
+text-align: center;
+line-height: 1.5em;
+margin-top: 50px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#join:hover {
+transform: scale(1.05);
+}
+
+#join h2 {
+font-weight: bold;
+font-size: 20px;
+letter-spacing: -1px;
+margin-bottom: 10px;
+}
+
+#join p,
+#join b {
+font-size: 15px;
+}
+/*javascript*/
+    .section{
+
+    }
 /* Footer styles */
 footer {
     background: linear-gradient(135deg, #2E8540, #556B2F);
-    padding: 20px;
+    padding: 15px;
     color: #fff;
-    text-align: center;
 }
 
 footer div {
