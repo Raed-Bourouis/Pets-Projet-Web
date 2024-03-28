@@ -11,7 +11,7 @@ function reveal() {
             sect[i].classList.add("active");
         }
         else{
-            sect[i].classList.remove("active");
+            sect[i].classList.remove("active"); // hedhiya bech y3awed yscrolli t3awed mil louwel w jdid kil loop
 
         }
 }
