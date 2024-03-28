@@ -1,7 +1,7 @@
-    // Sample cart data
+    // exemple
     const cartItems = [
-        { id: 1, name: 'Classy Sapphire Necklace', price: 99.99, quantity: 2 },
-        { id: 2, name: 'Elegant Pearl Earrings', price: 49.99, quantity: 1 }
+        { id: 1, name: 'Cat food', price: 99.99, quantity: 2 },
+        { id: 2, name: 'Dog food', price: 49.99, quantity: 1 }
     ];
 
     // Display cart items
@@ -10,15 +10,15 @@
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${item.name}</td>
-            <td>$${item.price.toFixed(2)}</td>
+            <td>${item.price.toFixed(2)} TND</td>
             <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)"></td>
-            <td>$${(item.price * item.quantity).toFixed(2)}</td>
+            <td>${(item.price * item.quantity).toFixed(2)} TND</td>
             <td><button onclick="removeItem(${item.id})">Remove</button></td>
         `;
         cartContainer.appendChild(row);
     });
 
-    // Update cart summary
+    // Update cart 
     const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
     const totalPrice = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
     document.getElementById('total-items').textContent = totalItems;
@@ -53,9 +53,9 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${item.name}</td>
-                <td>$${item.price.toFixed(2)}</td>
+                <td>${item.price.toFixed(2)} TND</td>
                 <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)"></td>
-                <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                <td>${(item.price * item.quantity).toFixed(2)} TND</td>
                 <td><button onclick="removeItem(${item.id})">Remove</button></td>
             `;
             cartContainer.appendChild(row);
