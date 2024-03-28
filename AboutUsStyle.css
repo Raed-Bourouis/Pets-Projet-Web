@@ -231,7 +231,7 @@ li .ValueBox{
 .teamMember img {
     width: 300px;
     height: auto;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
 .teamMember img:hover {
@@ -248,7 +248,8 @@ li .ValueBox{
     margin: 20px;
     padding: 20px;
     border-radius: 4px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 1s ease-in-out;
+
 }
 
 .teamMember:hover {
@@ -307,10 +308,7 @@ margin-bottom: 10px;
 #join b {
 font-size: 15px;
 }
-/*javascript*/
-    .section{
 
-    }
 /* Footer styles */
 footer {
     background: linear-gradient(135deg, #2E8540, #556B2F);

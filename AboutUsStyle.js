@@ -10,10 +10,10 @@ function reveal() {
         if(top < windowHeight - revealpoint) {
             sect[i].classList.add("active");
         }
-        else{
-            sect[i].classList.remove("active");
+        // else{
+        //     sect[i].classList.remove("active");
 
-        }
+        // }
 }
 }
 
