@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Dashboard</title>
-  <script src="https://kit.fontawesome.com/faa6c9467e.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="formsstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Dashboard</title>
+    <script src="https://kit.fontawesome.com/faa6c9467e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="formsstyle.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -26,115 +28,99 @@
         </nav>
     </header>
     <!-- Header -->
-  
-  <div class="container">
-    <h1>Forms Dashboard</h1>
-    <!-- Statistics -->
-    <div class="statistics">
-      <div class="stat-item">
-        <i class="fas fa-users"></i>
-        <div class="stat-text">
-          <p>Total Users</p>
-          <strong>2</strong>
-        </div>
-      </div>
-      <div class="stat-item">
-        <i class="fas fa-user-shield"></i>
-        <div class="stat-text">
-          <p>Admins</p>
-          <strong>1</strong>
-        </div>
-      </div>
-      <div class="stat-item">
-        <i class="fas fa-user"></i>
-        <div class="stat-text">
-          <p>Regular Users</p>
-          <strong>1</strong>
-        </div>
-      </div>
-      <div class="stat-item">
-        <i class="fas fa-user-check"></i>
-        <div class="stat-text">
-          <p>Active Users</p>
-          <strong>2</strong>
-        </div>
-      </div>
-      <div class="stat-item">
-        <i class="fas fa-user-clock"></i>
-        <div class="stat-text">
-          <p>Pending Users</p>
-          <strong>0</strong>
-        </div>
-      </div>
-      <div class="stat-item">
-        <i class="fas fa-user-slash"></i>
-        <div class="stat-text">
-          <p>Banned Users</p>
-          <strong>0</strong>
-        </div>
-      </div>
-    </div>
-    <!-- End of Statistics -->
-    <ul class="user-list">
-      <li class="user" data-user-id="1">
-        <img src="user1.webp" alt="User 1">
-        <div class="user-details">
-          <h3>User 1</h3>
-          <p>Email: user1@example.com</p>
-          <p>Role: Admin</p>
-          <p class="user-join-date">Joined: January 1, 2022</p>
-        </div>
-        <div class="user-options">
-          <button class="btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
-        </div>
-      </li>
-      <li class="user" data-user-id="2">
-        <img src="user2.webp" alt="User 2">
-        <div class="user-details">
-          <h3>User 2</h3>
-          <p>Email: user2@example.com</p>
-          <p>Role: User</p>
-          <p class="user-join-date">Joined: February 15, 2023</p>
-        </div>
-        <div class="user-options">
-          <button class="btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
-          <button class="btn delete-btn"><i class="fas fa-trash-alt"></i> Delete</button>
-        </div>
-      </li>
-    </ul>
-  </div>
 
-  <!-- Footer -->
-  <footer>
-    <div>
-        <img id="logo" src="logoweblight.png" alt="Logo">
-    </div>
-    <div>
-        <p>Addresses:</p>
-        <p>Denden, Manouba</p>
-        <p>Moncef Bey, Tunis</p>
-    </div>
-    <div>
-        <p>Email: pets@gmail.com</p>
-        <p>Tel: +216 12 898 757</p>
-        <p>Fax: +216 62 69 26</p>
-        <p>RIB: 156549855955558598</p>
-    </div>
-  </footer>
-  <!-- End of Footer -->
+    <div class="container">
+        <h1>Forms Dashboard</h1>
+        <!-- Statistics -->
+        <div class="statistics">
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const deleteButtons = document.querySelectorAll('.delete-btn');
+        <div class="stat-item">
+            <i class="fa-regular fa-eye"></i>
+            <div class="stat-text">
+                <p>Views</p>
+                <strong>1</strong>
+            </div>
+        </div>
+        <div class="stat-item">
+            <i class="fa-regular fa-envelope"></i>
+            <div class="stat-text">
+                <p>Submissions</p>
+                <strong>1</strong>
+            </div>
+        </div>
+            <div class="stat-item">
+                <i class="fa-brands fa-wpforms"></i>
+                <div class="stat-text">
+                    <p>Active Forms</p>
+                    <strong>2</strong>
+                </div>
+            </div>
 
-      deleteButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          const userItem = button.closest('.user');
-          userItem.remove();
+
+        </div>
+        <!-- End of Statistics -->
+
+
+        <ul class="user-list">
+            <li class="user" data-user-id="1">
+                <img src="user1.webp" alt="User 1">
+                <div class="user-details">
+                    <h3>User 1</h3>
+                    <p>Email: user1@example.com</p>
+                    <p>Role: Admin</p>
+                    <p class="user-join-date">Joined: January 1, 2022</p>
+                </div>
+                <div class="user-options">
+                    <button class="btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                </div>
+            </li>
+            <li class="user" data-user-id="2">
+                <img src="user2.webp" alt="User 2">
+                <div class="user-details">
+                    <h3>User 2</h3>
+                    <p>Email: user2@example.com</p>
+                    <p>Role: User</p>
+                    <p class="user-join-date">Joined: February 15, 2023</p>
+                </div>
+                <div class="user-options">
+                    <button class="btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn delete-btn"><i class="fas fa-trash-alt"></i> Delete</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <img id="logo" src="logoweblight.png" alt="Logo">
+        </div>
+        <div>
+            <p>Addresses:</p>
+            <p>Denden, Manouba</p>
+            <p>Moncef Bey, Tunis</p>
+        </div>
+        <div>
+            <p>Email: pets@gmail.com</p>
+            <p>Tel: +216 12 898 757</p>
+            <p>Fax: +216 62 69 26</p>
+            <p>RIB: 156549855955558598</p>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteButtons = document.querySelectorAll('.delete-btn');
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const userItem = button.closest('.user');
+                    userItem.remove();
+                });
+            });
         });
-      });
-    });
-  </script>
+    </script>
 </body>
-</html>
 
+</html>
