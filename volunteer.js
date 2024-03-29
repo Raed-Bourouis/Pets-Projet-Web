@@ -77,11 +77,21 @@ function validateAge() {
 function validatePhoneNumber() { 
     var phoneInput = document.getElementById("phone");
     var phone = phoneInput.value.trim();
-    if (!/^\+\d+$/.test(phone)) {
+    if(phone.length == 0){
+        displayErrorMessage(phoneInput.parentElement, "* This field is required")
+        showErrorAnimation(phoneInput.parentElement);
+    }
+    else if (!/^\+\d+$/.test(phone)) {
         displayErrorMessage(phoneInput.parentElement, "Please enter a valid phone number starting with '+'.");
         showErrorAnimation(phoneInput.parentElement);
         return false;
-    } else {
+    }
+
+    else if(phone.length != 12) {
+            displayErrorMessage(phoneInput.parentElement, "Invalid Phone Number! Please make sure your number has exactly 12 characters.")
+            showErrorAnimation(phoneInput.parentElement);
+        }
+     else {
         removeErrorMessage(phoneInput.parentElement);
     }
 
@@ -94,8 +104,12 @@ function validateEmail() {
 
     let emailInput = document.getElementById('email');
     let emailValue = emailInput.value.trim();
-
-    if (!emailPattern.test(emailValue)) {
+    if (emailValue === "") {
+        displayErrorMessage(emailInput.parentElement, "* This field is required.")
+        showErrorAnimation(emailInput.parentElement);
+        return false;
+    } 
+    else if (!emailPattern.test(emailValue)) {
         displayErrorMessage(emailInput.parentElement, "Invalid Email Address!");
         showErrorAnimation(emailInput.parentElement);
         return false;
@@ -167,11 +181,10 @@ function validateForm() {
     isValid = validateNotEmpty() && isValid;
     isValid = validateRadios() && isValid;
     isValid = validateCheckbox() && isValid;
-    if(isValid){
-        isValid = validateEmail() && isValid;
-        isValid = validateAge() && isValid;
-        isValid = validatePhoneNumber() && isValid;
-    }
+    isValid = validateEmail() && isValid;
+    isValid = validateAge() && isValid;
+    isValid = validatePhoneNumber() && isValid;
+    
    
     return isValid;
 }
