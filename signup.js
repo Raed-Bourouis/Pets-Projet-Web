@@ -1,25 +1,3 @@
-// Function to toggle the "otherSpecifyInput" field based on the "otherSpecify" checkbox
-function toggleOtherSpecifyInput() {
-    var otherSpecifyCheckbox = document.getElementById('otherSpecify');
-    var otherSpecifyInput = document.getElementById('otherSpecifyInput');
-    
-    otherSpecifyInput.disabled = !otherSpecifyCheckbox.checked;
-
-    // Add/remove the 'required' attribute based on the checkbox status
-    if (otherSpecifyCheckbox.checked) {
-        otherSpecifyInput.setAttribute('required', 'required');
-    } else {
-        otherSpecifyInput.removeAttribute('required');
-    }
-}
-
-
-// Event listener for the "otherSpecify" checkbox change
-var otherSpecifyCheckbox = document.getElementById('otherSpecify');
-if (otherSpecifyCheckbox) { // Check if the element exists before adding event listener
-    otherSpecifyCheckbox.addEventListener('change', toggleOtherSpecifyInput);
-}
-
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.getElementById("Vform");
 
@@ -39,6 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+function validatePassword(){
+    var Password=document.getElementById("password")
+    var confirmPassword=document.getElementById("confirm-password")
+    return(Password.value===confirmPassword.value)
+
+}
 
 
 function validateNotEmpty() { 
@@ -105,62 +90,6 @@ function validateEmail() {
     return true;
 }
 
-function validateRadios() {
-    let allChecked = true; // Assume all radios are checked by default
-
-    // Select all radio buttons
-    const radios = document.querySelectorAll('.required-radio input');
-
-    radios.forEach(radio => {
-        const groupName = radio.getAttribute('name'); // Get the name of the radio button group
-        const groupRadios = document.querySelectorAll(`input[name="${groupName}"]`);
-
-        let groupChecked = false; // Assume the group is not checked initially
-
-        // Check if at least one radio button in the group is checked
-        groupRadios.forEach(groupRadio => {
-            if (groupRadio.checked) {
-                groupChecked = true;
-            }
-        });
-        const parentElement = radio.closest('.required-radio'); 
-
-        // Display error message if the group is not checked
-        if (!groupChecked) {
-            const errorMessage = " *  Please select an option"; 
-            displayErrorMessage(parentElement, errorMessage);
-            allChecked = false;
-        } else {
-            removeErrorMessage(parentElement);
-        }
-    });
-
-    return allChecked; // Return whether all groups have at least one option selected
-}
-
-function validateCheckbox(){
-    const checkboxes = document.querySelectorAll("input[name='volunteerRole[]']");
-    let checked = false;
-
-    checkboxes.forEach(checkbox => {
-        if (checkbox.checked) {
-            checked = true;
-        }
-    });
-    const parentElement=document.getElementById("volunteerRole");
-    if (!checked) {
-        const message = " * You must choose at least one role to volunteer for.";
-        var errorDiv = parentElement.querySelector('.error'); 
-        errorDiv.textContent = message;
-        errorDiv.style.display = "block";
-        errorDiv.style="color:red;font-weight:bold;font-size:14px;margin-bottom: 20px;"
-        return false;
-    } else {
-        const errorDisplay = parentElement.querySelector('.error');
-        errorDisplay.innerText = '';     
-        return true;
-    }
-}
 
 function validateForm() {
     let isValid = true;
