@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Perform form submission after a brief delay to ensure the "Submitting..." message is displayed
             setTimeout(() => {
                 form.submit();
-                window.location.href = 'thankyou.html';
+                window.location.href = 'signin.html';
             }, 700);
         }
     });
@@ -102,7 +102,7 @@ function validateForm() {
     let isValid = true;
     isValid = validateNotEmpty() && isValid;
     if(isValid){
-        isValid = validateEmail() && isValid;
+        isValid = validateEmail()  && isValid;
         isValid = validateAge() && isValid;
         isValid = validatePhoneNumber() && isValid;
         isValid = validatePassword() && isValid;
