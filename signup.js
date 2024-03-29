@@ -21,8 +21,15 @@ document.addEventListener("DOMContentLoaded", function() {
 function validatePassword(){
     var Password=document.getElementById("password")
     var confirmPassword=document.getElementById("confirm-password")
-    return(Password.value===confirmPassword.value)
-
+    if(!(Password.value===confirmPassword.value)){
+        displayErrorMessage(confirmPassword.parentElement, "Passwords do not match");
+        showErrorAnimation(confirmPassword.parentElement);
+        return false
+    }
+    else{
+        removeErrorMessage(confirmPassword.parentElement);
+    }
+    return true
 }
 
 
@@ -47,15 +54,15 @@ function validateNotEmpty() {
 }
 
 function validateAge() { 
-    // var ageInput = document.getElementById("age");
-    // var age = parseInt(ageInput.value);
-    // if (isNaN(age) || age < 13 || age > 100) {
-    //     displayErrorMessage(ageInput.parentElement, "Please enter a valid age between 13 and 100.");
-    //     showErrorAnimation(ageInput.parentElement);
-    //     return false;
-    // } else {
-    //     removeErrorMessage(ageInput.parentElement);
-    // }
+    var ageInput = document.getElementById("age");
+    var age = ageInput.value.slice(0,4);
+    if (age<1900) {
+        displayErrorMessage(ageInput.parentElement, "Date of birth is invalid");
+        showErrorAnimation(ageInput.parentElement);
+        return false;
+    } else {
+        removeErrorMessage(ageInput.parentElement);
+    }
     return true;
 }
 
