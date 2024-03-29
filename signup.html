@@ -25,43 +25,43 @@
             </nav>
         </header>
         <!-- Header -->
-    <form>
+    <form id="form">
         <fieldset>
             <legend>Sign Up</legend>
             <div>
                 <label for="fullName">1. Full Name:</label>
-                <input type="text" id="fullName" name="fullName" >
+                <input type="text" id="fullName" name="fullName" class="required" >
             </div>
             <div>
                 <label for="Username">2. Username:</label>
-                <input type="text" id="Username" name="Username" >
+                <input type="text" id="Username" name="Username" class="required" >
             </div>
             <div>
                 <label for="password">3. Password:</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" class="required">
             </div>
             <div>
                 <label for="confirm-password">4. Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password">
+                <input type="password" id="confirm-password" name="confirm-password" class="required">
             </div>
             <div>
                 <label for="email">5. Email Address:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" class="required">
             </div>
             <div>
                 <label for="phone">6. Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone" class="required">
             </div>
             <div>
                 <label for="address">7. Address:</label>
-                <textarea id="address" name="address"></textarea>
+                <textarea id="address" name="address" class="required"></textarea>
             </div>
             <div id="Age">
                 <label for="age">8. Date of Birth:</label>
-                <input type="date" id="age" name="age" min="13" max="100" >
+                <input type="date" id="age" name="age" class="required">
             </div>
             <div id="signup-btn">
-                <input id="register" type="submit" value="Register">
+                <input id="register" type="submit" value="Register" class="required">
             </div>
         </fieldset>
     </form>

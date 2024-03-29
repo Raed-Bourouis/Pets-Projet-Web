@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var form = document.getElementById("Vform");
+    var form = document.getElementById("form");
 
     // Event listener for form submission
     form.addEventListener("submit", function(event) {
@@ -47,15 +47,15 @@ function validateNotEmpty() {
 }
 
 function validateAge() { 
-    var ageInput = document.getElementById("age");
-    var age = parseInt(ageInput.value);
-    if (isNaN(age) || age < 13 || age > 100) {
-        displayErrorMessage(ageInput.parentElement, "Please enter a valid age between 13 and 100.");
-        showErrorAnimation(ageInput.parentElement);
-        return false;
-    } else {
-        removeErrorMessage(ageInput.parentElement);
-    }
+    // var ageInput = document.getElementById("age");
+    // var age = parseInt(ageInput.value);
+    // if (isNaN(age) || age < 13 || age > 100) {
+    //     displayErrorMessage(ageInput.parentElement, "Please enter a valid age between 13 and 100.");
+    //     showErrorAnimation(ageInput.parentElement);
+    //     return false;
+    // } else {
+    //     removeErrorMessage(ageInput.parentElement);
+    // }
     return true;
 }
 
@@ -94,12 +94,11 @@ function validateEmail() {
 function validateForm() {
     let isValid = true;
     isValid = validateNotEmpty() && isValid;
-    isValid = validateRadios() && isValid;
-    isValid = validateCheckbox() && isValid;
     if(isValid){
         isValid = validateEmail() && isValid;
         isValid = validateAge() && isValid;
         isValid = validatePhoneNumber() && isValid;
+        isValid = validatePassword() && isValid;
     }
    
     return isValid;
