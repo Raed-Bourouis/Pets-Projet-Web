@@ -102,6 +102,7 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="password"],
 input[type="tel"],
 textarea {
     width: 100%;
