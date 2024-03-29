@@ -186,3 +186,30 @@ footer div:nth-child(3){
 /*----------------------------*/
 
 
+/* Javascript */
+.success input ,.success textarea{
+    border-color: #09c372;
+}
+
+.error input,.error textarea {
+    border-color: #ff3860;
+}
+
+
+
+
+/* Error animation */
+@keyframes errorAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.error-animation {
+    animation: errorAnimation 0.5s ease-in-out;
+}
+
+
+
