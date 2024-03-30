@@ -309,17 +309,20 @@ margin-bottom: 10px;
 font-size: 15px;
 }
 
-/* Footer styles */
-footer {
-    background: linear-gradient(135deg, #2E8540, #556B2F);
-    padding: 15px;
+/*footer*/
+footer{
+    background: linear-gradient(135deg, #2E8540, #556B2F) ; 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    font-family: "Kavivanar";
     color: #fff;
+    align-items: center;
+
 }
 
-footer div {
-    margin-bottom: 20px;
+footer div:nth-child(3){
+    padding-right: 2vw;
 }
 
-footer div:last-child {
-    margin-bottom: 0;
-}
+/*----------------------------*/
