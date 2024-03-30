@@ -139,62 +139,14 @@ h1 {
     margin-left: auto;
 }
 
-/* user list styles */
-.user-list {
-    list-style: none;
-    padding: 0;
+/* form dash styles */
+.dashelement{
+    border: black 1px solid;
+    border-collapse: collapse;
+
 }
 
-.user {
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-}
 
-.user img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.user-details {
-    flex: 1;
-}
-
-.user-details h3 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.user-details p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-.user-join-date {
-    font-size: 14px;
-    color: #666;
-}
-
-.user-options {
-    display: flex;
-    align-items: center;
-}
-
-.user-options .btn {
-    background-color: #238323;
-    border: none;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-}
 
 /*footer*/
 footer{
