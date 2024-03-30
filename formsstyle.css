@@ -140,9 +140,15 @@ h1 {
 }
 
 /* form dash styles */
-.dashelement{
-    border: black 1px solid;
+#formdash{
     border-collapse: collapse;
+    width: 100%;
+
+
+}
+
+td, th{
+    border-bottom: black 1px solid;
 
 }
 
