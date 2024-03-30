@@ -3,12 +3,16 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; 
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* header styles */
 nav {
-    background: linear-gradient(135deg, #2E8540, #556B2F); 
+    background: linear-gradient(135deg, #2E8540, #556B2F);
     top: 0;
     left: 0;
     right: 0;
@@ -22,7 +26,7 @@ nav {
 }
 
 nav:hover {
-    background: linear-gradient(135deg, #25703B, #35603A); 
+    background: linear-gradient(135deg, #25703B, #35603A);
 }
 
 #logo {
@@ -90,10 +94,11 @@ nav ul li i {
 
 
 .container {
-    max-width: 1200px;
+    flex-grow: 1;
+    width: calc(100vw - 100px);
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff; 
+    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -123,11 +128,14 @@ h1 {
 
 .stat-item i {
     font-size: 24px;
-    margin-right: 10px;
+    
 }
 
 .stat-text {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .stat-item p {
@@ -136,37 +144,74 @@ h1 {
 
 .stat-item strong {
     font-size: 18px;
-    margin-left: auto;
+    margin-left: 0;
 }
 
 /* form dash styles */
-#formdash{
+#formdash {
     border-collapse: collapse;
     width: 100%;
-
-
+    margin-top: 2%;
 }
 
-td, th{
+td,th {
     border-bottom: black 1px solid;
-
 }
+th{
+    color: #25703B ;
+}
+td{
+    text-align: center;
+    height: 6vh;
+}
+
+.btncontain{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.formaction{
+    background: none;
+    border: 1px #fff solid;
+    background-color: #2E8540;
+    z-index: 1;
+    height: 80%;
+    border-radius: 10px;
+    text-decoration: underline;
+    color: #fff;
+}
+.formaction:hover{
+    cursor: pointer;
+    border: 1px #25703B solid;
+    color: #25703B;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
 
 
 
 /*footer*/
-footer{
-    background: linear-gradient(135deg, #2E8540, #556B2F) ; 
+footer {
+    background: linear-gradient(135deg, #2E8540, #556B2F);
     display: flex;
+    /* position: absolute;
+    width: 100%;
+    bottom: 0vh; */
     flex-flow: row wrap;
-    justify-content:space-between;
+    justify-content: space-between;
     font-family: "Kavivanar";
     color: #fff;
     align-items: center;
 
 }
 
-footer div:nth-child(3){
+footer div:nth-child(3) {
     padding-right: 2vw;
 }
 

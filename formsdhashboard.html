@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="formsstyle.css">
 </head>
 
+<script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const userItem = button.closest('.user');
+                userItem.remove();
+            });
+        });
+    });
+</script>
+
 <body>
     <!-- Header -->
     <header>
@@ -20,7 +33,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Market</a></li>
-                    <li><a href="#">User Dashboard</a></li>
+                    <li><a href="userdashboard.html">User Dashboard</a></li>
                     <li><a href="#">Form Dashboard</a></li>
                     <li><a href="#"><i class='far fa-user' style="color: #fff; font-size:24px"></i>Account</a></li>
                 </ul>
@@ -34,20 +47,20 @@
         <!-- Statistics -->
         <div class="statistics">
 
-        <div class="stat-item">
-            <i class="fa-regular fa-eye"></i>
-            <div class="stat-text">
-                <p>Views</p>
-                <strong>1</strong>
+            <div class="stat-item">
+                <i class="fa-regular fa-eye"></i>
+                <div class="stat-text">
+                    <p>Views</p>
+                    <strong>1</strong>
+                </div>
             </div>
-        </div>
-        <div class="stat-item">
-            <i class="fa-regular fa-envelope"></i>
-            <div class="stat-text">
-                <p>Submissions</p>
-                <strong>1</strong>
+            <div class="stat-item">
+                <i class="fa-regular fa-envelope"></i>
+                <div class="stat-text">
+                    <p>Submissions</p>
+                    <strong>1</strong>
+                </div>
             </div>
-        </div>
             <div class="stat-item">
                 <i class="fa-brands fa-wpforms"></i>
                 <div class="stat-text">
@@ -63,14 +76,32 @@
 
         <table id="formdash" class="pure-table-horizontal">
             <tr class="dashelement">
-                <th>form name</th>
-                <th>views</th>
+                <th>Form Name</th>
+                <th>Views</th>
                 <th>Submissions</th>
-                <th>actions</th>
+                <th>Actions</th>
+            </tr>
+            <tr class="dashelement">
+                <td>Volunteer Form 1</td>
+                <td>201</td>
+                <td>67</td>
+                <td class="btncontain"><button type="button" class="formaction">View</button><button class="formaction">Edit</button><button class="formaction">View submissions</button><button class="formaction">Export submissions</button></td>
+            </tr>
+            <tr class="dashelement">
+                <td>Volunteer Form 2</td>
+                <td>174</td>
+                <td>53</td>
+                <td class="btncontain"><button class="formaction">View</button><button class="formaction">Edit</button><button class="formaction">View submissions</button><button class="formaction">Export submissions</button></td>
+            </tr>
+            <tr class="dashelement">
+                <td>Adoption Form</td>
+                <td>2149</td>
+                <td>1738</td>
+                <td class="btncontain"><button class="formaction">View</button><button class="formaction">Edit</button><button class="formaction">View submissions</button><button class="formaction">Export submissions</button></td>
             </tr>
 
 
-            
+
         </table>
     </div>
     <!-- Footer -->
@@ -91,19 +122,6 @@
         </div>
     </footer>
     <!-- End of Footer -->
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const deleteButtons = document.querySelectorAll('.delete-btn');
-
-            deleteButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const userItem = button.closest('.user');
-                    userItem.remove();
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
