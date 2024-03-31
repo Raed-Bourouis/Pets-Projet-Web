@@ -160,6 +160,27 @@ fieldset div label {
     }
 }
 
+#terms{
+    display: flex;
+    align-items: center;
+
+}
+
+#terms label{
+    margin-top: 5px;
+    a:link{
+        color: #2E8540;
+    }
+    a:hover{
+        cursor: pointer;
+        font-size: 1.05em;
+        transition: font-size 0.2s;
+    }
+}
+
+
+
+
 #signup-btn{
     width:100%;
     display: flex;
