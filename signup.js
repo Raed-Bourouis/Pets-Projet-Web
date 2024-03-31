@@ -119,6 +119,19 @@ function validateEmail() {
     return true;
 }
 
+function validateTerms(){
+    let terms=document.querySelector("#terms")
+    if(!terms.checked){
+        displayErrorMessage(terms.parentElement,"‎ ‎ ‎ ‎ *This field is required.");
+        showErrorAnimation(terms.parentElement);
+        return false;
+    }
+    else{
+        removeErrorMessage(terms.parentElement)
+        return true
+    }
+}
+
 
 function validateForm() {
     let isValid = true;
@@ -127,6 +140,8 @@ function validateForm() {
     isValid = validateAge() && isValid;
     isValid = validatePhoneNumber() && isValid; 
     isValid = validatePassword() && isValid;
+    isValid = validateTerms() && isValid;
+
  
    
     return isValid;
@@ -146,7 +161,7 @@ function displayErrorMessage(parentElement, message) {
     var errorDiv = parentElement.querySelector('.error'); 
     errorDiv.textContent = message;
     errorDiv.style.display = "block";
-    errorDiv.style="color:red;font-weight:bold;font-size:14px;margin-bottom: 20px;"
+    errorDiv.style="color:red;font-weight:bold;font-size:14px;margin-bottom: 0px;"
     parentElement.classList.add('error');
     parentElement.classList.remove('success');
 }
