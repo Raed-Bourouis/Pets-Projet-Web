@@ -21,8 +21,16 @@ document.addEventListener("DOMContentLoaded", function() {
 function validatePassword(){
     var Password=document.getElementById("password")
     var confirmPassword=document.getElementById("confirm-password")
-    if(!(Password.value===confirmPassword.value)){
+    if(Password.value=="" && confirmPassword.value== ""){
+        displayErrorMessage(confirmPassword.parentElement,"*Please enter both password and confirmation.");
+        showErrorAnimation(Password.parentElement);
+        displayErrorMessage(Password.parentElement,"*Please enter both password and confirmation.");
+        showErrorAnimation(confirmPassword.parentElement);
+        return false
+    }
+    else if(!(Password.value===confirmPassword.value)){
         displayErrorMessage(confirmPassword.parentElement, "Passwords do not match");
+        removeErrorMessage(Password.parentElement);
         showErrorAnimation(confirmPassword.parentElement);
         return false
     }
@@ -56,6 +64,11 @@ function validateNotEmpty() {
 function validateAge() { 
     var ageInput = document.getElementById("age");
     var age = ageInput.value.slice(0,4);
+    if(isNaN(age)) {
+        displayErrorMessage(ageInput.parentElement,'*This field is required.');
+        showErrorAnimation(ageInput.parentElement);
+        return false;
+    }
     if (age<1900) {
         displayErrorMessage(ageInput.parentElement, "Date of birth is invalid");
         showErrorAnimation(ageInput.parentElement);
@@ -69,7 +82,12 @@ function validateAge() {
 function validatePhoneNumber() { 
     var phoneInput = document.getElementById("phone");
     var phone = phoneInput.value.trim();
-    if (!/^\+\d+$/.test(phone)) {
+    if (phone==""){
+        displayErrorMessage(phoneInput.parentElement, "* This field is required .");
+        showErrorAnimation(phoneInput.parentElement);
+        return false
+    }
+    else if (!/^\+\d+$/.test(phone)) {
         displayErrorMessage(phoneInput.parentElement, "Please enter a valid phone number starting with '+'.");
         showErrorAnimation(phoneInput.parentElement);
         return false;
@@ -86,7 +104,11 @@ function validateEmail() {
 
     let emailInput = document.getElementById('email');
     let emailValue = emailInput.value.trim();
-
+    if(emailValue == "") {
+        displayErrorMessage(emailInput.parentElement,"* This field is required.");
+        showErrorAnimation(emailInput.parentElement);
+        return false;
+    } else 
     if (!emailPattern.test(emailValue)) {
         displayErrorMessage(emailInput.parentElement, "Invalid Email Address!");
         showErrorAnimation(emailInput.parentElement);
@@ -101,12 +123,11 @@ function validateEmail() {
 function validateForm() {
     let isValid = true;
     isValid = validateNotEmpty() && isValid;
-    if(isValid){
-        isValid = validateEmail()  && isValid;
-        isValid = validateAge() && isValid;
-        isValid = validatePhoneNumber() && isValid;
-        isValid = validatePassword() && isValid;
-    }
+    isValid = validateEmail()  && isValid;
+    isValid = validateAge() && isValid;
+    isValid = validatePhoneNumber() && isValid; 
+    isValid = validatePassword() && isValid;
+ 
    
     return isValid;
 }
