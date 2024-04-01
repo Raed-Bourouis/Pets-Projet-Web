@@ -227,6 +227,9 @@ nav ul li a:hover {
     background-repeat: no-repeat;
     z-index: -1; /* Ensures the blur is behind other content */
 }
+.audio-player audio::-webkit-media-controls-panel {
+    background-color: #88B04B;
+}
 /* section3 */
 .container3{
     padding-right: 20%;
