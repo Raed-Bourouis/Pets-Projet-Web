@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Reset button event listener
     document.querySelector('.reset').addEventListener('click', function() {
-        resetForm(inputs);
+        resetForm(inputs); select.parentElement.querySelector('p').innerText='';
+        select.style='margin-top:18px'
+
     });
 
     // Function to validate inputs
@@ -87,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
             element.value = '';
             const parentElement = element.parentElement;
             parentElement.classList.remove('error', 'success');
-            parentElement.querySelector('.error').textContent = ''; // Reset error message
+            parentElement.querySelector('.error').textContent = ''; 
         });
     };
 });

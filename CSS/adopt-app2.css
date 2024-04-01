@@ -84,7 +84,7 @@ nav ul li a:hover {
 
 /* Background Image */
 .bck-img {
-    background-image: url('BackgroundImage.jpg');
+    background-image: url('../assets/BackgroundImage.jpg');
     background-size: cover;
     background-position: center;
     position: fixed;
