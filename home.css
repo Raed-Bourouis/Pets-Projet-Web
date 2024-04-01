@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* common */
+body{
+    margin: 0;
+
+}
+
+
+.container,.container1,.container2,.container3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: larger;
+    gap: 30px;
+}
+button{
+    height: 50px;
+    border-radius: 40px;
+    background-color: #88B04B;
+    border-color: #88B04B;
+    color: black;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+
+
+/*Header style*/
+nav {
+    background: linear-gradient(135deg, #2E8540, #556B2F) ; 
+    top: 0; left: 0; right: 0; height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav:hover {
+    background: linear-gradient(135deg, #25703B, #35603A);
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-separator {
+    border-right: 2px solid #fff;
+    height: 50px;
+    margin: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+nav ul li:last-child a {
+    padding: 10px 20px;
+    background-color: #2E8540;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+nav ul li:last-child a:hover {
+    background-color: #25703B;
+}
+nav ul li a:hover {
+    color: #C0C0C0;
+}
+
+/* intro */
+#presentation{
+    margin-top: 10px;
+    font-family: 'Playfair display';
+    font-size: 70px;
+    border-right: 5px solid rgb(221, 221, 221); 
+    transition: border-right 0.3s ease;
+    color: #88B04B;
+}
+#traitHor{
+    margin: 0 auto;
+    height: 6px;
+    width: 70%;
+    background-color: #88B04B;
+    border-color: #88B04B;
+    border-radius: 4px;
+}
+
+/* <!-- section1 --> */
+.container1{
+    height: 650px;
+    position: relative;
+    padding: 20;
+    overflow: hidden;
+}
+.blur1 {
+    background-image: url('shelter.png');
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px); /* Adjust the blur radius as needed */
+    z-index: -1; /* Ensures the blur is behind other content */
+}
+.sect11{
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Playfair Display', serif;
+}
+.sect11,.sect12{
+    padding-top: 100px;
+}
+#img1{
+    width: 500px;
+    height: 300px;
+}
+
+/* video */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 30em;
+    max-width: 800px; 
+    margin: 0 auto; /* centre le conteneur horizontalement */
+    border: 9px solid #88B04B; 
+    border-radius: 10px;     
+  }
+.video-container:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+  .video-container iframe {
+    width: 100%;
+    height: 100%; 
+    border: none; /* supprime la bordure de l'iframe */
+  }
+
+  
+/* Our Supporters */
+#TitleOurSupp{
+    margin-left: 20%;
+    font-size: x-large;
+}
+#listSupp{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 20%;
+    padding-right: 20%;    
+
+
+}
+#oursupp{
+    background-color: #88B04B;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.supp{
+    width: 90px;
+    mix-blend-mode: color-burn;
+    
+}
+
+/* section2 */
+.container2{
+    padding-right: 20%;
+    padding-left: 20%;
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+}
+#img2{
+
+    width: 550px;
+    height: 450px;
+    border-radius: 60px;
+    
+
+}
+#btn2{
+    width: 100px;
+    padding-left: 80%;
+}
+#sect21,#sect22{
+    padding-top: 15%;
+}
+.blur2{
+    position: absolute;
+    background-image: url('Nature\ green\ background\ featuring\ april\,\ august\,\ and\ background\ \(1\).jpg');
+    filter: blur(4px);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensures the blur is behind other content */
+}
+/* section3 */
+.container3{
+    padding-right: 20%;
+    padding-left: 20%;
+}
+#btn3{
+    padding-left: 70%;
+}
+#volunteernow{
+    text-align: center;
+}
+/* be part */
+#bepart{
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 45px;
+    height: 22em;
+    background: linear-gradient(to right, #88B04B, #A9D6CE);
+    display: grid;
+    place-items: center;
+    font-family: 'Playfair display';
+    border-radius: 30px;
+
+}
+#btn4{
+    width: 5em;
+}
+
+
+/*footer*/
+footer{
+    background: linear-gradient(135deg, #2E8540, #556B2F) ; 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    font-family: "Kavivanar";
+    color: #fff;
+    align-items: center;
+
+}
+
+footer div:nth-child(3){
+    padding-right: 2vw;
+}
