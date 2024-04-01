@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="cart.Css">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div>
+                <img id="logo" src="logoweblight.png" alt="Logo">
+            </div>
+            <div id="nav-list">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Adopt</a></li>
+                    <li><a href="market.html">Marketplace</a></li>
+                    <li><a href="cart.html"><i class="fas fa-cart-plus"></i> Cart</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End of Header -->
+<div class="container">
+    <h1>Shopping Cart</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align:center">Product</th>
+                <th style="text-align:center">Price</th>
+                <th style="text-align:center">Quantity</th>
+                <th style="text-align:center">Total</th>
+                <th style="text-align:center">Action</th>
+            </tr>
+            <tbody id="cart-items">
+
+            </tbody>
+        </thead>
+    </table>
+    <div id="cart-summary">
+        <p>Total Items: <span id="total-items">0</span></p>
+        <p>Total Price: <span id="total-price">0.00</span> TND</p>
+    </div>
+    <div class="buttons">
+        <a href="checkout.html" class="button">Proceed to Checkout</a>
+        <button class="button" style="background-color:red;border:none" onclick="clearCart()">Clear Cart</button>
+    </div>
+</div>
+  <!-- Footer -->
+  <footer>
+    <div>
+        <img id="logo" src="logoweblight.png" alt="Logo">
+    </div>
+    <div>
+        <p>Addresses:</p>
+        <p>Denden, Manouba</p>
+        <p>Moncef Bey, Tunis</p>
+    </div>
+    <div>
+        <p>Email: pets@gmail.com</p>
+        <p>Tel: +216 12 898 757</p>
+        <p>Fax: +216 62 69 26</p>
+        <p>RIB: 156549855955558598</p>
+    </div>
+</footer>
+<!-- End of Footer -->
+<script src="cart.js">
+
+</script>
+
+</body>
+</html>
