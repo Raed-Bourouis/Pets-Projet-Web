@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    font-family: 'Playfair Display',sans-serif;
+    background-color: rgba(249, 249, 249, 0.8); 
+    margin: 0;
+    padding: 0;
+}
+/* Header styles */
+nav {
+    background: linear-gradient(135deg, #2E8540, #556B2F) ; 
+    top: 0; left: 0; right: 0; height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav:hover {
+    background: linear-gradient(135deg, #25703B, #35603A);
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-separator {
+    border-right: 2px solid #fff;
+    height: 50px;
+    margin: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+nav ul li:last-child a {
+    padding: 10px 20px;
+    background-color: #2E8540;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+nav ul li:last-child a:hover {
+    background-color: #25703B;
+}
+nav ul li a:hover {
+    color: #C0C0C0;
+}
+/*end of header*/
+/* background image */
+.bck-img {
+    
+    background-image: url('BackgroundImage.jpg');
+    /* Adjust background size and position */
+    background-size: cover;
+    background-position: center;
+    /* Set fixed positioning to prevent scrolling */
+    position: fixed;
+    filter: blur(8px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure background is behind other elements */
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+#logo2 {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+#title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#note {
+    font-size: large;
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label,
+input {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+input:focus,
+select:focus {
+    border-color: #257042;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+.city {
+    display: grid;
+    grid-template-columns: auto max-content auto; 
+    gap: 10px; 
+    align-items: center;
+    margin-bottom: 20px;
+}
+#state{
+    width: 150px;
+    transform: translateY(-11px);
+}
+
+
+#Pcode {
+    flex: 1; 
+}
+
+/******* javascript ********/
+/* Apply error animation to elements with the class 'error' */
+
+.input-control .error,.selected .error{
+    animation: errorAnimation 0.5s ease forwards;
+    color: #ff3860;
+    font-size: 14px;
+    height: 13px;
+}
+
+.input-control.success input{
+    border-color : #09c372;
+}
+.input-control.error input
+{
+    border-color: #ff3860;
+}
+/******** End of Javascript **********/
+.btn-container {
+    text-align: center;
+}
+
+button {
+    background-color: #2E8540;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.reset {
+    background-color: #f44336;
+}
+
+button:hover {
+    background-color: #25703B;
+}
+
+button.reset:hover {
+    background-color: #BF3A3A;
+}
+/*footer*/
+footer {
+    background: linear-gradient(135deg, #2E8540, #556B2F);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-family: "Kavivanar";
+    color: #fff;
+    align-items: center;
+}
+
+footer div:nth-child(3) {
+    padding-right: 2vw;
+}
+/* Error animation */
+@keyframes errorAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.error-animation {
+    animation: errorAnimation 0.5s ease-in-out;
+}
+
+
+
