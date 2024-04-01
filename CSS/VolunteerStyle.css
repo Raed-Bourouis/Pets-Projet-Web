@@ -4,33 +4,27 @@ body {
     margin: 0;
     padding: 0;
 }
-
-/* Header Styles */
+/* Header styles */
 nav {
-    background: linear-gradient(135deg, #2E8540, #556B2F); 
+    background: linear-gradient(135deg, #2E8540, #556B2F);
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
-    padding: 20px;
+    height: 70px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in-out;
-    border: 2px solid;
-    border-image-slice: 1;
-    border-width: 0 0 2px 0;
-    border-image-source: linear-gradient(135deg, #2E8540, #556B2F); 
 }
 
-/* Hover Effect on Header */
 nav:hover {
     background: linear-gradient(135deg, #25703B, #35603A);
 }
 
 #logo {
-    width: 150px;
+    width: 100px;
     height: auto;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
     transition: transform 0.3s ease-in-out;
@@ -42,7 +36,7 @@ nav:hover {
 
 .nav-separator {
     border-right: 2px solid #fff;
-    height: 50px;
+    height: 40px;
     margin: 0 20px;
 }
 
@@ -53,7 +47,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 nav ul li:last-child {
@@ -65,14 +59,14 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
-    font-size: 1.2em;
+    font-size: 1em;
     letter-spacing: 1px;
 }
 
 nav ul li:last-child a {
-    padding: 10px 20px;
+    padding: 8px 16px;
     background-color: #2E8540;
-    border-radius: 6px;
+    border-radius: 4px;
     transition: background-color 0.3s;
 }
 

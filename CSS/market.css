@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 /* Reset styles */
 * {
     margin: 0;
@@ -6,7 +8,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     background-color: #f7f7f7;
     color: #333;
 }
@@ -84,7 +86,6 @@ nav ul li:last-child a:hover {
 nav ul li a:hover {
     color: #C0C0C0;
 }
-
 
 /* Picture  */
 
