@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet"  href="signup.css">
+    <script src="signup.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+        <header>
+            <nav>
+                <div>
+                    <img id="logo" src="logowhite.png" alt="Logo">
+                </div>
+                <div id="nav-list">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Market</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Header -->
+    <form id="form">
+        <fieldset>
+            <legend>Sign Up</legend>
+            <div>
+                <label for="fullName">1. Full Name:</label>
+                <input type="text" id="fullName" name="fullName" class="required" >
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="Username">2. Username:</label>
+                <input type="text" id="Username" name="Username" class="required" >
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="password">3. Password:</label>
+                <input type="password" id="password" name="password" >
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="confirm-password">4. Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" >
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="email">5. Email Address:</label>
+                <input type="text" id="email" name="email">
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="phone">6. Phone Number:</label>
+                <input type="text" id="phone" name="phone" >
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="address">7. Address:</label>
+                <textarea id="address" name="address" class="required"></textarea>
+                <div class="error"></div>
+            </div>
+            <div id="Age">
+                <label for="age">8. Date of Birth:</label>
+                <input type="date" id="age" name="age" class="required">
+                <div class="error"></div>
+            </div>
+            <div id="Terms">
+                <input type="radio" id="terms" name="terms" class="required">
+                <label for="terms">I have read and accept the <a href="Terms-and-Conditions-for-Signing-Up.pdf" target="_blank">Terms&Conditions</a></label>
+                <div class="error"></div>
+            </div>
+
+            <div id="signup-btn">
+                <input id="register" type="submit" value="Register">
+            </div>
+        </fieldset>
+    </form>
+
+     <!--footer-->
+     <footer>
+        <div>
+            <img id="logo" src="logowhite.png">
+        </div>
+        <div>
+            <p>Addresses:</p>
+            <p>Denden, Manouba</p>
+            <p>Moncef Bey, Tunis</p>
+        </div>
+        <div>
+            <p>Email: pets@gmail.com</p>
+            <p>Tel: +218 12 898 757</p>
+            <p>Fax: +218 62 69 26</p>
+            <p>RIB: 156549855955558598</p>
+        </div>
+    </footer>
+    <!---------------------------------------------------------------------------------------------------------------------------->
+
+
+</body>
+</html>
+
