@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets - Sign In</title>
+    <link rel="stylesheet" href="sign-in.css">
+    <script src="sign-in.js" defer></script>
+
+</head>
+
+<body>
+
+    <div id="bgim"></div>
+
+
+    <div id="main">
+        <img src="logoblack.png" alt="">
+
+        <section id="sectionright">
+            <div class="login-container">
+                <form action="#">
+                    <div class="form-group">
+                        <p style="font-size: 1.5em; font-weight: 600;">Welcome Back!</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Email, Phone Number or Username:</label>
+                        <input style="margin-top: 1vh;" type="text" id="name" name="name" placeholder="JonDoe@pets.org"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <div id="pwdcontainer">
+                            <input style="margin-top: 1vh;" type="password" id="password" name="password"
+                                placeholder="●●●●●●●●●●●●●" required>
+                            <button type="button" id="revealpswrd">Reveal</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button id="signin">Sign In</button>
+                    </div>
+
+                    <div class="form-group">
+                        <a href="">
+                            <p id="signup-hyperlink">No Account? Sign Up!</p>
+                        </a>
+                    </div>
+                </form>
+
+
+            </div>
+        </section>
+    </div id="main">
+
+
+</body>
+
+</html>
