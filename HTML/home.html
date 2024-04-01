@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <title>Pets</title>
-    <link rel="icon" href="logo.png">
-    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="../assets/logoweblight.png">
+    <link rel="stylesheet" href="../CSS/home.css">
 </head>
 <body>
-     <!--Header-->
-     <div>
+         <!-- Header -->
+    <header>
         <nav>
             <div>
-                <img id="logo" src="logo.png" alt="Logo">
+                <img id="logo" src="../assets/logoweblight.png" alt="Logo">
             </div>
             <div id="nav-list">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Market</a></li>
-                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="adopt-user.html">Adopt</a></li>
+                    <li><a href="market.html">Marketplace</a></li>
+                    <li><a href="cart.html"><i class="fas fa-cart-plus"></i> Cart</a></li>
+                    <li><a href="sign-in.html">Sign In</a></li>
                 </ul>
             </div>
         </nav>
-    </div>
-    <!------------------------------------------------------------------------------------------------------------------------------------->
-
-
+    </header>
+    <!-- End of Header -->
     <!-- intro -->
     <div class="container">
         <div id="presentation">W</div>
@@ -40,10 +42,10 @@
     <div class="container1">
         <div class="sect11">
             <h1>Meet Your Adorable Pet</h1>
-            <button onclick="redirection('link1')">View Adoptable Pets</button>
+            <button onclick="redirection('adopt-user.html')">View Adoptable Pets</button>
         </div>
         <div class="sect12">
-            <img id="img1" src="./images/image13.png" alt="">
+            <img id="img1" src="../assets/image13.png" alt="">
         </div>
         <div class="blur1"></div>
     </div>
@@ -59,14 +61,14 @@
     <!-- section2 -->    
     <div class="container2">
         <div id="sect21">
-            <img id="img2" src="./images/416019816_332436186378112_3094684770895714120_n.jpg" alt="">
+            <img id="img2" src="../assets/416019816_332436186378112_3094684770895714120_n.jpg" alt="">
         </div>
         <div id="sect22">
             <h1>Thousands of stray dogs and cats face starvation.</h1>
             <p>According to global animal welfare organisation FOUR PAWS, homeless dogs and cats are threatened with starvation. The reasons for the food shortage are
                  the curfews as well as the closed restaurants and factories especially after the covid-19, the main food source for many 
                  stray animals.</p>
-            <div id="btn2"> <button onclick="redirection('link2')">Read More</button> </div>      
+            <div id="btn2"> <button onclick="redirection('process.html')">Join Us!</button> </div>      
         </div>
         <div class="blur2"></div>
     </div>
@@ -78,10 +80,10 @@
     <div id="TitleOurSupp"> <h2>Our Supporters</h2> </div>
     <div id="oursupp">
     <ul id="listSupp">
-        <li><img class="supp" src="./images/Ifaw_logo.png" alt=""></li>
-        <li><img class="supp" src="./images/FOUR PAWS logo_PNG.png" alt=""></li>
-        <li><img class="supp" src="./images/images.webp" alt=""></li>
-        <li><img class="supp" src="./images/18-AWI-Logo-Hexagons-Green-Border_300x300.png" alt=""></li>
+        <li><img class="supp" src="../assets/Ifaw_logo.png" alt=""></li>
+        <li><img class="supp" src="../assets/FOUR PAWS logo_PNG.png" alt=""></li>
+        <li><img class="supp" src="../assets/images.webp" alt=""></li>
+        <li><img class="supp" src="../assets/18-AWI-Logo-Hexagons-Green-Border_300x300.png" alt=""></li>
     </ul>
     </div>
      
@@ -94,10 +96,10 @@
             <p>We can help you choose the right pet for you, 
                 and understand the needs of the pet you're thinking about getting. 
                 Think P-E-T-S – Place, Exercise, Time and Spend</p>
-            <div id="btn3"> <button onclick="redirection('link3')">View More</button> </div> 
+            <div id="btn3"> <button onclick="redirection('joincause.html')">View More</button> </div>
         </div>
         <div>
-            <img src="./images/istockphoto-1140204204-612x612.jpg" alt="">
+            <img src="../assets/istockphoto-1140204204-612x612.jpg" alt="">
         </div>
     </div>
 
@@ -106,15 +108,14 @@
         <h2>Are You Ready ?</h2>
         <h1>Be a part of our community !</h1>
         <br>
-        <div><button onclick="redirection('link1')" id="btn4">Sign Up</button> </div>   
-
+        <div><button onclick="redirection('signup.html')" id="btn4">Sign Up</button></div>
     </div>
 
 
     <!--footer-->
     <footer>
         <div>
-            <img id="logo" src="logo.png">
+            <img id="logo" src="../assets/logowhite.png">
         </div>
         <div>
             <p>Addresses:</p>
@@ -131,6 +132,6 @@
     <!---------------------------------------------------------------------------------------------------------------------------->
 
 
-    <script src="home.js"></script>
+    <script src="../Javascript/home.js"></script>
 </body>
 </html>
