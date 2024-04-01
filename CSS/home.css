@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/kavivanar');
 /* common */
 body{
     font-family: 'Playfair Display', serif;
@@ -29,8 +29,6 @@ button:hover{
     transition: transform 0.2s;
     color: white;
 }
-
-
 
 /* Header styles */
 nav {
@@ -105,7 +103,6 @@ nav ul li:last-child a:hover {
 nav ul li a:hover {
     color: #C0C0C0;
 }
-
 
 /* intro */
 #presentation{

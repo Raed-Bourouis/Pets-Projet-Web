@@ -1,3 +1,6 @@
+function redirection(link) {
+    window.location.href = link;
+}
 
 function ToDelete(button){
     var parentDiv=button.parentNode
