@@ -76,7 +76,7 @@ nav ul li a:hover {
     /* background image */
     .bck-img {
         
-        background-image: url('BackgroundImage.jpg');
+        background-image: url('../assets/BackgroundImage.jpg');
         /* Adjust background size and position */
         background-size: cover;
         background-position: center;
@@ -142,7 +142,6 @@ footer{
     display: flex;
     flex-flow: row wrap;
     justify-content:space-between;
-    font-family: "Kavivanar";
     position: fixed;
     bottom : 0;
     width :100%;

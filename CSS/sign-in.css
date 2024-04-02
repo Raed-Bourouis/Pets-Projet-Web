@@ -1,9 +1,10 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+
+body{
+    font-family: "Playfair  Display";
     padding: 0;
-    margin: 0;
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    margin:0;
 }
 
 #bgim {
@@ -12,7 +13,7 @@ body {
     padding: 0;
     margin: 0;
     position: absolute;
-    background-image: url(ea2b6330761b3f3e8e0b7577918f55f2.jpg);
+    background-image: url('../assets/ea2b6330761b3f3e8e0b7577918f55f2.jpg');
     background-size: 100vw 100vh;
     filter: blur(8px);
 }
@@ -31,7 +32,7 @@ body {
     position: relative;
     display: flex;
     border: #ddd 2px solid;
-    background: #ddd;
+    background: #25703B;
     flex-flow: row wrap;
     margin-top: 10vh;
     margin-left: 2vw;
