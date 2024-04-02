@@ -81,7 +81,7 @@ nav ul li a:hover {
 /*end of header*/
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     max-width: 800px;
     margin: 50px auto;

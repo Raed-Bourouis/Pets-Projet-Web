@@ -17,16 +17,19 @@ body{
 }
 button{
     height: 50px;
+    width: fit-content;
     border-radius: 40px;
-    background-color: #88B04B;
+    background-color: #658238;
     border: none;
-    color: black;
+    color: white;
     cursor: pointer;
+    font-size: 18px;
 }
 button:hover{
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s;
+    background-color: #3f4f23;
     color: white;
 }
 
@@ -137,8 +140,8 @@ nav ul li a:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    filter: blur(10px); /* Adjust the blur radius as needed */
-    z-index: -1; /* Ensures the blur is behind other content */
+    filter: blur(10px); 
+    z-index: -1; 
 }
 .sect11{
     text-align: center;
@@ -215,7 +218,8 @@ nav ul li a:hover {
 
 }
 #btn2{
-    width: 100px;
+    width: 150px;
+    color: white;
     padding-left: 80%;
 }
 #sect21,#sect22{
@@ -240,6 +244,7 @@ nav ul li a:hover {
 }
 #btn3{
     padding-left: 70%;
+    width: 80px;
 }
 #volunteernow{
     text-align: center;
@@ -253,13 +258,15 @@ nav ul li a:hover {
     background: linear-gradient(to right, #88B04B, #A9D6CE);
     display: grid;
     place-items: center;
-    font-family: 'Playfair display';
+    font-family: 'Playfair display',sans-serif;
     border-radius: 30px;
 
 }
 #btn4{
-    width: 5em;
+    width: 10em;
+   
 }
+
 
 
 /*footer*/
@@ -267,8 +274,8 @@ footer{
     background: linear-gradient(135deg, #2E8540, #556B2F) ; 
     display: flex;
     flex-flow: row wrap;
-    justify-content:space-between;
-    font-family: "Kavivanar";
+    justify-content:space-around;
+    font-family: 'Playfair display',sans-serif;
     color: #fff;
     align-items: center;
 

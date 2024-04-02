@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Food Shop</title>
-    <!-- Link to Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!--import poppins--> 
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/market.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+
 </head>
 <body>
          <!-- Header -->
@@ -112,27 +106,26 @@
         <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </div>
     </section>
 
-     <!-- Footer -->
-     <footer>
-        <div>
-            <img id="logo" src="../assets/logoweblight.png" alt="Logo">
-        </div>
-        <div>
-            <p>Addresses:</p>
-            <p>Denden, Manouba</p>
-            <p>Moncef Bey, Tunis</p>
-        </div>
-        <div>
-            <p>Email: pets@gmail.com</p>
-            <p>Tel: +216 12 898 757</p>
-            <p>Fax: +216 62 69 26</p>
-            <p>RIB: 156549855955558598</p>
-        </div>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <div>
+                <img id="logo" src="../assets/logoweblight.png" alt="Logo">
+            </div>
+            <div>
+                <p>Addresses:</p>
+                <p><a href="https://www.google.com/maps/place/Denden,+Manouba" style="color:white; text-decoration:none"><i class="fa-solid fa-location-pin"></i>&nbsp;Denden, Manouba</a></p>
+                <p><a href="https://www.google.com/maps/place/Av.+Moncef+Bey,+Tunis" style="color:white; text-decoration:none"><i class="fa-solid fa-location-pin"></i>&nbsp;Moncef Bey, Tunis</a></p>
+            </div>
+            <div>
+                <p ><a href="mailto:pets@gmail.com" style="color:white; text-decoration:none" >Email: pets@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i>&nbsp;Tel: +216 12 898 757</p>
+                <p><i class="fa-solid fa-fax"></i>&nbspFax: +216 62 69 26</p>
+                <p>RIB: 156549855955558598</p>
+            </div>
+        </footer>
     <!-- End of Footer -->
 </body>
 <script>
-    // Function to animate product listing
     function animateProductListing() {
         const products = document.querySelectorAll('.product');
         products.forEach((product, index) => {

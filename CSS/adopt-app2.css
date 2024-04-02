@@ -264,7 +264,7 @@ footer {
     background: linear-gradient(135deg, #2E8540, #556B2F);
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     color: #fff;
     align-items: center;
 }

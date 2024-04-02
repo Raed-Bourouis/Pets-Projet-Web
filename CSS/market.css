@@ -213,7 +213,7 @@ footer {
     padding: 20px;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-family: "Kavivanar";
 }

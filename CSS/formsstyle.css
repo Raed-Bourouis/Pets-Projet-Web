@@ -203,7 +203,7 @@ footer {
     width: 100%;
     bottom: 0vh; */
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     font-family: "Kavivanar";
     color: #fff;
     align-items: center;
