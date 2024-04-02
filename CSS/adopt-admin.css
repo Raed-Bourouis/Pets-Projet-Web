@@ -113,6 +113,7 @@ nav ul li a:hover {
     border-radius: 15px;
     width: max-content;
     border: none;
+    color: white;
     padding: 10px 20px ;
     background-color: #88B04B;
     border-color: #88B04B;
@@ -175,6 +176,7 @@ p{
 .modify{
     border-radius: 15px;
     padding: 10px 20px ;
+    color: white;
     border: none;
     background-color: #61ae22;
 }
@@ -189,6 +191,7 @@ p{
     border-radius: 15px;
     padding: 10px 20px ;
     border: none;
+    color: white;
     background-color: #f34444;
     border-color: #f34444;
 }
