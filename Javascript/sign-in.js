@@ -8,3 +8,14 @@
       passwordInput.type = "password";
     }
   });
+
+  const form = document.querySelector('form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Redirect to home.html
+    window.location.href = 'cart.html';
+});
+
+ 
