@@ -2,7 +2,7 @@
 
 
 body{
-    font-family: "Playfair  Display";
+    font-family: "Playfair Display";
     padding: 0;
     margin:0;
 }
@@ -103,10 +103,13 @@ form {
     border:none;
     background-color: #f9f9f9;
 
+
 }
 
-#revealpswrd:hover{
+#revealpswrd i:hover{
     border:none;
+    transform: scale(1.3);
+    transition: transform 0.3s;
     cursor:pointer;
     border: #25703B 1px hidden;
     color: #25703B;
