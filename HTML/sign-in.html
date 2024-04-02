@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/faa6c9467e.js" crossorigin="anonymous"></script>
+
     <title>Pets - Sign In</title>
-    <link rel="stylesheet" href="sign-in.css">
-    <script src="sign-in.js" defer></script>
+    <link rel="stylesheet" href="../CSS/sign-in.css">
+    <script src="../Javascript/sign-in.js" defer></script>
 
 </head>
 
@@ -16,7 +18,7 @@
 
 
     <div id="main">
-        <img src="logoblack.png" alt="">
+        <img src="../assets/logoblack.png" alt="">
 
         <section id="sectionright">
             <div class="login-container">
@@ -35,16 +37,16 @@
                         <div id="pwdcontainer">
                             <input style="margin-top: 1vh;" type="password" id="password" name="password"
                                 placeholder="●●●●●●●●●●●●●" required>
-                            <button type="button" id="revealpswrd">Reveal</button>
+                            <button type="button" id="revealpswrd"><i class="fa-regular fa-eye"></i></button>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <button id="signin">Sign In</button>
+                        <input value="Sign In" type="submit" id="signin">
                     </div>
 
                     <div class="form-group">
-                        <a href="">
+                        <a href="signup.html">
                             <p id="signup-hyperlink">No Account? Sign Up!</p>
                         </a>
                     </div>
@@ -53,7 +55,7 @@
 
             </div>
         </section>
-    </div id="main">
+    </div>
 
 
 </body>

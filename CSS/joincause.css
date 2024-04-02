@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+
 body{
+    font-family: "Playfair Display";
     padding: 0;
     margin:0;
 }
@@ -95,6 +99,28 @@ nav ul li a:hover {
 
 
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 
@@ -109,6 +135,9 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     filter: brightness(0.7);
+    animation: fadeIn 1s ease-in;
+
+
 }
 #Volunteers-photo{
     position: relative;
@@ -116,6 +145,7 @@ nav ul li a:hover {
     height: 400px; 
     margin-bottom: 10vh;
     margin-top: 0.2%;
+
 
 }
 
@@ -135,6 +165,8 @@ nav ul li a:hover {
     text-align: center;
     position: relative;
     font-size: larger;
+    animation: fadeIn 1s ease-in;
+
 }
 #join-cause h1{
     font-family:"Kavivanar";
@@ -168,6 +200,9 @@ nav ul li a:hover {
     border: solid 2px #556B2F;
     -webkit-text-stroke: #556B2F;
     margin: 2vw 2vw 2vw 2vw;
+    animation: fadeIn 1s ease-in;
+
+    
 }
 
 #get-involved h4{
