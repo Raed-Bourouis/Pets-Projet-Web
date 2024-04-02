@@ -144,6 +144,7 @@ p {
 .modify,
 .delete {
     border-radius: 15px;
+    color:white;
     padding: 10px 20px;
     background-color: #4cb959;
     border: none;

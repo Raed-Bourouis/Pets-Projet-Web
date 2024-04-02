@@ -233,6 +233,9 @@ li .ValueBox{
     width: 300px;
     height: auto;
     transition: transform 1s ease-in-out;
+    height: 300px;
+    object-fit: cover
+
 }
 
 .teamMember img:hover {
@@ -306,8 +309,8 @@ margin-bottom: 10px;
 }
 
 #join p,
-#join b {
-font-size: 15px;
+ b {
+font-size: 25px;
 }
 
 /*footer*/
