@@ -291,6 +291,9 @@ function Ajouter(button) {
     let photo1=document.createElement("input"); photo1.type="file"
     let photo2=document.createElement("input"); photo2.type="file"
     let photo3=document.createElement("input"); photo3.type="file"
+    photo1.accept = "image/*";
+    photo2.accept = "image/*";
+    photo3.accept = "image/*";
 
 
 
@@ -345,19 +348,26 @@ function Ajouter(button) {
     document.body.style.overflow = 'hidden';//bech ili wra il fenetre mayscrollich
 
     const currentDate = new Date().toDateString();
-
-    let item=`<p class="date"> ${currentDate} </p><div class="block"><div class="left"><img src=${photo1.value} alt=""><div class="circles"><div class="circle" onclick="changerImage(${photo1.value},this)"></div><div class="circle" onclick="changerImage(${photo2.value},this)"></div><div class="circle" onclick="changerImage(${photo3.value},this)"></div></div></div><div class="right"><h1>${input1.value}</h1><h4>${input12.value}</h4><h5>Description :</h5><p>${input.value}</p><div class="divForBtn"><button onclick="ToDelete(this)" class="delete">Delete &nbsp;<i class="fa-solid fa-trash-can"></i></button><button onclick="Modifier(this)" class="modify">Modify&nbsp;<i class="fas fa-edit"></i></button></div></div></div><div class="traitHor"></div>`
+    let date=document.createElement('p')
+    date.classList.add("date")
+    date.innerHTML=currentDate
+    let item = `<div class="block"><div class="left"><img src='../assets/bella2.jpg' alt=""><div class="circles"><div class="circle" onclick="changerImage('../assets/bella2.jpg',this)"></div><div class="circle" onclick="changerImage('../assets/bella.png',this)"></div><div class="circle" onclick="changerImage('../assets/bella3.jpg',this)"></div></div></div><div class="right"><h1>${input1.value}</h1><h4>${input12.value}</h4><h5>Description :</h5><p>${input.value}</p><div class="divForBtn"><button onclick="ToDelete(this)" class="delete">Delete &nbsp;<i class="fa-solid fa-trash-can"></i></button><button onclick="Modifier(this)" class="modify">Modify&nbsp;<i class="fas fa-edit"></i></button></div></div></div><div class="traitHor"></div>`;
 
     let Newitem=document.createElement("div")
     Newitem.innerHTML=item
 
     submit.onclick = () => {
         Enregistrer(Newitem, input.value, input1.value, input12.value, fenetre, container,sect1 ,overlay);
+        parent.appendChild(date)
 
         parent.appendChild(Newitem)
 
     };
 }
+
+
+
+//    let item = `<div class="block"><div class="left"><img src='../assets/bella2.jpg' alt=""><div class="circles"><div class="circle" onclick="changerImage('../assets/bella2.jpg',this)"></div><div class="circle" onclick="changerImage('../assets/bella.png',this)"></div><div class="circle" onclick="changerImage('../assets/bella3.jpg',this)"></div></div></div><div class="right"><h1>${input1.value}</h1><h4>${input12.value}</h4><h5>Description :</h5><p>${input.value}</p><div class="divForBtn"><button onclick="ToDelete(this)" class="delete">Delete &nbsp;<i class="fa-solid fa-trash-can"></i></button><button onclick="Modifier(this)" class="modify">Modify&nbsp;<i class="fas fa-edit"></i></button></div></div></div><div class="traitHor"></div>`;
 
 
 // let item=`<p class="date">${input1.value}</p><div class="block"><div class="left"><img src="../assets/bella.png" alt=""><div class="circles"><div class="circle" onclick="changerImage(\'../assets/bella.png\',this)"></div><div class="circle" onclick="changerImage(\'../assets/bella2.jpg\',this)"></div><div class="circle" onclick="changerImage(\'../assets/bella3.jpg\',this)"></div></div></div><div class="right"><h1>BELLA</h1><h4>8-Month puff ball</h4><h5>Description :</h5><p>Bella is the epitome of sweetness and gentleness, with a heart as big as her fluffy golden coat. She thrives on love and affection, always eager to snuggle up on the couch for a cozy cuddle session. Bella's loyalty knows no bounds, and she'll stick by your side through thick and thin. Whether you're looking for a faithful friend to share your quiet moments with or a loving presence to greet you at the end of a long day, Bella is the perfect addition to your family.</p><div class="divForBtn"><button onclick="ToDelete(this)" class="delete">Delete &nbsp;<i class="fa-solid fa-trash-can"></i></button><button onclick="Modifier(this)" class="modify">Modify&nbsp;<i class="fas fa-edit"></i></button></div></div></div><div class="traitHor"></div>`
