@@ -110,7 +110,6 @@ nav ul li a:hover {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
 /* Picture  */
 
 .banner {
@@ -231,17 +230,19 @@ h2 {
     text-align: center;
     margin: 15px;
 }
-/* Footer styles */
-footer {
-    background: linear-gradient(135deg, #2E8540, #556B2F);
-    padding: 20px;
-    color: #fff;
+/*footer*/
+footer{
+    background: linear-gradient(135deg, #2E8540, #556B2F) ; 
     display: flex;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content:space-around;
+    font-family: 'Playfair display',sans-serif;
+    color: #fff;
     align-items: center;
-    font-family: "Kavivanar";
+    height: 140px;
+
 }
 
-footer div:nth-child(3) {
+footer div:nth-child(3){
     padding-right: 2vw;
 }
