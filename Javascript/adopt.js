@@ -140,7 +140,7 @@ function Modifier(button) {
     fenetre.style.top = '50%';
     fenetre.style.left = '50%';
     fenetre.style.transform = 'translate(-50%, -50%)';
-    fenetre.style.backgroundColor = ''; 
+    fenetre.style.backgroundColor = '#f9f9f9'; 
     fenetre.style.width = '600px';
     fenetre.style.maxWidth = '80%';
     fenetre.style.height = 'auto';
@@ -318,7 +318,7 @@ function Ajouter(button) {
     fenetre.style.top = '50%';
     fenetre.style.left = '50%';
     fenetre.style.transform = 'translate(-50%, -50%)';
-    fenetre.style.backgroundColor = ''; 
+    fenetre.style.backgroundColor = '#f9f9f9'; 
     fenetre.style.width = '600px';
     fenetre.style.maxWidth = '80%';
     fenetre.style.height = 'auto';

@@ -33,13 +33,11 @@ body {
     display: flex;
     border: #ddd 2px solid;
     background: #25703B;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     margin-top: 10vh;
     margin-left: 2vw;
     margin-right: 2vw;
-    border-radius: 2vw;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    border-radius: 4px;
     justify-content: space-around;
     align-items: center;
 }
@@ -49,7 +47,6 @@ body {
 #sectionright {
     border-radius: 2vw;
     background: #25703B;
-    border: #fff 2px solid;
     width: 50vw;
     height: 60vh;
     color: #ddd;
@@ -57,11 +54,20 @@ body {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    
+    flex:1;
 
 
 }
+#sectionleft img{
+    object-fit: cover;  
+     max-width: 100%;
+     height: 800px;
+     filter: brightness(80%);
 
+}
+#sectionleft{
+    flex:1;
+}
 a:visited,
 a:link {
     color: #ddd;
@@ -69,11 +75,9 @@ a:link {
 
 #signup-hyperlink:hover {
     border-radius: 2vw;
-    border: #25703B 2px solid;
-    background: #ddd;
-    color: #25703B;
+    color: #a9b7ad;
     transition: 0.2s;
-
+    
 
 }
 
@@ -93,16 +97,15 @@ form {
 }
 
 #revealpswrd {
-    border: #ddd 1px;
+    border: none;
     position: absolute;
     top: 57%;
-    color: #25703B;
+    color: #ffffff;
     transform: translateY(-50%);
     right: 10px;
     border-radius: 4px;
     border:none;
-    background-color: #f9f9f9;
-
+    background-color: transparent;
 
 }
 
@@ -112,7 +115,7 @@ form {
     transition: transform 0.3s;
     cursor:pointer;
     border: #25703B 1px hidden;
-    color: #25703B;
+    color: #ffffff;
 }
 #signin{
     background: #25703B;
@@ -136,7 +139,10 @@ form {
 input {
     width: calc(100% - 22px);
     padding: 10px;
-    border: 1px solid #ddd;
+    border:none;
+    color: #ddd;
+    border-bottom: 1px solid white;
+    outline: none;
     border-radius: 4px;
-    background-color: #f9f9f9;
+    background-color: #25703B
 }
