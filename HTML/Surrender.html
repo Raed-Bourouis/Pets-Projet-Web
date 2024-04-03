@@ -141,11 +141,17 @@
             margin-bottom: 10px;
             font-weight: bold;
         }
-
+ 
+        #image:hover{
+            cursor: pointer;
+            background-color: #ccc;
+        }
         input[type="text"],
         input[type="email"],
         input[type="tel"],
         input[type="number"],
+        input[type="file"],
+        select,
         textarea {
             width: 100%;
             padding: 10px;
@@ -223,7 +229,7 @@
             <input type="text" id="name" name="name" required>
             <br>
             <label for="image" style="margin-bottom: 20px;">Image of The animal: (optional):</label>
-            <input type="file" accept=".jpg,.jpeg,.png, .gif" id="image" name="image" style="margin-bottom: 20px;">
+            <input type="file" accept=".jpg,.jpeg,.png, .gif" id="image" name="image">
 
             <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" required>
@@ -244,15 +250,17 @@
             <input type="number" id="age" name="age">
 
             <label style="margin-bottom: 15px;" for="gender">Animal's Gender:</label>
-            <select id="gender" name="gender" required style="margin-bottom: 20px;">
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select the gender...</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
             </select>
 
             <label style="margin-bottom: 15px;" for="vaccinated">Is the animal vaccinated?</label>
-            <input type="radio" id="vaccinated_yes" name="vaccinated" value="yes" required>Yes
-            <input type="radio" id="vaccinated_no" name="vaccinated" value="no" required style="margin-bottom: 20px;">No
+            <input type="radio" id="vaccinated_yes" name="vaccinated" value="yes" required>&nbsp;Yes
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" id="vaccinated_no" name="vaccinated" value="no" required style="margin-bottom: 20px;">&nbsp;No
 
             <label for="reason">Reason for Surrender:</label>
             <textarea id="reason" name="reason" rows="4" required></textarea>

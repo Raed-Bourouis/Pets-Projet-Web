@@ -35,8 +35,9 @@ body {
     background: #25703B;
     flex-flow: row nowrap;
     margin-top: 10vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin-bottom: 12vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
     border-radius: 4px;
     justify-content: space-around;
     align-items: center;
