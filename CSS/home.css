@@ -226,8 +226,9 @@ nav ul li a:hover {
 
 /* section2 */
 .container2{
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 250px;
+    padding-left: 250px;
+    padding-bottom: 130px;
     position: relative;
     overflow: hidden;
     height: 700px;
@@ -262,8 +263,8 @@ nav ul li a:hover {
 }
 /* section3 */
 .container3{
-    padding-right: 20%;
-    padding-left: 20%;
+    padding-right: 290px;
+    padding-left: 290px;
 }
 #btn3{
     padding-left: 70%;
@@ -301,6 +302,7 @@ footer{
     font-family: 'Playfair display',sans-serif;
     color: #fff;
     align-items: center;
+    margin-top: 90px;
 
 }
 
