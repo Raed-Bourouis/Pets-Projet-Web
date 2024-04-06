@@ -37,7 +37,8 @@ button:hover{
 
 /* Header styles */
 nav {
-    background: linear-gradient(135deg, #2E8540, #556B2F);
+    background: linear-gradient(to right, #2E8540, #556B2F);
+    border: none hidden;
     top: 0;
     left: 0;
     right: 0;
@@ -46,11 +47,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     transition: background-color 0.3s ease-in-out;
 }
 
-nav:hover {
+nav:hover, #presentationcont:hover {
+    
     background: linear-gradient(135deg, #25703B, #35603A);
 }
 
@@ -134,19 +136,32 @@ nav ul li a:hover {
   }
 
 /* intro */
+
+#presentationcont{
+    background: linear-gradient(to right, #2E8540, #556B2F);
+    padding-top: 3%;
+    border: hidden;
+    color: white;
+    display: flex;
+    flex-flow: column ;
+    justify-content: center;
+    align-items: center;
+}
+
 #presentation{
     margin-top: 10px;
+    margin-bottom: -5%;
     font-family: 'Playfair display';
     font-size: 70px;
     border-right: 5px solid rgb(221, 221, 221); 
     transition: border-right 0.3s ease;
-    color: #88B04B;
+    /* color: #88B04B; */
 }
 #traitHor{
     margin: 0 auto;
     height: 6px;
     width: 70%;
-    background-color: #88B04B;
+    background-color: white;
     border-color: #88B04B;
     border-radius: 4px;
 }
