@@ -53,7 +53,7 @@ body {
 #sectionleft a {
     padding: 12px 24px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: #fff;
     width: 120px;
     border-radius: 24px;
@@ -64,15 +64,14 @@ body {
 
 #sectionleft .signin {
     background: linear-gradient(to right, #32CD32, #008000);
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 #sectionleft a:hover {
     background: rgba(255, 255, 255, 0.1);
     color: #a9b7ad;
-    transform: translateY(-3px);
+   
 }
 
 #sectionleft img {

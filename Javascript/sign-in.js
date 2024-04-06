@@ -24,3 +24,11 @@ form.addEventListener('submit', function (event) {
   // Redirect to cart.html after form submission
   window.location.href = 'cart.html';
 });
+document.onkeydown = checkKey;
+function checkKey(e) {
+  e = e || window.event;
+  if (e.keyCode == '13') {
+    form.dispatchEvent(new Event('submit'));
+  }
+}
+
