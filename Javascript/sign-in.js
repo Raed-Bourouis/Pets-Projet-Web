@@ -1,17 +1,18 @@
 const passwordInput = document.getElementById('password');
 const toggleButton = document.querySelector('#revealpswrd');
-let eye = document.querySelector('i')
+
+// Select the eye icon element
+const eye = toggleButton.querySelector('i');
+
 toggleButton.addEventListener('click', function () {
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
-    eye.classList.add("fa-eye-slash")
-    eye.classList.remove("fa-eye")
-    
+    eye.classList.remove("fa-eye");
+    eye.classList.add("fa-eye-slash");
   } else {
     passwordInput.type = "password";
-    eye.classList.add("fa-eye")
-    eye.classList.remove("fa-eye-slash")
-
+    eye.classList.remove("fa-eye-slash");
+    eye.classList.add("fa-eye");
   }
 });
 
@@ -20,7 +21,6 @@ const form = document.querySelector('form');
 form.addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent the form from submitting
 
-  // Redirect to home.html
+  // Redirect to cart.html after form submission
   window.location.href = 'cart.html';
 });
-
