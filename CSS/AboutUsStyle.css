@@ -149,9 +149,9 @@ nav ul li a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-25%, -50%);
+    transform: translate(-17%, -50%);
     z-index: 1;
-    width: 750px;
+    width: 670px;
 }
 
 #section1 ,#section3{
@@ -177,10 +177,10 @@ nav ul li a:hover {
     padding: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     position: absolute;
-    width: 750px;
+    width: 670px;
     top: 50%;
     right: 50%; 
-    transform: translate(25%, -50%); 
+    transform: translate(17%, -50%); 
     z-index: 1;
 }
 
@@ -220,7 +220,7 @@ li .ValueBox{
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    height:  max-content;
+    height:  150px;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;

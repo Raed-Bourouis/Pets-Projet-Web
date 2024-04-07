@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link  rel="stylesheet" href="../CSS/inup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bg">
+            <div class="box signin">
+                <h2>Already Have An Account?  Sign in Here!</h2><br>
+                <button class="boutsignin">Sign In</button>
+            </div>
+            <div class="box signup">
+                <h2>Don't have an account? Click here to Register!</h2><br>
+               <button class="boutsignup">Register Now</button>
+            </div>
+        </div>
+        <div class="formbox">
+            <div id="loginForm">
+                
+            </div>
+            <div id="registerForm"  >
+                <div class="form-group">
+
+                <input type="text" id="fullName" name="fullName" class="required" >
+                <label for="fullName">Full Name:</label>
+
+                <div class="error"></div>
+                </div>
+
+            <div class="form-group">
+                <input type="text" id="Username" name="Username" class="required" >
+                <label for="Username">Username:</label>
+
+                <div class="error"></div>
+            </div>
+                
+            <div class="form-group">
+                <input type="text" id="email" name="email">
+                <label for="email"> Email Address:</label>
+
+                <div class="error"></div>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" >
+                
+                <label for="password"> Password: </label>
+                <div class="error"></div>
+            </div>
+            <div class="form-group">
+        <input type="password" id="confirm-password" name="confirm-password" >
+        <label for="confirm-password">Confirm Password:</label>
+
+        <div class="error"></div>
+            </div>
+            <div class="form-group">
+                <input value="Next" type="submit" id="signin">
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    const boutsignin =   document.querySelector(".boutsignin");
+    const boutsignup = document.querySelector(".boutsignup");
+    const formbox = document.querySelector(".formbox");
+    const body = document.querySelector('body');
+
+    boutsignin.onclick = function() {
+        formbox.classList.remove('active');
+        body.classList.remove('active');
+
+    }
+    boutsignup.onclick = function() {
+        formbox.classList.add('active');
+        body.classList.add('active');
+        document.querySelector( "#registerform" ).style.display="block";
+
+    }
+    
+</script>
+</html>

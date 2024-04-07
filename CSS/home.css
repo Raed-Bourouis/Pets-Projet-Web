@@ -267,7 +267,7 @@ nav ul li a:hover {
 .blur2{
     position: absolute;
     background-image: url('../assets/Nature\ green\ background\ featuring\ april\,\ august\,\ and\ background\ \(1\).jpg');
-    filter: blur(4px);
+    filter: blur(30px);
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;

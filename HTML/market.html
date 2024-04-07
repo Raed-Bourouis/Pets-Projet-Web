@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../CSS/market.css">
     <link rel="icon" href="../assets/logoweblight.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <script src="../Javascript/market.js" defer ></script>
 
 </head>
 <body>
@@ -44,74 +45,81 @@
             <p>Thank you for your donation!</p>
         </div>
     </div>
-
-    <h2> Our Products :</h2>
+  
+    <h1> Our Products :</h1>
+    <!--Search bar-->
+    <form class="search-wrapper">
+        <input type="text" name="" placeholder="Search..."  id="searchinput" >
+        
+    </form>
     <!-- Product Listing -->
-    <section class="product-listing">
-        <div class="product">
+    <section class="product-listing" id="product-listing">
+        <ul>
+        <li class="product">
             <img src="../assets/product-1.png" alt="Pet Food 1">
             <h2>Delicious Dog Food</h2>
             <p>Healthy and nutritious food for your dog.</p>
             <span>19.99 TND</span>
             <button class="add-to-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i>Add to Cart</button>
-        <a href="productpage1.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </div>
-        <div class="product">
+        <a href="productpage1.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </li>
+        <li class="product">
             <img src="../assets/product-2.png" alt="Pet Food 2">
             <h2>Nutritious Cat Food</h2>
             <p>Rich in essential nutrients for your cat's health.</p>
             <span>14.99 TND</span>
             <button class="add-to-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i>Add to Cart</button>
-            <a href="productpage2.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </div>
-        <div class="product">
+            <a href="productpage2.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </li>
+        <li class="product">
             <img src="../assets/product-3.png" alt="Pet Food 3">
             <h2>Healthy Bird Feed</h2>
             <p>A balanced diet for your pet bird's well-being.</p>
             <span>9.99 TND </span>
             <button class="add-to-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i>Add to Cart</button>
-        <a href="productpage3.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </div>
-        <div class="product">
+        <a href="productpage3.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </li>
+        <li class="product">
             <img src="../assets/product-4.png" alt="Pet Food 4">
             <h2>Fresh Fish Food</h2>
             <p>High-quality food to keep your fish healthy and vibrant.</p>
             <span>7.99 TND</span>
             <button class="add-to-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i>Add to Cart</button>
-        <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </div>
-        <div class="product">
+        <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </li>
+        <li class="product">
             <img src="../assets/product-4.png" alt="Pet Food 4">
             <h2>Fresh Fish Food</h2>
             <p>High-quality food to keep your fish healthy and vibrant.</p>
             <span>7.99 TND</span>
             <button class="add-to-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i>Add to Cart</button>
-        <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </div>
-        <div class="product">
+        <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </li>
+        <li class="product">
             <img src="../assets/petfood6.png" alt="Pet Food 4">
             <h2>Fresh Fish Food</h2>
             <p>High-quality food to keep your fish healthy and vibrant.</p>
             <span>7.99 TND</span>
             <button class="add-to-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i>Add to Cart</button>
-        <a href="productpage3.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </div>
-        <div class="product">
+        <a href="productpage3.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </li>
+        <li class="product">
             <img src="../assets/product-4.png" alt="Pet Food 4">
             <h2>Fresh Fish Food</h2>
             <p>High-quality food to keep your fish healthy and vibrant.</p>
             <span>7.99 TND</span>
             <button class="add-to-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i>Add to Cart</button>
-        <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </div>
-        <div class="product">
+        <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </li>
+        <li class="product">
             <img src="../assets/product-4.png" alt="Pet Food 4">
             <h2>Fresh Fish Food</h2>
             <p>High-quality food to keep your fish healthy and vibrant.</p>
             <span>7.99 TND</span>
             <button class="add-to-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i>Add to Cart</button>
-        <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </div>
-        <div class="product">
+        <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </li>
+        <li class="product">
             <img src="../assets/product-4.png" alt="Pet Food 4">
             <h2>Fresh Fish Food</h2>
             <p>High-quality food to keep your fish healthy and vibrant.</p>
             <span>7.99 TND</span>
             <button class="add-to-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i>Add to Cart</button>
-        <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </div>
-    </section>
+        <a href="productpage4.html" class="view-product"><i class="fas fa-eye"></i>View Product</a>        </li>
+    </ul>
+</section>
 
         <!-- Footer -->
       <footer>
