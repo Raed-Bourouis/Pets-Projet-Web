@@ -137,6 +137,9 @@ body {
     background-color: #f8fafc;
 }
 
+/* end of header style */
+
+
 
 
 .slider-wrapper {
@@ -147,6 +150,7 @@ body {
 .slider {
     display: flex;
     aspect-ratio: 16 / 9;
+    min-width: 100vw;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -193,33 +197,9 @@ body {
 }
 
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
-
-.slide-photo{
+#slide-photo{
     scroll-snap-align: start;
     flex: 1 0 100%;
 
@@ -228,8 +208,8 @@ body {
 
 
 
-.slide-photo img {
-    width: 100%;
+#slide-photo img {
+    width: 100vw;
     height: 100%;
     object-fit: cover;
     filter: brightness(0.7);
@@ -258,10 +238,12 @@ body {
     align-items: center;
     text-shadow: 2px 2px 2px black;
     position: relative;
-    top: 40%;
-    left: 20%;
+    transform: translateY(50%);
 }
 
+.hidden{
+    display: none;
+}
 .title{
     font-size: 2rem ;
 }
@@ -276,57 +258,48 @@ body {
 
 
 
-/*---------------------------------------*/
-
-/*get involved*/
-#get-involved {
-    text-align: center;
-    font-family: "Playfair Display";
-    border: solid 2px #556B2F;
-    -webkit-text-stroke: #556B2F;
-    margin: 2vw 2vw 2vw 2vw;
-    animation: fadeIn 1s ease-in;
 
 
-}
 
-#get-involved h4 {
-    font-size: 2em;
-    font-weight: 200;
-}
-
-#get-involved ol {
-    margin-top: 5vw;
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 1000;
+    width: 300px;
+    max-width: 30%;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 5vh;
-    align-content: center;
-
+    gap: 10px;
+    align-items: center;
+}
+.arrows .button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows .button:hover{
+    background-color: #fff;
+    color: #000;
 }
 
-#get-involved ol #one,
-#get-involved ol #two {
-    display: flex;
-    font-size: larger;
-    gap: 20vw;
 
-    li {
-        width: 30vw;
-    }
-}
 
-#get-involved ol #three {
-    font-size: larger;
-    padding-top: 2vh;
-    padding-left: 25vw;
 
-    li {
-        width: 30vw;
-    }
-}
 
-/*-------------------------------------------*/
+
+
+
+
+
+
+
+
 
 /*footer*/
 footer {
@@ -345,3 +318,31 @@ footer div:nth-child(3) {
 }
 
 /*----------------------------*/
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

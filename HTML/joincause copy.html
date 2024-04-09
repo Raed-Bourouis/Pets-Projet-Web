@@ -7,6 +7,7 @@
     <link rel="icon" href="../assets/logoweblight.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../CSS/joincause copy.css">
+    <script defer src="../Javascript/joincause.js"></script>
     <title>Document</title>
 
     <style>
@@ -50,16 +51,15 @@
         <div class="slider-wrapper">
             <div class="slider">
 
-                <div class="slider-content" id="slide-1">
+                <div class="slidercontent" id="slide-1">
 
-                    <!--Volunteers Photo-->
-                    <div class="slide-photo" style="min-width: 100%;">
+                    <div id="slide-photo">
                         <img
                             src="https://bestfriends.org/sites/default/files/story_images/Volunteer_SalemPupsKarlaScottHanley_LF_794A8813.jpg">
+                        <div class="switch" id="right">></div>
                     </div>
-                    <!------------------------------------------------------------------------------------------------------------------------------------->
 
-                    <!--Join our cause-->
+
                     <div id="slide-text">
                         <p class="title">Are you passionate about making a difference in the lives of animals?</p>
                         <p class="subtitle">Consider becoming a volunteer at Pets Haven!</p>
@@ -68,21 +68,20 @@
                             rescuing and caring
                             for animals in need.</p>
                     </div>
-                    <!------------------------------------------------------------------------------------------------------------------------------------>
+
 
                 </div>
 
 
-                <div class="slider-content" id="slide-2">
+                <div class="slidercontent hidden" id="slide-2">
 
                     <!--Volunteers Photo-->
                     <div class="slide-photo">
                         <img
                             src="https://www.amarillo.com/gcdn/authoring/authoring-images/2023/08/28/NAGN/70702629007-shelter-4-of-28.jpg">
                     </div>
-                    <!------------------------------------------------------------------------------------------------------------------------------------->
 
-                    <!--Join our cause-->
+
                     <div id="slide-text">
                         <p class="title">Here's how you can get involved</p>
                         <p class="subtitle">1. Fill Out a Volunteer Application Form</p>
@@ -95,15 +94,114 @@
                 </div>
 
 
+                <div class="slidercontent hidden" id="slide-3">
+
+                    <div id="slide-photo">
+                        <img
+                            src="https://www.amarillo.com/gcdn/authoring/authoring-images/2023/08/28/NAGN/70702629007-shelter-4-of-28.jpg">
+                    </div>
+
+
+                    <div class="slidercontent hidden" id="slide-2">
+
+                        <div id="slide-photo">
+                            <img
+                                src="https://www.amarillo.com/gcdn/authoring/authoring-images/2023/08/28/NAGN/70702629007-shelter-4-of-28.jpg">
+                        </div>
+
+
+                        <div id="slide-text">
+                            <p class="title">Here's how you can get involved</p>
+                            <p class="subtitle">5. Fill Out a Volunteer Application Form</p>
+                            <p class="regtext">Start by filling out a volunteer application form on our website. Provide
+                                your contact information, availability, and areas of interest or expertise. Once
+                                submitted,
+                                our team will review your application and reach out to you to discuss next steps.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div id="slide-text">
+                        <p class="title">Here's how you can get involved</p>
+                        <p class="subtitle">3. Join Our Team:</p>
+                        <p class="regtext">Once you're accepted into our volunteer program, you'll become an
+                            integral part of
+                            the Pets Haven team. Whether you're helping care for animals, assisting with adoption
+                            events, or
+                            providing administrative support, your contributions make a meaningful difference in the
+                            lives of
+                            our furry friends.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="slidercontent hidden" id="slide-4">
+
+                    <div id="slide-photo">
+                        <img
+                            src="https://www.amarillo.com/gcdn/authoring/authoring-images/2023/08/28/NAGN/70702629007-shelter-4-of-28.jpg">
+                    </div>
+
+
+                    <div id="slide-text">
+                        <p class="title">Here's how you can get involved</p>
+                        <p class="subtitle">4.Training and Support:</p>
+                        <p class="regtext"> As a volunteer, you'll receive training and ongoing support to
+                            help you
+                            succeed in your role. Whether you're a seasoned animal lover or new to volunteering, we'll
+                            provide
+                            the guidance and resources you need to make a positive impact.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="slidercontent hidden" id="slide-5">
+
+                    <div id="slide-photo">
+                        <img
+                            src="https://www.amarillo.com/gcdn/authoring/authoring-images/2023/08/28/NAGN/70702629007-shelter-4-of-28.jpg">
+                    </div>
+
+
+                    <div id="slide-text">
+                        <p class="title">Here's how you can get involved</p>
+                        <p class="subtitle">5. Make a Difference:</p>
+                        <p class="regtext"> By volunteering with Pets Haven, you're not just donating your
+                            time; you're
+                            changing lives. Your efforts help us provide essential care, love, and support to animals in
+                            need,
+                            giving them a second chance at a happy and healthy life.</p>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             </div>
-            <div class="slider-nav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
+            <div class="arrows">
+                <div class="button" id="prev"> < </div>
+                        <div class="button" id="next">></div>
+                </div>
             </div>
-        </div>
     </section>
 
 
