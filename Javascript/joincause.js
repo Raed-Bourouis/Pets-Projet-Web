@@ -85,5 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
     prevBtn.addEventListener('click', prevSlide);
 
     // Automatic slideshow
-    // setInterval(nextSlide, 5000);
+    setInterval(()=>{
+        slides[currentSlide].classList.add('hidden');
+        currentSlide = (currentSlide + 1 + slides.length) % slides.length;
+        slides[currentSlide].classList.remove('hidden');
+    }, 7000);
 });
