@@ -188,13 +188,15 @@ body {
 } */
 
 
-.slidercontent{
+.slidercontent {
     min-width: 100vw;
+    transition: transform 1s ease;
+
 
 }
 
 
-.slide-photo{
+.slide-photo {
     scroll-snap-align: start;
     flex: 1 0 100%;
     position: relative;
@@ -208,7 +210,6 @@ body {
     height: 100%;
     object-fit: cover;
     filter: brightness(0.7);
-    animation: fadeIn 1s ease-in;
     /* position: absolute; */
     z-index: 1;
 
@@ -223,7 +224,6 @@ body {
 #slide-text {
     text-align: center;
     font-size: larger;
-    animation: fadeIn 1s ease-in;
     font-family: "Playfair Display";
     color: white;
     width: 100%;
@@ -239,19 +239,26 @@ body {
     z-index: 2;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
-.title{
-    font-size: 2rem ;
+
+.title {
+    font-size: 2rem;
+    animation: fadeInUp 1.2s ease-in-out;
+
 }
 
-.subtitle{
+.subtitle {
     font-size: 1.5rem;
+    animation: fadeInUp 1.4s ease-in-out;
+
 }
 
-.regtext{
+.regtext {
     font-size: 1.2rem;
+    animation: fadeInUp 1.6s ease-in-out;
+
 }
 
 
@@ -259,7 +266,7 @@ body {
 
 
 
-.arrows{
+.arrows {
     position: absolute;
     bottom: 204px;
     z-index: 1000;
@@ -267,27 +274,49 @@ body {
     justify-content: space-between;
     top: 10vh;
 
-    gap: 97vw;
+    gap: 95vw;
 }
-.arrows .button{
+
+.arrows .button {
+    font-weight: bold;
+    -webkit-text-stroke: white 1px;
     /* padding-top: 50vh;
     padding-bottom: 50vh; */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
+    width: 40px;
     height: 115vh;
     background-color: #eee4;
     border: none;
     color: #fff;
     transition: .5s;
 }
-.arrows .button:hover{
+
+.arrows .button:hover {
     background-color: #fff;
     color: #000;
+    -webkit-text-stroke: black 1px;
+
 }
 
 
+
+.SlideLeftIn {
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.SlideRightIn {
+    animation: slideInFromRight 1s ease-in;
+}
+
+.SlideLeftOut {
+    animation: slideOutFromLeft 1s ease-out;
+}
+
+.SlideRightOut {
+    animation: slideOutFromRight 1s ease-out;
+}
 
 
 
@@ -334,17 +363,71 @@ footer div:nth-child(3) {
     }
 }
 
-@keyframes fade {
-    from {
+
+
+
+
+@keyframes fadeInUp {
+    0% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(20px);
     }
 
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+
+
+
+
+
 
 /* 
 .slider-nav {
@@ -369,3 +452,68 @@ footer div:nth-child(3) {
 .slider-nav a:hover {
     opacity: 1;
 } */
+
+
+.slidercontent {
+    position: relative;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+.slidercontent.hidden {
+    display: none;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.slidercontent.slide-in-right {
+    animation-name: slideInFromRight;
+}
+
+.slidercontent.slide-out-left {
+    animation-name: slideOutToLeft;
+    /* animation-delay: 1s; */
+}
+
+.slidercontent.slide-in-left {
+    animation-name: slideInFromLeft;
+}
+
+.slidercontent.slide-out-right {
+    /* animation-delay: 1s; */
+    animation-name: slideOutToRight;
+}
