@@ -55,6 +55,52 @@
 
 // })
 
+
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const slides = document.querySelectorAll('.slidercontent');
+//     const nextBtn = document.getElementById('next');
+//     const prevBtn = document.getElementById('prev');
+
+//     let currentSlide = 0;
+
+//     function goToSlide(n) {
+//         if (n !== currentSlide && n >= 0 && n < slides.length) {
+//             const direction = n > currentSlide ? 'right' : 'left';
+//             slides[currentSlide].classList.add(`slide-out-${direction}`);
+//             slides[n].classList.remove('hidden');
+//             slides[n].classList.add(`slide-in-${direction}`);
+//             setTimeout(() => {
+//                 slides[currentSlide].classList.add('hidden');
+//                 slides[currentSlide].classList.remove(`slide-out-${direction}`);
+//                 slides[n].classList.remove(`slide-in-${direction}`);
+//                 currentSlide = n;
+//             }, 1000);
+//         }
+//     }
+
+//     function nextSlide() {
+//         goToSlide((currentSlide + 1) % slides.length);
+//     }
+
+//     function prevSlide() {
+//         goToSlide((currentSlide - 1 + slides.length) % slides.length);
+//     }
+
+//     nextBtn.addEventListener('click', nextSlide);
+//     prevBtn.addEventListener('click', prevSlide);
+
+//     // Initialize the first slide
+//     slides[currentSlide].classList.remove('hidden');
+// });
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slidercontent');
     const nextBtn = document.getElementById('next');
@@ -63,31 +109,29 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSlide = 0;
 
     function goToSlide(n) {
-        if (n !== currentSlide && n >= 0 && n < slides.length) {
-            const direction = n > currentSlide ? 'right' : 'left';
-            slides[currentSlide].classList.add(`slide-out-${direction}`);
-            slides[n].classList.remove('hidden');
-            slides[n].classList.add(`slide-in-${direction}`);
-            setTimeout(() => {
-                slides[currentSlide].classList.add('hidden');
-                slides[currentSlide].classList.remove(`slide-out-${direction}`);
-                slides[n].classList.remove(`slide-in-${direction}`);
-                currentSlide = n;
-            }, 1000);
-        }
+        const direction = n < currentSlide ? 'left':'right';
+        let aux = currentSlide;
+        slides[aux].classList.add('hidden');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.remove('hidden');
+        slides[currentSlide].classList.add(`slide-in-${direction}`);
+        setTimeout(()=>{slides[currentSlide].classList.remove(`slide-in-${direction}`);},2500)
+        
+
+        
     }
 
     function nextSlide() {
-        goToSlide((currentSlide + 1) % slides.length);
+        goToSlide(currentSlide + 1);
     }
 
     function prevSlide() {
-        goToSlide((currentSlide - 1 + slides.length) % slides.length);
+        goToSlide(currentSlide - 1);
     }
 
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
 
-    // Initialize the first slide
-    slides[currentSlide].classList.remove('hidden');
+    // Automatic slideshow
+    // setInterval(nextSlide, 5000);
 });
