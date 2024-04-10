@@ -58,7 +58,6 @@
 
 
 
-// hetha code l chat (last resort)
 
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slidercontent');
@@ -85,9 +84,9 @@ document.addEventListener('DOMContentLoaded', function() {
     prevBtn.addEventListener('click', prevSlide);
 
     // Automatic slideshow
-    setInterval(()=>{
-        slides[currentSlide].classList.add('hidden');
-        currentSlide = (currentSlide + 1 + slides.length) % slides.length;
-        slides[currentSlide].classList.remove('hidden');
-    }, 7000);
+    // setInterval(()=>{
+    //     slides[currentSlide].classList.add('hidden');
+    //     currentSlide = (currentSlide + 1 + slides.length) % slides.length;
+    //     slides[currentSlide].classList.remove('hidden');
+    // }, 7000);
 });
