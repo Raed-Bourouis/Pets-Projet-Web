@@ -112,7 +112,7 @@ nav ul li a:hover {
     background-size: cover;
     background-position: center;
     position: fixed;
-    filter: blur(8px);
+    filter: blur(8px) brightness(60%);
     top: 0;
     left: 0;
     width: 100%;

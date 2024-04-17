@@ -119,6 +119,19 @@ body {
     margin: 0;
     padding: 0;
 }
+.bck-img {
+    background-image: url('../assets/BackgroundImage.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    filter: blur(8px) brightness(60%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind any content so it doesn't show over anything else */
+}
+
 .container {
     max-width: 800px;
     margin: 50px auto;

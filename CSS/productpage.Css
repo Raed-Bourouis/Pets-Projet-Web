@@ -118,7 +118,7 @@ nav ul li a:hover {
 
 .product-info {
     display: flex;
-    align-items: center;
+    align-items:center;
 }
 
 .product-image {

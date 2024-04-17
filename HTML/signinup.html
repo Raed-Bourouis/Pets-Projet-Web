@@ -3,83 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
-    <link  rel="stylesheet" href="../CSS/inup.css">
+    <link  rel="stylesheet" href="../css/inup.css"/>
+    <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <div class="bg">
-            <div class="box signin">
-                <h2>Already Have An Account?  Sign in Here!</h2><br>
-                <button class="boutsignin">Sign In</button>
-            </div>
-            <div class="box signup">
-                <h2>Don't have an account? Click here to Register!</h2><br>
-               <button class="boutsignup">Register Now</button>
-            </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+                <button id="nextButton">Next</button>
+            </form>
         </div>
-        <div class="formbox">
-            <div id="loginForm">
-                
-            </div>
-            <div id="registerForm"  >
-                <div class="form-group">
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <input type="email" placeholder="Email"> <label>E-mail  </label>
+                <input type="password" placeholder="Password"> <label> Password</label>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="form-container next" id="next">
+            <form>
 
-                <input type="text" id="fullName" name="fullName" class="required" >
-                <label for="fullName">Full Name:</label>
+                <input type="text" id="phone" name="phone" >
+                <label for="phone">Phone Number</label>
+            
 
-                <div class="error"></div>
+                <textarea id="address" name="address" class="required"></textarea>
+                <label for="address"> Address</label>
+      
+                <input type="date" id="age" name="age" class="required" >
+                <label for="age">Date of Birth</label>
+                <input type="checkbox" id="terms" name="terms" class="required">
+                <label for="terms">I have read and accept the <a href="Terms-and-Conditions-for-Signing-Up.pdf" target="_blank">Terms&Conditions</a></label>
+                <button type="submit">Sign Up</button>
+
+        </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Hello, There !</h1>
+
+                    <button class="hidden" id="login">Sign In</button>
                 </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Welcome Back!</h1>
 
-            <div class="form-group">
-                <input type="text" id="Username" name="Username" class="required" >
-                <label for="Username">Username:</label>
-
-                <div class="error"></div>
-            </div>
-                
-            <div class="form-group">
-                <input type="text" id="email" name="email">
-                <label for="email"> Email Address:</label>
-
-                <div class="error"></div>
-            </div>
-            <div class="form-group">
-                <input type="password" id="password" name="password" >
-                
-                <label for="password"> Password: </label>
-                <div class="error"></div>
-            </div>
-            <div class="form-group">
-        <input type="password" id="confirm-password" name="confirm-password" >
-        <label for="confirm-password">Confirm Password:</label>
-
-        <div class="error"></div>
-            </div>
-            <div class="form-group">
-                <input value="Next" type="submit" id="signin">
+                    <p>Join a Community of Animal Lovers</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
             </div>
         </div>
         
-    </div>
+    </div>  
 </body>
 <script>
-    const boutsignin =   document.querySelector(".boutsignin");
-    const boutsignup = document.querySelector(".boutsignup");
-    const formbox = document.querySelector(".formbox");
-    const body = document.querySelector('body');
+        const container = document.getElementById('container');
+        const signUpForm = document.querySelector('.sign-up');
+        const signinForm = document.querySelector('.sign-in');
+        const nextForm = document.getElementById('next');
+        const nextButton = document.getElementById('nextButton');
+        const registerBtn = document.getElementById('register');
+        const loginBtn = document.getElementById('login');
 
-    boutsignin.onclick = function() {
-        formbox.classList.remove('active');
-        body.classList.remove('active');
+        nextButton.addEventListener('click', function(event) {
+            event.preventDefault(); 
 
-    }
-    boutsignup.onclick = function() {
-        formbox.classList.add('active');
-        body.classList.add('active');
-        document.querySelector( "#registerform" ).style.display="block";
+            signUpForm.style.transform = 'translateX(-100%)';
+            signUpForm.style.opacity = '0';
+            signinForm.style.transform = 'translateX(-100%)';
+            signinForm.style.opacity = '0';
+            nextForm.classList.add('active');
+        
+        });
 
-    }
-    
-</script>
+        
+
+        registerBtn.addEventListener('click', function() {
+            container.classList.add('active');
+
+        });
+
+        loginBtn.addEventListener('click', function() {
+            container.classList.remove('active');
+            signinForm.style.opacity = '1';
+
+        });
+
+    </script>
 </html>

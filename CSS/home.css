@@ -6,7 +6,11 @@ body{
     margin: 0;
 
 }
+@media screen {
+     /* Style for screen (desktop) */
+	html, body { height: 100%; }
 
+}
 
 .container,.container1,.container2,.container3{
     display: flex;
@@ -278,8 +282,8 @@ nav ul li a:hover {
 }
 /* section3 */
 .container3{
-    padding-right: 290px;
-    padding-left: 290px;
+    padding-right: 245px;
+    padding-left: 245px;
 }
 #btn3{
     padding-left: 70%;
