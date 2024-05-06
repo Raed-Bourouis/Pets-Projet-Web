@@ -36,6 +36,8 @@ function addVolunteerFormDataToDatabase()
     echo "New volunteer form data added successfully";
 
 }
+
+
 // Call the function to execute on form submission
 
 

@@ -18,6 +18,8 @@
         require_once ("header.php");
         echo getHeader();
     ?>
+
+     
     <!-- End of Header -->
 
 

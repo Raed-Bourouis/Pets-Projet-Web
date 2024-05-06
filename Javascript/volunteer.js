@@ -8,9 +8,13 @@ function toggleOtherSpecifyInput() {
     // Add/remove the 'required' attribute based on the checkbox status
     if (otherSpecifyCheckbox.checked) {
         otherSpecifyInput.setAttribute('required', 'required');
+    
+    
+        
     } else {
         otherSpecifyInput.removeAttribute('required');
     }
+
 }
 
 
@@ -205,6 +209,7 @@ function displayErrorMessage(parentElement, message) {
     parentElement.classList.add('error');
     parentElement.classList.remove('success');
 }
+
 
 // Function to remove error message for an input field
 const removeErrorMessage = (parentElement) => {
