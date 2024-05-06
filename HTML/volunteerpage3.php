@@ -23,7 +23,7 @@
 
 
     <div class="bck-img"></div>
-    <form id="Vform">
+    <form id="Vform" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <fieldset>
             <legend>Veterinary Volunteer Questionnaire</legend>
             <ol>
@@ -83,7 +83,7 @@
                         yes, please specify.</label>
                     <textarea id="specificExperience" name="specificExperience"></textarea>
                 </li>
-                <li id="volunteerRolee">
+                <li id="volunteerRole">
                     <label for="volunteerRolee" class="label-questions">Please choose the type of work you are interested
                         in:</label>
                     <div>
@@ -121,7 +121,14 @@
             <input type="submit" value="Submit">
         </fieldset>
     </form>
-
+    
+    
+    <?php
+        require("./regularvolunteer.php");
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            addVolunteerFormDataToDatabase();
+        }
+    ?>
 
     
     <!-- Footer -->
@@ -130,60 +137,6 @@
     ?>
 
 
-<?php
-
-function addVolunteerFormDataToDatabase()
-{
-    try {
-        $db = new PDO(
-            'mysql:host=127.0.0.1;dbname=pets;charset=utf8',
-            'login',
-            'password'
-        );
-    } catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
-    // Database connection parameters
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "volunteer_db";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO VOLUNTEERFORMS (fullName, email, phone, address, age, specificExperience, routineMedicalCare, surgicalProcedures, emergencyCare, behavioralConsultations, outreachProgramsVolunteer, otherSpecifyInput, other) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssissssssss", $fullName, $email, $phone, $address, $age, $specificExperience, $routineMedicalCare, $surgicalProcedures, $emergencyCare, $behavioralConsultations, $outreachProgramsVolunteer, $otherSpecifyInput, $other);
-
-    // Set parameters and execute
-    $fullName = $_POST['fullName'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
-    $age = $_POST['age'];
-    $specificExperience = $_POST['specificExperience'];
-    $routineMedicalCare = isset($_POST['routineMedicalCare']) ? 'Yes' : 'No';
-    $surgicalProcedures = isset($_POST['surgicalProcedures']) ? 'Yes' : 'No';
-    $emergencyCare = isset($_POST['emergencyCare']) ? 'Yes' : 'No';
-    $behavioralConsultations = isset($_POST['behavioralConsultations']) ? 'Yes' : 'No';
-    $outreachProgramsVolunteer = isset($_POST['outreachProgramsVolunteer']) ? 'Yes' : 'No';
-    $otherSpecifyInput = isset($_POST['otherSpecifyInput']) ? $_POST['otherSpecifyInput'] : '';
-    $other = isset($_POST['other']) ? 'Yes' : 'No';
-
-    $stmt->execute();
-
-    echo "New volunteer form data added successfully";
-
-    $stmt->close();
-    $conn->close();
-}
-?>
 
 
 

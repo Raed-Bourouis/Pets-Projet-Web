@@ -1,46 +1,5 @@
 <?php
-function processVolunteerApplication()
-{
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Database connection parameters
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "volunteer_db";
 
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        // Prepare and bind
-        $stmt = $conn->prepare("INSERT INTO volunteers (fullName, email, phone, address, age, legalWork, yearsExperience, specializedEquipment, volunteerCommitment, volunteerRole, otherSpecifyInput) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssisissis", $fullName, $email, $phone, $address, $age, $legalWork, $yearsExperience, $specializedEquipment, $volunteerCommitment, $volunteerRole, $otherSpecifyInput);
-
-        // Set parameters and execute
-        $fullName = $_POST['fullName'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $address = $_POST['address'];
-        $age = $_POST['age'];
-        $legalWork = $_POST['legalWork'];
-        $yearsExperience = $_POST['yearsExperience'];
-        $specializedEquipment = $_POST['specializedEquipment'];
-        $volunteerCommitment = $_POST['volunteerCommitment'];
-        $volunteerRole = implode(", ", $_POST['volunteerRole']); // Assuming multiple roles can be selected
-        $otherSpecifyInput = isset($_POST['otherSpecifyInput']) ? $_POST['otherSpecifyInput'] : '';
-
-        $stmt->execute();
-
-        echo "New records created successfully";
-
-        $stmt->close();
-        $conn->close();
-    }
-}
 
 
 
@@ -60,7 +19,7 @@ function addVolunteerFormDataToDatabase()
 
 
     // Prepare and bind
-    $req= $db->prepare("INSERT INTO VOLUNTEERFORMS (fullName, email, phone, address, age, specificExperience, routineMedicalCare, surgicalProcedures, emergencyCare, behavioralConsultations, outreachProgramsVolunteer, otherSpecifyInput, other) VALUES (:fullName, :email, :phone, :address, :age, :specificExperience, :routineMedicalCare, :surgicalProcedures, :emergencyCare, :behavioralConsultations, :outreachProgramsVolunteer, :otherSpecifyInput, :other)");
+    $req= $db->prepare("INSERT INTO VOLUNTEERFORMS (fullName, email, phone, address, age, legalWork, yearsExperience, previousVolunteer, availability, specificExperience, Roles, otherSpecifyInput) VALUES (:fullname, :email, :phone, :address, :age, :legalwork, :yearsexperience, :previousvolunteer, :availability, :specificexperience, :roles,  :otherspecifyinput)");
 
     // Set parameters and execute
     $fullName = $_POST['fullName'];
@@ -74,17 +33,16 @@ function addVolunteerFormDataToDatabase()
     $availability = $_POST['availability'];
     $specificExperience = $_POST['specificExperience'];
     $Role= $_POST['volunteerRole'];
+    $Roles= implode(' ',$Role);
     $otherSpecifyInput = isset($_POST['otherSpecifyInput']) ? $_POST['otherSpecifyInput'] : '';
 
-    $req->execute(array());
+    $req->execute(array('fullname'=>$fullName, 'email'=>$email, 'phone'=>$phone, 'address'=>$address, 'age'=>$age, 'legalwork'=>$legalWork, 'yearsexperience'=>$yearsExperience, 'previousvolunteer'=>$previousVolunteer, 'availability'=>$availability, 'specificexperience'=>$specificExperience, 'roles'=>$Roles, 'otherspecifyinput'=>$otherSpecifyInput));
 
     echo "New volunteer form data added successfully";
 
 }
 // Call the function to execute on form submission
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     addVolunteerFormDataToDatabase();
-// }
+
 
 
 function validateVolunteerForm()
@@ -146,7 +104,6 @@ function validateVolunteerForm()
 
         // If the form is valid, process the data
         if ($isValid) {
-            processVolunteerApplication();
         } else {
             foreach ($errors as $field => $message) {
                 echo "<p>Error in $field: $message</p>";
@@ -154,4 +111,3 @@ function validateVolunteerForm()
         }
     }
 }
-?>
