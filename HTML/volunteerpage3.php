@@ -126,9 +126,9 @@
     
     
     <?php
-        require("./regularvolunteer.php");
+        require("./Volunteer.php");
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            addVolunteerFormDataToDatabase();
+            addVetFormDataToDatabase();
         }
     ?>
 

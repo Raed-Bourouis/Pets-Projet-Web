@@ -21,7 +21,7 @@
     ?>
     <!-- End of Header -->
     <div class="bck-img"></div>
-    <form id="Vform">
+    <form id="Vform" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <fieldset>
             <legend>Volunteer Questionnaire</legend>
             <div>
@@ -90,13 +90,9 @@
 
             </div>
 
-            <div class="textarea">
-                <label for="limitationsOrConcerns" class="label-questions">10. Do you have any physical limitations or
-                    health concerns we should be aware of?</label>
-                <textarea id="limitationsOrConcerns" name="limitationsOrConcerns"></textarea>
-            </div>
+
             <div class="required-radio">
-                <label for="animalAbuseOrNeglect" class="label-questions">11. Have you ever been convicted of animal
+                <label for="animalAbuseOrNeglect" class="label-questions">10. Have you ever been convicted of animal
                     abuse or neglect? (Yes/No)<span class="req">*</span></label>
                 <br>
                 <label>
@@ -109,39 +105,23 @@
 
             </div>
             <div>
-                <label for="experience" class="label-questions">12. Do you have any experience working with specific
+                <label for="experience" class="label-questions">11. Do you have any experience working with specific
                     types of animals (e.g., dogs, cats, small animals)? If yes, please specify.</label>
                 <input type="text" id="experience" name="experience">
             </div>
-            <div>
-                <label for="interestSpecificTasks" class="label-questions">13. Are you interested in volunteering for
-                    specific tasks (e.g., cleaning kennels, walking dogs, socializing with cats)? If yes, please
-                    specify.</label>
-                <input type="text" id="interestSpecificTasks" name="interestSpecificTasks">
-            </div>
+
             <div class="textarea">
-                <label for="skillsOrQualities" class="label-questions">14. What skills or qualities do you possess that
+                <label for="skillsOrQualities" class="label-questions">12. What skills or qualities do you possess that
                     you think would make you a valuable volunteer at our animal shelter?</label>
                 <textarea id="skillsOrQualities" name="skillsOrQualities"></textarea>
             </div>
-
             <div>
-                <label for="commitment" class="label-questions">15. Are you interested in a long-term volunteer
-                    commitment or a short-term project?</label>
-                <input type="text" id="commitment" name="commitment">
-            </div>
-            <div>
-                <label for="leadershipRole" class="label-questions">16. Are you interested in taking on a leadership
-                    role within our volunteer program (e.g., team leader, event coordinator)?</label>
-                <input type="text" id="leadershipRole" name="leadershipRole">
-            </div>
-            <div>
-                <label for="additionalTraining" class="label-questions">17. Are you interested in participating in
+                <label for="additionalTraining" class="label-questions">13. Are you interested in participating in
                     additional training or workshops related to animal care or shelter operations?</label>
                 <input type="text" id="additionalTraining" name="additionalTraining">
             </div>
             <div id="volunteerRole">
-                <label for="volunteerRole" class="label-questions">18. Please select the type of volunteer role you are
+                <label for="volunteerRole" class="label-questions">14. Please select the type of volunteer role you are
                     interested in:</label>
                 <div class="input-role">
                     <div>
@@ -192,6 +172,14 @@
                 </div>
         </fieldset>
     </form>
+
+    <?php
+        require("./Volunteer.php");
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            addVolunteerFormDataToDatabase();
+        }
+    ?>
+
     <!-- Footer -->
     <?php
         echo getFooter();
