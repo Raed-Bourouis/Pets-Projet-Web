@@ -8,8 +8,9 @@
 }
 
 body{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-color: #9dd99f;
+    background-image: url('../assets/BackgroundImage.jpg');
+    background: linear-gradient(to right, #3a9554, #72b96f);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,10 +24,27 @@ body{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
+    width: 900px;
     max-width: 100%;
+    height: 90%;
     min-height: 480px;
 }
+.error{
+    font-size: small;
+    color: red;
+}
+.container .reveal-password-button {
+    background-color: #eee;
+    color: #000;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 28px; 
+    top: 52%;
+    transform: translateY(-50%);
+}
+
 
 .container p{
     font-size: 14px;
@@ -47,7 +65,7 @@ body{
 }
 
 .container button{
-    background-color: #512da8;
+    background-color: #1a7515;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -75,16 +93,17 @@ body{
     height: 100%;
 }
 
-.container input , .container textarea{
+input,textarea{
     background-color: #eee;
     border: none;
     margin: 8px 0;
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 8px;
-    width: 100%;
+    width: 400px;
     outline: none;
 }
+
 
 .form-container{
     position: absolute;
@@ -103,23 +122,14 @@ body{
     transform: translateX(100%);
 }
 
-.sign-up ,.next{
+.sign-up{
     left: 0;
     width: 50%;
     opacity: 0;
     z-index: 1;
 }
-.container .next{
-   opacity: 0;
 
-
-}
-.container .next.active{
-    transform: translateX(100%);
-    opacity : 1;
-    
-}
-.container.active .sign-up {
+.container.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -136,6 +146,7 @@ body{
         z-index: 5;
     }
 }
+
 
 
 .toggle-container{
@@ -156,9 +167,9 @@ body{
 }
 
 .toggle{
-    background-color: #512da8;
+    background-color: #205e0c;
     height: 100%;
-    background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    background: linear-gradient(to right, #64c05c, #0e6719);
     color: #fff;
     position: relative;
     left: -100%;
@@ -203,5 +214,3 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
-
-
