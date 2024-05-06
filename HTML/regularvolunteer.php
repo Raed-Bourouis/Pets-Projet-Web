@@ -1,10 +1,5 @@
 <?php
 
-
-
-
-
-
 function addVolunteerFormDataToDatabase()
 {
     try {
