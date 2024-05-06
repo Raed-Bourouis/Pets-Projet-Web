@@ -2,7 +2,7 @@
 function toggleOtherSpecifyInput() {
     var otherSpecifyCheckbox = document.getElementById('otherSpecify');
     var otherSpecifyInput = document.getElementById('otherSpecifyInput');
-    
+
     otherSpecifyInput.disabled = !otherSpecifyCheckbox.checked;
 
     // Add/remove the 'required' attribute based on the checkbox status
@@ -20,11 +20,11 @@ if (otherSpecifyCheckbox) { // Check if the element exists before adding event l
     otherSpecifyCheckbox.addEventListener('change', toggleOtherSpecifyInput);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     var form = document.getElementById("Vform");
 
     // Event listener for form submission
-    form.addEventListener("submit", function(event) {
+    form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
 
         // Validate form inputs
@@ -32,21 +32,19 @@ document.addEventListener("DOMContentLoaded", function() {
             const submitButton = document.querySelector('input[type="submit"]');
             submitButton.value = 'Submitting...';
             // Perform form submission after a brief delay to ensure the "Submitting..." message is displayed
-            setTimeout(() => {
-                form.submit();
-                window.location.href = 'thankyou.html';
-            }, 700);
+            form.submit();
+
         }
     });
 });
 
 
-function validateNotEmpty() { 
+function validateNotEmpty() {
     var requiredFields = document.querySelectorAll('.required');
     var isValid = true;
 
     // Loop through all required fields
-    requiredFields.forEach(function(field) {
+    requiredFields.forEach(function (field) {
 
         // Check if the field is empty
         if (field.value.trim() === '') {
@@ -61,7 +59,7 @@ function validateNotEmpty() {
     return isValid; // Return true if all required fields are filled out
 }
 
-function validateAge() { 
+function validateAge() {
     var ageInput = document.getElementById("age");
     var age = parseInt(ageInput.value);
     if (isNaN(age) || age < 13 || age > 100) {
@@ -74,10 +72,10 @@ function validateAge() {
     return true;
 }
 
-function validatePhoneNumber() { 
+function validatePhoneNumber() {
     var phoneInput = document.getElementById("phone");
     var phone = phoneInput.value.trim();
-    if(phone.length == 0){
+    if (phone.length == 0) {
         displayErrorMessage(phoneInput.parentElement, "* This field is required")
         showErrorAnimation(phoneInput.parentElement);
     }
@@ -87,18 +85,18 @@ function validatePhoneNumber() {
         return false;
     }
 
-    else if(phone.length != 12) {
-            displayErrorMessage(phoneInput.parentElement, "Invalid Phone Number! Please make sure your number has exactly 12 characters.")
-            showErrorAnimation(phoneInput.parentElement);
-        }
-     else {
+    else if (phone.length != 12) {
+        displayErrorMessage(phoneInput.parentElement, "Invalid Phone Number! Please make sure your number has exactly 12 characters.")
+        showErrorAnimation(phoneInput.parentElement);
+    }
+    else {
         removeErrorMessage(phoneInput.parentElement);
     }
 
     return true;
 }
 
-function validateEmail() { 
+function validateEmail() {
     // Regular expression pattern for validating email addresses
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -108,7 +106,7 @@ function validateEmail() {
         displayErrorMessage(emailInput.parentElement, "* This field is required.")
         showErrorAnimation(emailInput.parentElement);
         return false;
-    } 
+    }
     else if (!emailPattern.test(emailValue)) {
         displayErrorMessage(emailInput.parentElement, "Invalid Email Address!");
         showErrorAnimation(emailInput.parentElement);
@@ -137,11 +135,11 @@ function validateRadios() {
                 groupChecked = true;
             }
         });
-        const parentElement = radio.closest('.required-radio'); 
+        const parentElement = radio.closest('.required-radio');
 
         // Display error message if the group is not checked
         if (!groupChecked) {
-            const errorMessage = " *  Please select an option"; 
+            const errorMessage = " *  Please select an option";
             displayErrorMessage(parentElement, errorMessage);
             allChecked = false;
         } else {
@@ -152,7 +150,7 @@ function validateRadios() {
     return allChecked; // Return whether all groups have at least one option selected
 }
 
-function validateCheckbox(){
+function validateCheckbox() {
     const checkboxes = document.querySelectorAll("input[name='volunteerRole[]']");
     let checked = false;
 
@@ -161,17 +159,17 @@ function validateCheckbox(){
             checked = true;
         }
     });
-    const parentElement=document.getElementById("volunteerRole");
+    const parentElement = document.getElementById("volunteerRole");
     if (!checked) {
         const message = " * You must choose at least one role to volunteer for.";
-        var errorDiv = parentElement.querySelector('.error'); 
+        var errorDiv = parentElement.querySelector('.error');
         errorDiv.textContent = message;
         errorDiv.style.display = "block";
-        errorDiv.style="color:red;font-weight:bold;font-size:14px;margin-bottom: 20px;"
+        errorDiv.style = "color:red;font-weight:bold;font-size:14px;margin-bottom: 20px;"
         return false;
     } else {
         const errorDisplay = parentElement.querySelector('.error');
-        errorDisplay.innerText = '';     
+        errorDisplay.innerText = '';
         return true;
     }
 }
@@ -184,8 +182,8 @@ function validateForm() {
     isValid = validateEmail() && isValid;
     isValid = validateAge() && isValid;
     isValid = validatePhoneNumber() && isValid;
-    
-   
+
+
     return isValid;
 }
 
@@ -200,10 +198,10 @@ const showErrorAnimation = parentElement => {
 
 // Function to display error message for an input field
 function displayErrorMessage(parentElement, message) {
-    var errorDiv = parentElement.querySelector('.error'); 
+    var errorDiv = parentElement.querySelector('.error');
     errorDiv.textContent = message;
     errorDiv.style.display = "block";
-    errorDiv.style="color:red;font-weight:bold;font-size:14px;margin-bottom: 20px;"
+    errorDiv.style = "color:red;font-weight:bold;font-size:14px;margin-bottom: 20px;"
     parentElement.classList.add('error');
     parentElement.classList.remove('success');
 }
