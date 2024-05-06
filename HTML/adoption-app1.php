@@ -1,3 +1,50 @@
+<?php
+include_once 'db_connection.php';
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Define variables and initialize with empty values
+    $Petname = $name = $email = $Phone = $Address = $City = $Pcode = "";
+    $errors = array();
+
+    // Validate and sanitize input data
+    // You can perform validation and sanitation here
+
+    // Check if all required fields are filled
+    if (empty($_POST['Petname']) || empty($_POST['name']) || empty($_POST['email']) || empty($_POST['Phone']) || empty($_POST['Address']) || empty($_POST['City']) || empty($_POST['Pcode'])) {
+        $errors['all'] = "All fields are required";
+    } else {
+        // Prepare a SQL INSERT statement
+        $sql = "INSERT INTO applications (Petname, name, email, Phone, Address, City, Pcode) VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+        if ($stmt = $mysqli->prepare($sql)) {
+            // Bind variables to the prepared statement as parameters
+            $stmt->bind_param("sssssss", $Petname, $name, $email, $Phone, $Address, $City, $Pcode);
+
+            // Set parameters
+            $Petname = $_POST['Petname'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $Phone = $_POST['Phone'];
+            $Address = $_POST['Address'];
+            $City = $_POST['City'];
+            $Pcode = $_POST['Pcode'];
+
+            // Attempt to execute the prepared statement
+            if ($stmt->execute()) {
+                // Redirect to the next page or display a success message
+                header("location: adoption-app2.php");
+                exit();
+            } else {
+                echo "Error: " . $sql . "<br>" . $mysqli->error;
+            }
+        }
+
+        // Close statement
+        $stmt->close();
+    } 
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +55,7 @@
     <link rel="icon" href="../assets/logoweblight.png">
     <script defer src="../Javascript/adopt-app.js"></script>
 </head>
+
 <body>
          <!-- Header -->
          <header>
@@ -22,7 +70,7 @@
                         <li><a href="adopt-user.html">Adopt</a></li>
                         <li><a href="market.html">Marketplace</a></li>
                         <li><a href="cart.html"><i class="fas fa-cart-plus"></i> Cart</a></li>
-                        <li><a href="sign-in.html">Sign In</a></li>
+                        <li><a href="signinup.html">Sign In</a></li>
                     </ul>
                 </div>
             </nav>
@@ -35,11 +83,11 @@
         <img id="logo2" src="../assets/LogoLArge.png" alt="Large Logo">
         <h1 id="title">Adoption Application</h1>
         <p id="note">Complete this application to start the adoption process. Applications submitted by minors will not be considered valid.</p>
-        <form name="appform" action="adoption-app2.html" method="post">
+        <form name="appform" action="adoption-app1.php" method="post">
             <div class="input-control">
                 <label for="Petname">Name Of the Pet(s) You're Interested in Adopting: *</label>
                 <input type="text" id="Petname" name="Petname" placeholder="Kiki, Micha..">
-                <p class="error"></p>
+                <p class="error"><?php echo isset($errors['Petname']) ? $errors['Petname'] : ''; ?></p>
             </div>
 
             <div class="input-control">
@@ -51,25 +99,25 @@
             <div class="input-control">
                 <label for="email">Your E-mail: *</label>
                 <input type="email" id="email" name="email" placeholder="example@gmail.com">
-                <p class="error"></p>
+                <p class="error"><?php echo isset($errors['Email']) ? $errors['Email'] : ''; ?></p>
             </div>
 
             <div class="input-control">
                 <label for="Phone">Your Phone Number: *</label>
                 <input type="tel" id="Phone" name="Phone" placeholder="+123 456789456">
-                <p class="error"></p>
+                <p class="error"><?php echo isset($errors['Phone']) ? $errors['Phone Number'] : ''; ?></p>
             </div>
 
             <div class="input-control">
                 <label for="Address">Your Address: *</label>
                 <input type="text" id="Address" name="Address">
-                <p class="error"></p>
+                <p class="error"><?php echo isset($errors['Address']) ? $errors['Address'] : ''; ?></p>
             </div>
 
             <div class="city">
                 <div class="input-control">
                 <input type="text" id="City" name="City" placeholder="City">
-                <p class="error"></p>
+                <p class="error"><?php echo isset($errors['City']) ? $errors['City'] : ''; ?></p>
                 </div>
                 <div id="selected" >
                     <select id="state">
@@ -103,7 +151,7 @@
                 </div>
                 <div class="input-control">
                 <input type="text" id="Pcode" name="Pcode" placeholder="Postal Code">
-                <p class="error"></p>
+                <p class="error"><?php echo isset($errors['Pcode']) ? $errors['POstal Code'] : ''; ?></p>
                  </div>
             </div>
 
