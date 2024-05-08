@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 <?php
 include '../PHP/functions.php';
 
 // Connexion à la base de données MySQL
 $pdo = pdo_connect_mysql();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(empty( $_SESSION['Petname'] )||empty( $_SESSION['Name'] )||empty( $_SESSION['Email'] )||empty( $_SESSION['Phone'] )||empty( $_SESSION['Address'] )||empty( $_SESSION['City'] )|| $_SESSION['Pcode'] = $_POST['Pcode']){
+    if(empty( $_SESSION['Petname'] )||empty( $_SESSION['Name'] )||empty( $_SESSION['Email'] )||empty( $_SESSION['Phone'] )||empty( $_SESSION['Address'] )||empty( $_SESSION['City'] )|| $_SESSION['Pcode'] == $_POST['Pcode']){
         header('Location: ./adoption-app1.php');
     }
     if(empty($_POST["adult"]) ||
@@ -92,9 +91,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 ?>
-=======
-
->>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -272,7 +268,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
         <!-- Footer -->
         <?php 
-        generateHeader() ;
+        generateFooter() ;
             
         ?>
 <!-- End of Footer -->

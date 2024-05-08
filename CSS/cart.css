@@ -103,7 +103,7 @@ nav ul li a:hover {
 footer {
     background: linear-gradient(135deg, #2E8540, #556B2F);
     display: flex;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     flex-flow: row wrap;

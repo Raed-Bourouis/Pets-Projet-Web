@@ -48,7 +48,7 @@
     <br>
     <div id="container3">
         <div class="partie">
-            <ul>
+            <ul  style="list-style-image: url(../assets/puce.png)" >
                 <li style="font-size: xx-large"><b> Fill Out an Application Form:</b></li>
             </ul>
             <p>Begin by filling out <a id="appForm" href="./adoption-app1.php"> an application form </a> on our website. 
@@ -60,7 +60,7 @@
         <div class="vertical-line"></div>
 
         <div class="partie">
-            <ul style="padding-left: 20%">
+            <ul style="padding-left: 20%; list-style-image: url(../assets/puce.png)">
                 <li style="font-size: xx-large"><b> Visit Our Shelters : </b></li>
             </ul style="padding-left: 20%">
             <p>Stop by our shelters to meet your new furry friend! Bring your household members, including resident dogs .

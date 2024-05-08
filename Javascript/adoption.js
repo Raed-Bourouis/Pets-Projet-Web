@@ -60,7 +60,6 @@ const validateInputsOrTextarea = elements => {
             showSuccess(element, parentElement); 
         }
     });
-    toggleChildrenAges();
     return isValid;
 };
 
@@ -166,38 +165,7 @@ const mustBeAYesAdult = () => {
 };
 
 // Function to toggle display of children ages field and label based on the number of minors
-const toggleChildrenAges = () => {
-    const numMinors = parseInt(document.getElementById("num-minors").value);
-    const childrenAgesLabel = document.getElementById("children-ages-label");
-    const childrenAgesField = document.getElementById("children-ages");
-    const childrenAgesParent = childrenAgesField.closest('.input');
-    const childrenAgesError = childrenAgesParent.querySelector('.error');
 
-    if (numMinors > 0) {
-        childrenAgesLabel.style.display = "block";
-        childrenAgesField.required = true;
-        childrenAgesField.style.display = "block";
-
-        // Validate the children ages field if it's visible
-        if (childrenAgesField.style.display === "block") {
-            if (childrenAgesField.value.trim() === '') {
-                showError(childrenAgesField, childrenAgesParent);
-                showErrorAnimation(childrenAgesParent);
-            } else {
-                showSuccess(childrenAgesField, childrenAgesParent);
-            }
-        }
-    } else {
-        childrenAgesLabel.style.display = "none";
-        childrenAgesField.required = false;
-        childrenAgesField.style.display = "none";
-
-        // Clear any error messages for the children ages field if it's hidden
-        childrenAgesError.innerText = '';
-        childrenAgesParent.classList.remove('error');
-        childrenAgesParent.classList.remove('success');
-    }
-};
 // Function to show error animation
 const showErrorAnimation = parentElement => {
         parentElement.classList.add('error-animation');
@@ -224,14 +192,7 @@ const resetSelect = select => {
         parentElement.querySelector('.error').textContent = '';
     };
 // Function to initialize the form
-const initializeForm = () => {
-    // Hide the children ages field by default
-    document.getElementById("children-ages").style.display = "none";
 
-    // Attach event listener to the number of minors input
-    document.getElementById("num-minors").addEventListener("change", toggleChildrenAges);
-};
 
 // Calling the initialization function when the window loads
-window.onload = initializeForm;
 
