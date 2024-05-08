@@ -32,6 +32,13 @@ $adopt_count = $adopt_query->fetch(PDO::FETCH_ASSOC)['count'];
 
 $users=$db->query("SELECT * FROM users");
 
+
+$v1 = $db->query('SELECT * FROM volunteersforms');
+$v2 = $db->query('SELECT * FROM vetforms');
+$v3 = $db->query('SELECT * FROM adopt');
+$v4 = $db->query('SELECT * FROM surrender');
+
+
 function usersStats(){
     global $total_users, $admin_users, $regular_users;
     return "
@@ -114,26 +121,84 @@ function fillFormsDash(){
             <tr class='dashelement'>
                 <td>Weekly Volunteer Form </td>
                 <td>$vol_form</td>
-                <td class='btncontain'><button onlick=window.location.replace('./Volunteerpage2.php') type='button' class='formaction'>View</button><button class='formaction'>View submissions</button></td>
+                <td class='btncontain'><button onclick=redirection('./Volunteerpage2.php') type='button' class='formaction'>View</button><button onclick=redirection('./view1.php') class='formaction'>View submissions</button></td>
             </tr>
             <tr class='dashelement'>
                 <td>Veterinary Volunteer Form </td>
                 <td>$vet_form</td>
-                <td class='btncontain'><button onlick=window.location.replace('./Volunteerpage3.php')  type='button' class='formaction'>View</button><button class='formaction'>View submissions</button></td>
+                <td class='btncontain'><button onclick=redirection('./Volunteerpage3.php')  type='button' class='formaction'>View</button><button onclick=redirection('./view2.php') class='formaction'>View submissions</button></td>
             </tr>
             <tr class='dashelement'>
                 <td>Adoption Form</td>
                 <td>$adopt_count</td>
-                <td class='btncontain'><button onlick=window.location.replace('./adoption-app1.php')  type='button' class='formaction'>View</button><button class='formaction'>View submissions</button></td>
+                <td class='btncontain'><button onclick=redirection('./adoption-app1.php')  type='button' class='formaction'>View</button><button onclick=redirection('./view3.php') class='formaction'>View submissions</button></td>
             </tr>
             <tr class='dashelement'>
                 <td>Surrender Form</td>
                 <td>$surrender_count</td>
-                <td class='btncontain'><button onlick=window.location.replace('./Surrender.html')  type='button' class='formaction'>View</button><button class='formaction'>View submissions</button></td>
+                <td class='btncontain'><button onclick=redirection('./Surrender.html')  type='button' class='formaction'>View</button><button onclick=redirection('./view4.php') class='formaction'>View submissions</button></td>
             </tr>
 
 
         </table>";
+}
+
+
+function view1(){
+  global $v1;
+  while(($entree = $v1->fetch())){
+    echo "<div>";
+    foreach($entree as $key => $value){
+      if(is_numeric($key)) {continue;}
+      echo "<p class='key' style='display:inline; color:red'>$key : </p>$value<br>";
+  }
+    echo "</div><hr>";
+
+    }
+
+}
+
+
+function view2(){
+  global $v2;
+  while(($entree = $v2->fetch())){
+    echo "<div>";
+    foreach($entree as $key => $value){
+      if(is_numeric($key)) {continue;}
+      echo "<p class='key' style='display:inline; color:red'>$key : </p>$value<br>";
+  }
+    echo "</div><hr>";
+
+    }
+
+}
+
+function view3(){
+  global $v3;
+  while(($entree = $v3->fetch())){
+    echo "<div>";
+    foreach($entree as $key => $value){
+      if(is_numeric($key)) {continue;}
+      echo "<p class='key' style='display:inline; color:red'>$key : </p>$value<br>";
+  }
+    echo "</div><hr>";
+
+    }
+
+}
+
+function view4(){
+  global $v4;
+  while(($entree = $v4->fetch())){
+    echo "<div>";
+    foreach($entree as $key => $value){
+      if(is_numeric($key)) {continue;}
+      echo "<p class='key' style='display:inline; color:red'>$key : </p>$value<br>";
+  }
+    echo "</div><hr>";
+
+    }
+
 }
 
 
