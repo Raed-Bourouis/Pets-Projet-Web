@@ -114,22 +114,22 @@ function fillFormsDash(){
             <tr class='dashelement'>
                 <td>Weekly Volunteer Form </td>
                 <td>$vol_form</td>
-                <td class='btncontain'><button type='button' class='formaction'>View</button><button class='formaction'>Edit</button><button class='formaction'>View submissions</button><button class='formaction'>Export submissions</button></td>
+                <td class='btncontain'><button onlick=window.location.replace('./Volunteerpage2.php') type='button' class='formaction'>View</button><button class='formaction'>View submissions</button></td>
             </tr>
             <tr class='dashelement'>
                 <td>Veterinary Volunteer Form </td>
                 <td>$vet_form</td>
-                <td class='btncontain'><button class='formaction'>View</button><button class='formaction'>Edit</button><button class='formaction'>View submissions</button><button class='formaction'>Export submissions</button></td>
+                <td class='btncontain'><button onlick=window.location.replace('./Volunteerpage3.php')  type='button' class='formaction'>View</button><button class='formaction'>View submissions</button></td>
             </tr>
             <tr class='dashelement'>
                 <td>Adoption Form</td>
                 <td>$adopt_count</td>
-                <td class='btncontain'><button class='formaction'>View</button><button class='formaction'>Edit</button><button class='formaction'>View submissions</button><button class='formaction'>Export submissions</button></td>
+                <td class='btncontain'><button onlick=window.location.replace('./adoption-app1.php')  type='button' class='formaction'>View</button><button class='formaction'>View submissions</button></td>
             </tr>
             <tr class='dashelement'>
                 <td>Surrender Form</td>
                 <td>$surrender_count</td>
-                <td class='btncontain'><button class='formaction'>View</button><button class='formaction'>Edit</button><button class='formaction'>View submissions</button><button class='formaction'>Export submissions</button></td>
+                <td class='btncontain'><button onlick=window.location.replace('./Surrender.html')  type='button' class='formaction'>View</button><button class='formaction'>View submissions</button></td>
             </tr>
 
 
