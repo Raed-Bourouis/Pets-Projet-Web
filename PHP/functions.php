@@ -41,27 +41,31 @@ function generateHeader() {
                 <a href="javascript:void(0)" class="dropbtn">Services&nbsp;<i class="fa-solid fa-caret-down"></i></a>
                 <div class="dropdown-content">
                 <a href="';
-                if (isUserLoggedIn()) {
-                    // Assuming getRole() function retrieves the user's role
-                    if ( getRole() == '1') {
-                        
-                        echo './adopt-admin.php';
-                    } elseif ( getRole() == '2') {
-                        echo './adopt-user.php';
-                    }
-                } else {
-                    echo 'signinup.php'; // Default to sign-in page if user not logged in
-                }
-                echo '">Adopt a Pet</a>';
-                echo '<a href="Surrender.php">Surrender a Pet</a>
-                    <a href="Volunteerpage1.php">Volunteer</a>
-                </div>
-            </li>';
+    if (isUserLoggedIn()) {
+        // Assuming getRole() function retrieves the user's role
+        if (getRole() == '1') {
+            echo './adopt-admin.php';
+        } elseif (getRole() == '2') {
+            echo './adopt-user.php';
+        }
+    } else {
+        echo 'signinup.php'; // Default to sign-in page if user not logged in
+    }
+    echo '">Adopt a Pet</a>';
+    echo '<a href="Surrender.php">Surrender a Pet</a>
+                <a href="Volunteerpage1.php">Volunteer</a>
+            </div>
+        </li>';
     echo '<li><a href="market.php">Marketplace</a></li>';
     echo '<li><a href="cart.php"><i class="fas fa-cart-plus"></i> Cart</a></li>';
 
     if (isUserLoggedIn()) {
+        if (getRole() == '1') {
+            echo '<li><a href="userdashboard.php">User Dashboard</a></li>';
+            echo '<li><a href="formsdhashboard.php">Forms Dashboard</a></li>';
+        }
         echo '<li><a href="../PHP/logout.php">Log out</a></li>';
+    
     } else {
         echo '<li><a href="signinup.php">Sign In</a></li>';
     }
