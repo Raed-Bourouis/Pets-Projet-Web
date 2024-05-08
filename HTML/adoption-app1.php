@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <?php
 $errors=[];
@@ -26,6 +27,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         header('Location: ./adoption-app2.php');
     }
+=======
+<?php
+include_once 'db_connection.php';
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Define variables and initialize with empty values
+    $Petname = $name = $email = $Phone = $Address = $City = $Pcode = "";
+    $errors = array();
+
+    // Validate and sanitize input data
+    // You can perform validation and sanitation here
+
+    // Check if all required fields are filled
+    if (empty($_POST['Petname']) || empty($_POST['name']) || empty($_POST['email']) || empty($_POST['Phone']) || empty($_POST['Address']) || empty($_POST['City']) || empty($_POST['Pcode'])) {
+        $errors['all'] = "All fields are required";
+    } else {
+        // Prepare a SQL INSERT statement
+        $sql = "INSERT INTO applications (Petname, name, email, Phone, Address, City, Pcode) VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+        if ($stmt = $mysqli->prepare($sql)) {
+            // Bind variables to the prepared statement as parameters
+            $stmt->bind_param("sssssss", $Petname, $name, $email, $Phone, $Address, $City, $Pcode);
+
+            // Set parameters
+            $Petname = $_POST['Petname'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $Phone = $_POST['Phone'];
+            $Address = $_POST['Address'];
+            $City = $_POST['City'];
+            $Pcode = $_POST['Pcode'];
+
+            // Attempt to execute the prepared statement
+            if ($stmt->execute()) {
+                // Redirect to the next page or display a success message
+                header("location: adoption-app2.php");
+                exit();
+            } else {
+                echo "Error: " . $sql . "<br>" . $mysqli->error;
+            }
+        }
+
+        // Close statement
+        $stmt->close();
+    } 
+>>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5
 }
 ?>
 <!DOCTYPE html>
@@ -41,11 +89,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
          <!-- Header -->
+<<<<<<< HEAD
          <?php 
     include '../PHP/functions.php';
     generateHeader() ;
         
     ?>
+=======
+         <header>
+            <nav>
+                <div>
+                    <img id="logo" src="../assets/logoweblight.png" alt="Logo">
+                </div>
+                <div id="nav-list">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="adopt-user.html">Adopt</a></li>
+                        <li><a href="market.html">Marketplace</a></li>
+                        <li><a href="cart.html"><i class="fas fa-cart-plus"></i> Cart</a></li>
+                        <li><a href="signinup.html">Sign In</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+>>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5
         <!-- End of Header -->
 
     <!-- Main Content -->
@@ -58,7 +126,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="input-control">
                 <label for="Petname">Name Of the Pet(s) You're Interested in Adopting: *</label>
                 <input type="text" id="Petname" name="Petname" placeholder="Kiki, Micha..">
+<<<<<<< HEAD
                 <p class="error"><?php echo isset( $errors['Petname']) ?  $errors['Petname']: ''; ?></p>
+=======
+                <p class="error"><?php echo isset($errors['Petname']) ? $errors['Petname'] : ''; ?></p>
+>>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5
             </div>
 
             <div class="input-control">
@@ -76,7 +148,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="input-control">
                 <label for="Phone">Your Phone Number: *</label>
                 <input type="tel" id="Phone" name="Phone" placeholder="+123 456789456">
+<<<<<<< HEAD
                 <p class="error"><?php echo isset($errors['Phone']) ? $errors['Phone'] : ''; ?></p>
+=======
+                <p class="error"><?php echo isset($errors['Phone']) ? $errors['Phone Number'] : ''; ?></p>
+>>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5
             </div>
 
             <div class="input-control">
@@ -123,7 +199,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="input-control">
                 <input type="text" id="Pcode" name="Pcode" placeholder="Postal Code">
+<<<<<<< HEAD
                 <p class="error"><?php echo isset($errors['Pcode']) ? $errors['Pcode'] : ''; ?></p>
+=======
+                <p class="error"><?php echo isset($errors['Pcode']) ? $errors['POstal Code'] : ''; ?></p>
+>>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5
                  </div>
             </div>
 

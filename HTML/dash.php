@@ -136,7 +136,11 @@ function fillFormsDash(){
             <tr class='dashelement'>
                 <td>Surrender Form</td>
                 <td>$surrender_count</td>
+<<<<<<< HEAD
                 <td class='btncontain'><button onclick=redirection('./Surrender.php')  type='button' class='formaction'>View</button><button onclick=redirection('./view4.php') class='formaction'>View submissions</button></td>
+=======
+                <td class='btncontain'><button onclick=redirection('./Surrender.html')  type='button' class='formaction'>View</button><button onclick=redirection('./view4.php') class='formaction'>View submissions</button></td>
+>>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5
             </tr>
 
 

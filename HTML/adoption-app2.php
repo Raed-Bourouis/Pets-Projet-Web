@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 include '../PHP/functions.php';
 
@@ -91,6 +92,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 ?>
+=======
+
+>>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5
 <!DOCTYPE html>
 <html lang="en">
 <head>

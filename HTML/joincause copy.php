@@ -177,11 +177,45 @@
 
 
     <!-- Footer -->
+<<<<<<< HEAD:HTML/joincause copy.php
     <?php 
     generateFooter() ;
         
     ?>
+=======
+    <footer>
+        <div>
+            <img id="logo" src="../assets/logoweblight.png" alt="Logo">
+        </div>
+        <div>
+            <p style="font-weight: bold;">Addresses:</p>
+            <p><a href="https://www.google.com/maps/place/Denden,+Manouba" style="color:white; text-decoration:none"><i
+                        class="fa-solid fa-location-pin"></i>&nbsp;Denden, Manouba</a></p>
+            <p><a href="https://www.google.com/maps/place/Av.+Moncef+Bey,+Tunis"
+                    style="color:white; text-decoration:none"><i class="fa-solid fa-location-pin"></i>&nbsp;Moncef Bey,
+                    Tunis</a></p>
+        </div>
+        <div>
+            <p style="font-weight: bold;"> Contact Us</p>
+            <p><a href="mailto:pets@gmail.com" style="color:white; text-decoration:none"><i
+                        class="fa-regular fa-envelope"></i>&nbsp;Email: pets@gmail.com</a></p>
+            <p><i class="fa-solid fa-phone"></i>&nbsp;Tel: +216 12 898 757</p>
+            <p><i class="fa-solid fa-fax"></i>&nbsp;Fax: +216 62 69 26</p>
+            <p>RIB: 156549855955558598</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    
+>>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5:HTML/joincause copy.html
     <!-- End of Footer -->
 </body>
+
+
 
 </html>

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function validatePassword(){
     var Password=document.getElementById("password")
-    var confirmPassword=document.getElementById("confirm-password")
+    var confirmPassword=document.getElementById("confirm_password")
     if(Password.value=="" && confirmPassword.value== ""){
         displayErrorMessage(confirmPassword.parentElement,"*Please enter both password and confirmation.");
         showErrorAnimation(Password.parentElement);
@@ -122,7 +122,7 @@ function validateEmail() {
 function validateTerms(){
     let terms=document.querySelector("#terms")
     if(!terms.checked){
-        displayErrorMessage(terms.parentElement,"‎ ‎ ‎ ‎ *This field is required.");
+        displayErrorMessage(terms.parentElement,"*This field is required.");
         showErrorAnimation(terms.parentElement);
         return false;
     }
