@@ -33,6 +33,19 @@ function addVetFormDataToDatabase()
 
     $req->execute(array('fullname' => $fullName, 'email' => $email, 'phone' => $phone, 'address' => $address, 'age' => $age, 'legalwork' => $legalWork, 'yearsexperience' => $yearsExperience, 'previousvolunteer' => $previousVolunteer, 'availability' => $availability, 'specificexperience' => $specificExperience, 'roles' => $Roles, 'otherspecifyinput' => $otherSpecifyInput));
 
+        // Send confirmation email to the volunteer
+        $to = $email;
+        $subject = "Volunteer Application Received";
+        $message = "Hello " . $fullName . ",\n\nThank you for your interest in volunteering with us. Your application is currently under processing. We will get back to you soon.\n\nBest Regards,\nThe Pets Team";
+        $headers = "From: noreply@yourorganization.com";
+    
+        if(mail($to, $subject, $message, $headers)) {
+            echo "<script>alert('Application recieved, Please check your email.')</script>";
+        } else {
+            echo  "<script>alert('Sorry, Something went wrong.')</script>";
+        }
+    
+
     echo "New volunteer form data added successfully";
 }
 
@@ -88,6 +101,18 @@ function addVolunteerFormDataToDatabase()
         'otherspecifyinput' => $otherSpecifyInput,
 
     ));
+
+    // Send confirmation email to the volunteer
+    $to = $email;
+    $subject = "Volunteer Application Received";
+    $message = "Hello " . $fullName . ",\n\nThank you for your interest in volunteering with us. Your application is currently under processing. We will get back to you soon.\n\nBest Regards,\nThe Pets Team";
+    $headers = "From: noreply@yourorganization.com";
+
+    if(mail($to, $subject, $message, $headers)) {
+        echo "<script>alert('Application recieved, Please check your email.')</script>";
+    } else {
+        echo  "<script>alert('Sorry, Something went wrong.')</script>";
+    }
 
     echo "New volunteer form data added successfully";
 }
