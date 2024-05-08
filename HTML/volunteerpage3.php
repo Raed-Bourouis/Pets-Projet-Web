@@ -14,18 +14,11 @@
 
 <body>
     <!-- Header -->
-<<<<<<< HEAD
     <?php 
     include '../PHP/functions.php';
     generateHeader() ;
 
      ?>
-=======
-    <?php
-        require_once ("header.php");
-        echo getHeader();
-    ?>
->>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5
 
      
     <!-- End of Header -->
@@ -142,28 +135,10 @@
 
     
     <!-- Footer -->
-<<<<<<< HEAD
     <?php 
     generateFooter() ;
 
      ?>
-=======
-    <?php
-        echo getFooter();
-    ?>
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 51d01e2e8b42fc916f59126acde6333bbd56eae5
 
 </body>
 

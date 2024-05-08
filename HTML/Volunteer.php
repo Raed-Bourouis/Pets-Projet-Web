@@ -46,7 +46,6 @@ function addVetFormDataToDatabase()
         }
     
 
-    echo "New volunteer form data added successfully";
 }
 
 function addVolunteerFormDataToDatabase()
@@ -114,7 +113,6 @@ function addVolunteerFormDataToDatabase()
         echo  "<script>alert('Sorry, Something went wrong.')</script>";
     }
 
-    echo "New volunteer form data added successfully";
 }
 
 
