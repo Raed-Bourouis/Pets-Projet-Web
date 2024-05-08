@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.getElementById('checkout-form').addEventListener('submit', e => {
+/*document.getElementById('checkout-form').addEventListener('submit', e => {
     e.preventDefault();
     if (validateForm()) {
         const submitButton = document.querySelector('#button-submit');
@@ -90,4 +90,4 @@ document.getElementById('checkout-form').addEventListener('submit', e => {
             window.location.href = 'Orderplaced.html';
         }, 300);
     }
-});
+});*/

@@ -31,7 +31,7 @@ document.forms.form.addEventListener('submit', e => {
         // Perform form submission after a brief delay to ensure the "Submitting..." message is displayed
         setTimeout(() => {
             document.forms.form.submit();
-            window.location.href = 'thankyou.html';
+            window.location.href = 'thankyou.php';
         }, 300);
     }
 });

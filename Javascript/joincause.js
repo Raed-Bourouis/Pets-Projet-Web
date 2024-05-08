@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
     function goToSlide(n) {
         const direction = n < currentSlide ? 'left' : 'right';
         slides[currentSlide].classList.add('hidden');
-        currentSlide = (n + slides.length) % slides.length;
+        currentSlide = (n + slides.length) % slides.length; // fprmule math bech temchi fi loop 
         slides[currentSlide].classList.remove('hidden');
         slides[currentSlide].classList.add(`slide-in-${direction}`);
         setTimeout(() => { slides[currentSlide].classList.remove(`slide-in-${direction}`); }, 1500)

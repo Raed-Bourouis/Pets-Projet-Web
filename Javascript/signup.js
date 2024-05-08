@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Perform form submission after a brief delay to ensure the "Submitting..." message is displayed
             setTimeout(() => {
                 form.submit();
-                window.location.href = 'sign-in.html';
+                window.location.href = 'sign-in.php';
             }, 700);
         }
     });

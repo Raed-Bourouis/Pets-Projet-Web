@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/logoweblight.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/joincause.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+      <!-- Header -->
+      <?php 
+    include '../PHP/functions.php';
+    generateHeader() ;
+        
+    ?>
+    <!-- End of Header -->
+
+
+    <!--Volunteers Photo-->
+    <div id="Volunteers-photo">
+        <img src="https://www.awla.org/wp-content/uploads/2023/05/AWLA_Dog_Tego-6918-1.jpeg">
+        <h1>Join Our Cause: Become A Volunteer</h1>
+
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------------------->
+
+    <!--Join our cause-->
+    <div id="join-cause">
+        <div id="join-cause-text-rectangle">
+            <b>Are you passionate about making a difference in the lives of animals?<br> Consider becoming a volunteer
+                at Pets Haven!</b><br>
+            Our volunteer program offers a rewarding opportunity to contribute<br> to our mission of rescuing and caring
+            for animals in need.
+        </div>
+        <div id="aka-lfaza-lm3awja"><br><br><br><br></div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------------------>
+            <br><br>
+
+    <!--Get involved-->
+    <div id="get-involved">
+        <h4>Here's how you can get involved</h4>
+        <ol>
+            <div id="one">
+                <li><b><u>Fill Out a Volunteer Application Form:</u></b> Start by filling out a volunteer application
+                    form on our
+                    website. Provide your contact information, availability, and areas of interest or expertise. Once
+                    submitted, our team will review your application and reach out to you to discuss next steps.</li>
+                <li><b><u>Review and Appointment Setup:</u></b> After reviewing your application, we'll schedule an
+                    appointment to
+                    meet with you and discuss potential volunteer opportunities. This meeting allows us to learn more
+                    about your interests, skills, and availability, ensuring we find the best fit for you within our
+                    organization.</li>
+            </div>
+            <div id="two">
+                <li><b><u>Join Our Team:</u></b> Once you're accepted into our volunteer program, you'll become an
+                    integral part of
+                    the Pets Haven team. Whether you're helping care for animals, assisting with adoption events, or
+                    providing administrative support, your contributions make a meaningful difference in the lives of
+                    our furry friends.</li>
+                <li><b><u>Training and Support:</u></b> As a volunteer, you'll receive training and ongoing support to
+                    help you
+                    succeed in your role. Whether you're a seasoned animal lover or new to volunteering, we'll provide
+                    the guidance and resources you need to make a positive impact.</li>
+            </div>
+            <div id="three">
+                <li><b><u>Make a Difference:</u></b> By volunteering with Pets Haven, you're not just donating your
+                    time; you're
+                    changing lives. Your efforts help us provide essential care, love, and support to animals in need,
+                    giving them a second chance at a happy and healthy life.</li>
+            </div>
+        </ol>
+
+
+    </div>
+    <!----------------------------------------------------------------------------------------------------------------------------->
+  <!-- Footer -->
+  <?php 
+    generateFooter() ;
+        
+    ?>
+<!-- End of Footer -->
+</body>
+
+</html>
