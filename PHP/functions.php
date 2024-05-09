@@ -62,7 +62,7 @@ function generateHeader() {
     if (isUserLoggedIn()) {
         if (getRole() == '1') {
             echo '<li><a href="userdashboard.php">User Dashboard</a></li>';
-            echo '<li><a href="formsdhashboard.php">Forms Dashboard</a></li>';
+            echo '<li><a href="formsdashboard.php">Forms Dashboard</a></li>';
         }
         echo '<li><a href="../PHP/logout.php">Log out</a></li>';
     
