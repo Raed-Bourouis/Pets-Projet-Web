@@ -17,7 +17,7 @@ Pour installer et exécuter localement Pets Haven, suivez ces étapes :
 
 1. Clonez le dépôt localement dans '.\xampp\htdocs' : `git clone https://github.com/Raed-Bourouis/Pets-Projet-Web`
 2. Dans XAMPP, démarrez Apache et MySQL, puis dans votre navigateur accédez à `localhost/phpmyadmin`
-3. Dans PhpMyAdmin, naviguez à la rubrique `import` et importez le fichier `./bdd/pets.sql`
+3. Dans PhpMyAdmin, créez une nouvelle bdd nommée `pets`, naviguez à la rubrique `import` et importez le fichier `./bdd/pets.sql`
 4. Tapez l'URL suivante : `http://localhost/Pets-Projet-Web/HTML/home.php`
 
 ## Fonctionnalités
