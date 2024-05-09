@@ -3,23 +3,18 @@
 include '../PHP/functions.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
-//$_SERVER['REQUEST_METHOD'] est utilisé pour connaître la méthode de requête (par exemple GET, POST, PUT, etc.) utilisée pour accéder à la page.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //Sign IN
-    // Vérification de la présence de l'email utilisateur et du mot de passe
     if (isset($_POST['email']) && isset($_POST['pwd'])) {
         $username = $_POST['email'];
         $password = $_POST['pwd'];
 
-        // Préparation de la requête SQL pour éviter les injections SQL
         $stmt = $pdo->prepare("SELECT * FROM users WHERE email=:email AND pwd=:pwd");
         $stmt->bindParam(':email', $username);
         $stmt->bindParam(':pwd', $password);
 
-        // Exécution de la requête
         $stmt->execute();
 
-        // Si la requête retourne une ligne, l'utilisateur existe et nous pouvons démarrer une session
 
         if ($stmt->rowCount() == 1) {
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -31,37 +26,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header('Location: ./home.php');
             exit;
         } else {
-            // Si la requête ne retourne aucune ligne, l'utilisateur n'existe pas ou le mot de passe est incorrect
             echo '<script>alert("Nom d\'utilisateur ou mot de passe invalide.");</script>';
             
         }
     }
     //Sign UP
-    if (isset($_POST['nom']) && isset($_POST['password']) && isset($_POST['emailup']) && isset($_POST['confirm_password']) && isset($_POST['phone']) && isset($_POST['address']) && isset($_POST['age']) && isset($_POST['terms'])) {
+    elseif (
+        isset($_POST['nom']) && 
+        isset($_POST['password']) && 
+        isset($_POST['emailup']) && 
+        isset($_POST['confirm_password']) && 
+        isset($_POST['phone']) && 
+        isset($_POST['address']) && 
+        isset($_POST['age']) && 
+        isset($_POST['terms'])
+    ) {
         $nom = $_POST['nom'];
         $pwdup = $_POST['password'];
         $emailUP = $_POST['emailup'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
         $age = $_POST['age'];
+        $confirmPassword = $_POST['confirm_password'];
 
-    
-
-        // Insérer un nouvel enregistrement dans la table des contacts
-        $stmtt = $pdo->prepare('INSERT INTO users (fullname, pwd, email, phone, adresse, date_naiss) VALUES (?, ?, ?, ?, ?, ?)');
-        $stmtt->execute([$nom, $pwdup, $emailUP, $phone, $address, $age]);
-        // Message de sortie
-        $msg = 'USER ' . $nom . ' created Successfully!';
-        echo $msg;
-        header("Location: ./signinup.php?signup=success");
-        exit;
-    }
-    else{
-        echo '<script>alert("Sign Up Error !");</script>';
+        // Validation de l'email
+        if (!filter_var($emailUP, FILTER_VALIDATE_EMAIL)) {
+            echo '<script>alert("Invalid email format.");</script>';
+        } elseif (strlen($pwdup) < 8) { // Vérification de la longueur du mot de passe
+            echo '<script>alert("Password must be at least 8 characters long.");</script>';
+        } elseif ($pwdup !== $confirmPassword) { // Vérification de la correspondance des mots de passe
+            echo '<script>alert("Passwords do not match.");</script>';
+        } else {
+            // Insérer un nouvel enregistrement dans la table des contacts
+            $stmtt = $pdo->prepare('INSERT INTO users (fullname, pwd, email, phone, adresse, date_naiss) VALUES (?, ?, ?, ?, ?, ?)');
+            $stmtt->execute([$nom, $pwdup, $emailUP, $phone, $address, $age]);
+            // Message de sortie
+            $msg = 'USER ' . $nom . ' created Successfully!';
+            header("Location: ./signinup.php?signup=success");
+            exit;
+        }
+    } 
+    else {
+        echo '<script>alert("All fields are required !");</script>';
     }
 }
-
 ?>
+
+
+
 
 
 <!DOCTYPE html>
@@ -94,14 +106,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" placeholder="Name" name="nom" id="name" class="required">
                 <div class="error"></div>
                 <input type="text" name="emailup" id="email" placeholder="Email" class="required">
-                <div class="error"></div>
+                <div class="error"><?php echo $msg; ?></div>
                 <div class="password">
                     <input type="password" name="password" id="password" placeholder="Password" class="required">
-                    <div class="error"></div>
+                    <div class="error"><?php echo $msg; ?></div>
                 </div>
                 <div class="password">
                     <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="required">
-                    <div class="error"></div>
+                    <div class="error"><?php echo $msg; ?></div>
                 </div>
                 <input type="text" id="phone" name="phone" id="phone" placeholder="Phone Number">
                 <div class="error"></div>
@@ -148,6 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 <script>
+  
     const container = document.getElementById('container');
     const registerBtn = document.getElementById('register');
     const loginBtn = document.getElementById('login');
@@ -202,7 +215,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Function to validate phone number
         function validatePhoneNumber(phone) {
             // You can implement custom validation rules for phone numbers here
-            // For simplicity, let's assume any non-empty phone number is valid
             return phone.trim() !== '';
         }
 
