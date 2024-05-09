@@ -125,9 +125,7 @@ INSERT INTO `orders` (`OrderID`, `FullName`, `Email`, `Address`, `City`, `State`
 (7, 'Hassan Gharbi', 'hassan@example.com', '30 Rue Habib Thameur', 'Mahdia', '', '5100', 'Tunisia', '456-789-0123', 'cash_on_delivery', 110.00, '', '', '', '2024-05-07 23:58:40'),
 (8, 'Sara Khemiri', 'sara@example.com', '40 Avenue Farhat Hached', 'Nabeul', '', '8000', 'Tunisia', '567-890-1234', 'card', 95.00, '', '', '', '2024-05-07 23:58:40'),
 (9, 'Islem Nasri', 'islemnasri20020627@gmail.com', '50 Rue de la République', 'Manouba', '', '2010', 'Tunisia', '123-456-7890', 'cash_on_delivery', 150.00, '', '', '', '2024-05-07 23:59:05'),
-(10, 'Raed Bourouis', 'raed.bourouis@ensi-uma.tn', 'Sfax', 'Skhira', 'Sfax', '3050', 'Tunisia', '+21629082907', 'cash', 22.98, '', '', '', '2024-05-08 18:31:29'),
-(11, 'Raed Bourouis', 'raed.bourouis@ensi-uma.tn', 'shbfgdfshbgdh', 'shbfgdfshbgdh', 'shbfgdfshbgdh', '3050', 'shbfgdfshbgdh', '+21629082907', 'cash', 9.99, '', '', '', '2024-05-08 21:13:23'),
-(12, 'raed', 'raed.bourouis@ensi-uma.tn', 'dfghdbghbhdbghj,', 'dfghdbghbhdbghj,', 'dfghdbghbhdbghj,', '3050', 'dfghdbghbhdbghj,', '+21629052904', 'cash', 19.99, '', '', '', '2024-05-09 12:00:36');
+(10, 'Raed Bourouis', 'raed.bourouis@ensi-uma.tn', 'Sfax', 'Skhira', 'Sfax', '3050', 'Tunisia', '+21629082907', 'cash', 22.98, '', '', '', '2024-05-08 18:31:29');
 
 -- --------------------------------------------------------
 
@@ -208,8 +206,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `fullname`, `pwd`, `email`, `phone`, `adresse`, `date_naiss`, `role`) VALUES
 (1, 'Rayen Jenhani', '12345678', 'rayenne901@gmail.com', '+21690133343', 'Nabeul', '2002-05-25', '1'),
-(5, 'Raed Bourouis', 'raedraed', 'raed.bourwis@gmail.com', '+21629082907', 'sfax', '2003-02-18', '1'),
-(14, 'raed', '123456789', 'raed.bourouis@ensi-uma.tn', '+21629052904', 'sfa9sfa9', '2024-05-23', '2');
+(5, 'Raed Bourouis', 'raedraed', 'raed.bourwis@gmail.com', '+21629082907', 'Sfax', '2003-02-18', '1'),
+(14, 'raed', '123456789', 'raed.bourouis@ensi-uma.tn', '+21629052904', 'Sfax', '2024-05-23', '2');
 
 -- --------------------------------------------------------
 
@@ -241,9 +239,7 @@ INSERT INTO `vetforms` (`fullName`, `email`, `phone`, `address`, `age`, `legalWo
 ('Jane Smith', 'jane.smith@example.com', '+99999999999', '456 Elm St, City, Country', 28, 'Yes', 5, 'Local Clinic', 'Weekdays', 'Exotic Animals', 'Surgical Procedures', ''),
 ('Alice Johnson', 'alice.johnson@example.com', '+99999999999', '789 Oak St, City, Country', 42, 'Yes', 15, 'None', 'Flexible', 'Emergency Medicine', 'Emergency Care', ''),
 ('Bob Brown', 'bob.brown@example.com', '+99999999999', '321 Pine St, City, Country', 50, 'Yes', 20, 'Wildlife Rescue', 'Weekends', 'Rehabilitation', 'Behavioral Consultations and Training', ''),
-('Sarah Lee', 'sarah.lee@example.com', '+99999999999', '987 Maple St, City, Country', 32, 'Yes', 8, 'Local Shelter', 'Weekends', 'Nutrition', 'Outreach and Education Programs', ''),
-('raed', 'raed.bourouis@ensi-uma.tn', '+21629052904', 'ghdfshgkjdfsgjrey', 21, 'yes', 2, 'ghdfshgkjdfsgjrey', 'ghdfshgkjdfsgjrey', 'ghdfshgkjdfsgjrey', 'Routine Medical Care Surgical Procedures Other', 'hdbfgdsjgj'),
-('hakim lta7an', 'hakim.salah@ensi-uma.tn', '+21629052904', 'ndkgjbdfbgdfhbgwhj', 100, 'yes', 5, 'ndkgjbdfbgdfhbgwhj', 'ndkgjbdfbgdfhbgwhj', 'ndkgjbdfbgdfhbgwhj', 'Routine Medical Care', '');
+('Sarah Lee', 'sarah.lee@example.com', '+99999999999', '987 Maple St, City, Country', 32, 'Yes', 8, 'Local Shelter', 'Weekends', 'Nutrition', 'Outreach and Education Programs', '');
 
 -- --------------------------------------------------------
 
