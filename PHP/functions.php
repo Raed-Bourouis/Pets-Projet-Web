@@ -42,14 +42,13 @@ function generateHeader() {
                 <div class="dropdown-content">
                 <a href="';
     if (isUserLoggedIn()) {
-        // Assuming getRole() function retrieves the user's role
         if (getRole() == '1') {
             echo './adopt-admin.php';
         } elseif (getRole() == '2') {
             echo './adopt-user.php';
         }
     } else {
-        echo 'signinup.php'; // Default to sign-in page if user not logged in
+        echo 'signinup.php'; 
     }
     echo '">Adopt a Pet</a>';
     echo '<a href="Surrender.php">Surrender a Pet</a>
