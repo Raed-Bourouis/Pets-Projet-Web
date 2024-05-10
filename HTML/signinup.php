@@ -214,7 +214,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Function to validate phone number
         function validatePhoneNumber(phone) {
-            // You can implement custom validation rules for phone numbers here
             return phone.trim() !== '';
         }
 
